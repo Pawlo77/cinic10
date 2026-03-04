@@ -1,0 +1,90 @@
+"""Factory for model construction."""
+
+import logging
+from typing import cast
+
+from torch import nn
+from torchvision.models import (
+    DenseNet121_Weights,
+    MobileNet_V3_Small_Weights,
+    ResNet18_Weights,
+    SqueezeNet1_0_Weights,
+    densenet121,
+    mobilenet_v3_small,
+    resnet18,
+    squeezenet1_0,
+)
+
+from cinic10.config import ArchitectureName
+from cinic10.models.convkan import replace_conv2d_with_convkan
+from cinic10.models.nas_cnn import NasCnn
+
+logger = logging.getLogger(__name__)
+
+
+def _replace_classifier_linear(module: nn.Module, in_features: int, num_classes: int) -> None:
+    """Replace a classifier linear layer.
+
+    Args:
+        module: Module containing `classifier` attribute.
+        in_features: Number of input features.
+        num_classes: Number of output classes.
+    """
+    module.classifier = nn.Linear(in_features, num_classes)
+
+
+def create_model(
+    architecture: ArchitectureName,
+    num_classes: int,
+    dropout: float,
+    pretrained: bool,
+) -> nn.Module:
+    """Create model by architecture name.
+
+    Args:
+        architecture: Architecture identifier.
+        num_classes: Number of output classes.
+        dropout: Dropout probability for custom heads.
+        pretrained: Whether to use pretrained torchvision weights.
+
+    Returns:
+        Initialized model.
+    """
+    if architecture == "nas_cnn":
+        logger.info("create_model: architecture=%s (nas_cnn)", architecture)
+        return NasCnn(num_classes=num_classes, dropout=dropout)
+
+    if architecture in {"mobilenet_v3_small", "convkan_mobilenet_v3_small"}:
+        model = mobilenet_v3_small(
+            weights=MobileNet_V3_Small_Weights.DEFAULT if pretrained else None
+        )
+        logger.info(
+            "create_model: mobilenet_v3_small pretrained=%s dropout=%s", pretrained, dropout
+        )
+        last = cast(nn.Linear, model.classifier[-1])
+        model.classifier[-1] = nn.Linear(last.in_features, num_classes)
+        if architecture == "convkan_mobilenet_v3_small":
+            replace_conv2d_with_convkan(model.features)
+        return model
+
+    if architecture in {"squeezenet1_0", "convkan_squeezenet1_0"}:
+        model = squeezenet1_0(weights=SqueezeNet1_0_Weights.DEFAULT if pretrained else None)
+        logger.info("create_model: squeezenet1_0 pretrained=%s", pretrained)
+        model.classifier[1] = nn.Conv2d(512, num_classes, kernel_size=1)
+        if architecture == "convkan_squeezenet1_0":
+            replace_conv2d_with_convkan(model.features)
+        return model
+
+    if architecture == "resnet18":
+        model = resnet18(weights=ResNet18_Weights.DEFAULT if pretrained else None)
+        logger.info("create_model: resnet18 pretrained=%s", pretrained)
+        model.fc = nn.Linear(model.fc.in_features, num_classes)
+        return model
+
+    if architecture == "densenet121":
+        model = densenet121(weights=DenseNet121_Weights.DEFAULT if pretrained else None)
+        logger.info("create_model: densenet121 pretrained=%s", pretrained)
+        _replace_classifier_linear(model, model.classifier.in_features, num_classes)
+        return model
+
+    raise ValueError(f"Unsupported architecture: {architecture}")
