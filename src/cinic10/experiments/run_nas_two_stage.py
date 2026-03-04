@@ -9,6 +9,7 @@ import torch
 
 from cinic10.config import TrainingConfig
 from cinic10.data import create_dataloader, resolve_data_root
+from cinic10.models import create_model
 from cinic10.models.nas_cnn import DiscreteNasCnn
 from cinic10.training.engine import evaluate, fit
 from cinic10.training.optimizer import create_optimizers, create_scheduler
@@ -137,8 +138,6 @@ def main() -> None:
         nas_temperature_end=args.nas_temperature_end,
         device=args.device,
     )
-
-    from cinic10.models import create_model
 
     search_model = create_model(
         architecture=search_config.architecture,

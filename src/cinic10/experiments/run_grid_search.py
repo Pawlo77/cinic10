@@ -7,12 +7,13 @@ from dataclasses import replace
 from pathlib import Path
 
 import pandas as pd
+import torch
 from tqdm.auto import tqdm
 
 from cinic10.config import build_mobilenet_grid
 from cinic10.data import create_dataloader, resolve_data_root
 from cinic10.models import create_model
-from cinic10.training.engine import fit
+from cinic10.training.engine import evaluate, fit
 from cinic10.training.optimizer import create_optimizer, create_scheduler
 from cinic10.utils import dump_json, pick_device, set_seed
 
@@ -84,6 +85,45 @@ def main() -> None:
         metrics_path = run_config.output_dir / "metrics.json"
         if args.resume and metrics_path.exists() and not args.force_rerun:
             metrics = json.loads(metrics_path.read_text(encoding="utf-8"))
+            test_metrics_path = run_config.output_dir / "test_metrics.json"
+            if test_metrics_path.exists():
+                test_metrics_payload = json.loads(test_metrics_path.read_text(encoding="utf-8"))
+                test_loss = float(test_metrics_payload.get("test_loss", float("inf")))
+                test_accuracy = float(test_metrics_payload.get("test_accuracy", 0.0))
+            else:
+                model = create_model(
+                    architecture=run_config.architecture,
+                    num_classes=10,
+                    dropout=run_config.dropout,
+                    pretrained=run_config.pretrained,
+                ).to(device)
+                test_loader = create_dataloader(
+                    data_root=run_config.data_root,
+                    split="test",
+                    batch_size=run_config.batch_size,
+                    num_workers=run_config.num_workers,
+                    use_autoaugment=False,
+                    train_fraction=1.0,
+                    seed=run_config.seed,
+                )
+                best_checkpoint = run_config.output_dir / "best.pt"
+                if best_checkpoint.exists():
+                    state = torch.load(best_checkpoint, map_location=device)
+                    model.load_state_dict(state["model_state_dict"])
+                evaluated = evaluate(
+                    model=model,
+                    dataloader=test_loader,
+                    criterion=torch.nn.CrossEntropyLoss(),
+                    device=device,
+                    progress_desc="test",
+                    verbose=not args.quiet,
+                )
+                test_loss = evaluated.loss
+                test_accuracy = evaluated.accuracy
+                dump_json(
+                    test_metrics_path,
+                    {"test_loss": test_loss, "test_accuracy": test_accuracy},
+                )
             if not args.quiet:
                 run_progress.set_postfix(
                     {
@@ -102,6 +142,8 @@ def main() -> None:
                     "weight_decay": run_config.weight_decay,
                     "best_val_accuracy": metrics.get("best_val_accuracy", 0.0),
                     "best_val_loss": metrics.get("best_val_loss", float("inf")),
+                    "test_accuracy": test_accuracy,
+                    "test_loss": test_loss,
                 }
             )
             continue
@@ -118,6 +160,15 @@ def main() -> None:
         val_loader = create_dataloader(
             data_root=run_config.data_root,
             split="validate",
+            batch_size=run_config.batch_size,
+            num_workers=run_config.num_workers,
+            use_autoaugment=False,
+            train_fraction=1.0,
+            seed=run_config.seed,
+        )
+        test_loader = create_dataloader(
+            data_root=run_config.data_root,
+            split="test",
             batch_size=run_config.batch_size,
             num_workers=run_config.num_workers,
             use_autoaugment=False,
@@ -145,6 +196,26 @@ def main() -> None:
             resume=args.resume,
             verbose=not args.quiet,
         )
+        best_checkpoint = run_config.output_dir / "best.pt"
+        if best_checkpoint.exists():
+            state = torch.load(best_checkpoint, map_location=device)
+            model.load_state_dict(state["model_state_dict"])
+
+        test_metrics = evaluate(
+            model=model,
+            dataloader=test_loader,
+            criterion=torch.nn.CrossEntropyLoss(),
+            device=device,
+            progress_desc="test",
+            verbose=not args.quiet,
+        )
+        dump_json(
+            run_config.output_dir / "test_metrics.json",
+            {
+                "test_loss": test_metrics.loss,
+                "test_accuracy": test_metrics.accuracy,
+            },
+        )
         if not args.quiet:
             run_progress.set_postfix(
                 {
@@ -163,6 +234,8 @@ def main() -> None:
                 "weight_decay": run_config.weight_decay,
                 "best_val_accuracy": metrics["best_val_accuracy"],
                 "best_val_loss": metrics["best_val_loss"],
+                "test_accuracy": test_metrics.accuracy,
+                "test_loss": test_metrics.loss,
             }
         )
 

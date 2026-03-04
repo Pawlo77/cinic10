@@ -186,6 +186,8 @@ def _prototypical_logits(
     ways: int,
 ) -> torch.Tensor:
     """Compute logits as negative distances to class prototypes.
+    Class prototypes are computed as mean of support embeddings per class,
+    and logits are negative L2 distances from query embeddings to prototypes.
 
     Args:
         support_embeddings: Support embeddings.
@@ -361,6 +363,7 @@ def train_protonet(
 
     train_set = datasets.ImageFolder(root=str(data_root / "train"), transform=_transform())
     val_set = datasets.ImageFolder(root=str(data_root / "validate"), transform=_transform())
+    test_set = datasets.ImageFolder(root=str(data_root / "test"), transform=_transform())
 
     model = PrototypicalNetwork(embedding_dim=config.embedding_dim).to(device)
     optimizer = Adam(model.parameters(), lr=config.learning_rate)
@@ -487,7 +490,14 @@ def train_protonet(
             logger.warning("few-shot training interrupted at episode %d", last_completed_episode)
             raise
 
-    metrics = {"best_val_accuracy": best_val}
+    if best_checkpoint_path.exists():
+        best_state = torch.load(best_checkpoint_path, map_location=device)
+        model.load_state_dict(best_state["model_state_dict"])
+
+    test_rng = np.random.default_rng(config.seed + 30_000)
+    test_accuracy = _evaluate(model, test_set, config, device, test_rng)
+
+    metrics = {"best_val_accuracy": best_val, "test_accuracy": test_accuracy}
     dump_json(config.output_dir / "fewshot_metrics.json", metrics)
     if episode_resource_stats:
         dump_json(
