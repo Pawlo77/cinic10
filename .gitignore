@@ -1,3 +1,9 @@
+data/
+
+report/report-blx.bib
+report/report.bbl
+report/report.synctex.gz
+
 .DS_Store
 
 uv.lock
@@ -194,6 +200,11 @@ cython_debug/
 
 # Ruff stuff:
 .ruff_cache/
+
+# Experiment artifacts
+*.ckpt
+best.pt
+protonet.pt
 
 # PyPI configuration file
 .pypirc
