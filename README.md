@@ -57,6 +57,7 @@ make nas-two-stage-resume
 **Few-Shot Learning:**
 ```bash
 make fewshot            # Prototypical Network
+```
 See [EXPERIMENT_PLAN.md](./EXPERIMENT_PLAN.md) for the complete multi-stage, multi-seed execution order:
 
 1. **Hyperparameter grid** on MobileNetV3 Small (per seed)
