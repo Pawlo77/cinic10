@@ -21,6 +21,15 @@ ArchitectureName = Literal[
 OptimizerName = Literal["sgd", "adamw"]
 """Identifier for optimizer type."""
 
+AugmentationMode = Literal[
+    "none",
+    "standard",
+    "standard_mixup",
+    "standard_cutmix",
+    "autoaugment",
+]
+"""Identifier for supervised augmentation strategy."""
+
 
 @dataclass(frozen=True, slots=True)
 class TrainingConfig:
@@ -39,9 +48,7 @@ class TrainingConfig:
         weight_decay: Weight decay regularization coefficient.
         dropout: Dropout probability for custom heads.
         num_workers: Number of dataloader workers.
-        use_autoaugment: Whether to use CIFAR-10 AutoAugment policy.
-        use_mixup: Whether to enable MixUp.
-        use_cutmix: Whether to enable CutMix.
+        augmentation: Data augmentation strategy.
         mix_alpha: Alpha parameter for Beta distribution used in MixUp/CutMix.
         pretrained: Whether to initialize torchvision models with pretrained weights.
         train_fraction: Fraction of train split to use, e.g. 0.05 for reduction analysis.
@@ -66,9 +73,7 @@ class TrainingConfig:
     weight_decay: float = 1e-4
     dropout: float = 0.1
     num_workers: int = 4
-    use_autoaugment: bool = True
-    use_mixup: bool = True
-    use_cutmix: bool = False
+    augmentation: AugmentationMode = "standard"
     mix_alpha: float = 1.0
     pretrained: bool = True
     train_fraction: float = 1.0

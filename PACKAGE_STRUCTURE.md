@@ -25,7 +25,6 @@ src/cinic10/                       # main package root
     __init__.py                    # training package exports
     engine.py                      # train/eval loops, progress bars, checkpoints, telemetry
     optimizer.py                   # optimizer and scheduler builders
-    mixing.py                      # MixUp/CutMix augmentation utilities
   fewshot/                         # episodic few-shot stack
     __init__.py                    # few-shot package exports
     protonet.py                    # Prototypical Network training/evaluation + telemetry

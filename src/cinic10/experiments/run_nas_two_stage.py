@@ -4,10 +4,11 @@ import argparse
 import json
 import logging
 from pathlib import Path
+from typing import get_args
 
 import torch
 
-from cinic10.config import TrainingConfig
+from cinic10.config import AugmentationMode, TrainingConfig
 from cinic10.data import create_dataloader, resolve_data_root
 from cinic10.models.nas_cnn import DiscreteNasCnn
 from cinic10.training.engine import evaluate, fit
@@ -34,8 +35,13 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--dropout", type=float, default=0.1)
     parser.add_argument("--device", type=str, default="cpu")
     parser.add_argument("--pretrained", action="store_true")
-    parser.add_argument("--mixup", action="store_true")
-    parser.add_argument("--cutmix", action="store_true")
+    augmentation_choices = tuple(get_args(AugmentationMode))
+    parser.add_argument(
+        "--augmentation",
+        type=str,
+        default="standard",
+        choices=augmentation_choices,
+    )
     parser.add_argument("--mix-alpha", type=float, default=1.0)
     parser.add_argument("--checkpoint-interval", type=int, default=1)
     parser.add_argument("--nas-entropy-weight", type=float, default=1e-3)
@@ -91,27 +97,33 @@ def main() -> None:
         split="train",
         batch_size=args.batch_size,
         num_workers=args.num_workers,
-        use_autoaugment=True,
+        augmentation=args.augmentation,
         train_fraction=1.0,
         seed=args.seed,
+        mix_alpha=args.mix_alpha,
+        num_classes=10,
     )
     val_loader = create_dataloader(
         data_root=data_root,
         split="validate",
         batch_size=args.batch_size,
         num_workers=args.num_workers,
-        use_autoaugment=False,
+        augmentation="none",
         train_fraction=1.0,
         seed=args.seed,
+        mix_alpha=args.mix_alpha,
+        num_classes=10,
     )
     test_loader = create_dataloader(
         data_root=data_root,
         split="test",
         batch_size=args.batch_size,
         num_workers=args.num_workers,
-        use_autoaugment=False,
+        augmentation="none",
         train_fraction=1.0,
         seed=args.seed,
+        mix_alpha=args.mix_alpha,
+        num_classes=10,
     )
 
     search_config = TrainingConfig(
@@ -127,8 +139,7 @@ def main() -> None:
         arch_weight_decay=args.arch_weight_decay,
         dropout=args.dropout,
         num_workers=args.num_workers,
-        use_mixup=args.mixup,
-        use_cutmix=args.cutmix,
+        augmentation=args.augmentation,
         mix_alpha=args.mix_alpha,
         pretrained=args.pretrained,
         checkpoint_interval=args.checkpoint_interval,
@@ -177,8 +188,7 @@ def main() -> None:
         weight_decay=args.weight_decay,
         dropout=args.dropout,
         num_workers=args.num_workers,
-        use_mixup=args.mixup,
-        use_cutmix=args.cutmix,
+        augmentation=args.augmentation,
         mix_alpha=args.mix_alpha,
         pretrained=args.pretrained,
         checkpoint_interval=args.checkpoint_interval,

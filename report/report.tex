@@ -30,7 +30,16 @@ Our goals are threefold: (i) compare efficient and high-capacity architectures u
 
 \section{Methodology}
 \subsection{Dataset}
-CINIC-10 \cite{cinic} contains $270{,}000$ RGB images at $32 \times 32$ resolution and $10$ balanced classes \cite{cinic}. Data is organized into train, validation, and test splits of $90{,}000$ samples each. The inclusion of ImageNet-derived examples increases intra-class variation relative to CIFAR-10 and makes generalization analysis more informative \cite{cinic}.
+CINIC-10 \cite{cinic} contains $270{,}000$ RGB images at $32 \times 32$ resolution and $10$ balanced classes \cite{cinic}. samples from the dataset are illustrated in Figure \ref{fig:sample_img}. Data is organized into train, validation, and test splits of $90{,}000$ samples each. The inclusion of ImageNet-derived examples increases intra-class variation relative to CIFAR-10 and makes generalization analysis more informative \cite{cinic}. For the purpose of these experiments, the dataset was sourced from the \texttt{mengcius/cinic10} repository via the Kaggle API, ensuring a standardized pipeline for data loading and preprocessing.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{../src/cinic10/eda/plots/sample_images.png}
+    \caption{Example images from CINIC-10 for four classes.}
+    \label{fig:sample_img}
+\end{figure}
+
+
 
 \subsection{Model families}
 We evaluate three groups:
@@ -75,9 +84,23 @@ The training pipeline includes geometric and photometric transforms and mixing-b
 \begin{itemize}
     \item random rotation and color jitter,
     \item MixUp \cite{zhang2018mixupempiricalriskminimization}: two samples $(x_i, y_i)$ and $(x_j, y_j)$ are linearly combined as $\tilde{x}=\lambda x_i+(1-\lambda)x_j$ and $\tilde{y}=\lambda y_i+(1-\lambda)y_j$, where the interpolation weight $\lambda \in [0, 1]$ is sampled from a Beta distribution, $\lambda \sim \text{Beta}(\alpha, \alpha)$. This continuous mixing smooths decision boundaries and reduces overconfident predictions. For our experiments, we set $\alpha=0.1$ as it is a pytorch-default;
-    \item CutMix \cite{Yun_2019_ICCV_cutmix}: a rectangular patch from one image replaces the corresponding region in another image. The bounding box is determined by a combination ratio $\lambda$ (sampled from a Beta distribution identically to MixUp), with its center uniformly sampled across the spatial dimensions and its width and height scaled proportionally to $\sqrt{1-\lambda}$. Labels are mixed by the exact visible area ratio, encouraging localized evidence use and improving robustness to occlusion;
-    \item AutoAugment (CIFAR-10 policy) \cite{Cubuk_2019_CVPR}: an augmentation schedule originally discovered via reinforcement learning. For each training sample, one sub-policy is uniformly sampled from a pool of $25$ learned policies. Each sub-policy sequentially applies two operations (ranging from geometric transformations like shearing to photometric ones like solarization or color inversion), each with a fixed, optimized probability and magnitude. This automated diversification prevents overfitting more effectively than static, hand-crafted heuristics;
+    \item CutMix \cite{Yun_2019_ICCV_cutmix}: a rectangular patch from one image replaces the corresponding region in another image. The bounding box is determined by a combination ratio $\lambda$ (sampled from a Beta distribution identically to MixUp), with its center uniformly sampled across the spatial dimensions and its width and height scaled proportionally to $\sqrt{1-\lambda}$. Labels are mixed by the exact visible area ratio, encouraging localized evidence use and improving robustness to occlusion. Examples of MixUp and CutMix is shown on the figure \ref{fig:aug_mixing};
+    \item AutoAugment (CIFAR-10 policy) \cite{Cubuk_2019_CVPR}: an augmentation schedule originally discovered via reinforcement learning. For each training sample, one sub-policy is uniformly sampled from a pool of $25$ learned policies. Each sub-policy sequentially applies two operations (ranging from geometric transformations like shearing to photometric ones like solarization or color inversion), each with a fixed, optimized probability and magnitude. This automated diversification prevents overfitting more effectively than static, hand-crafted heuristics. Comparison between chosen basic transform methods and AutoAugment is shown on the figure \ref{fig:basic_aug};
 \end{itemize}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{../src/cinic10/eda/plots/augmentation_sample.png}
+    \caption{Showcase of basic augmentation methods and autoaugment.}
+    \label{fig:basic_aug}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{../src/cinic10/eda/plots/mixing_methods.png}
+    \caption{Showcase of mixing methods.}
+    \label{fig:aug_mixing}
+\end{figure}
 
 \subsection{Low-data evaluation}
 Two complementary low-resource protocols are used:

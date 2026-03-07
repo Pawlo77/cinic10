@@ -3,6 +3,7 @@
 import logging
 import os
 import random
+from collections.abc import Callable
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Literal
@@ -10,8 +11,11 @@ from typing import Literal
 import kagglehub
 import numpy as np
 import torch
-from torch.utils.data import DataLoader, Dataset, Subset
+from torch.utils.data import DataLoader, Dataset, Subset, default_collate
 from torchvision import datasets, transforms
+from torchvision.transforms import v2
+
+from cinic10.config import AugmentationMode
 
 logger = logging.getLogger(__name__)
 
@@ -210,26 +214,42 @@ def _resolve_split_path(data_root: Path, split: SplitName) -> Path:
     )
 
 
-def build_transforms(train: bool, use_autoaugment: bool) -> transforms.Compose:
+def build_transforms(train: bool, augmentation: AugmentationMode) -> transforms.Compose:
     """Create input transform pipeline.
 
     Args:
         train: Whether transform is for train split.
-        use_autoaugment: Whether to apply CIFAR10 AutoAugment policy.
+        augmentation: Augmentation strategy for the train split.
 
     Returns:
         Composed transform pipeline.
     """
     if train:
-        train_ops: list[object] = [
-            transforms.RandomRotation(degrees=15),
-            transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2, hue=0.05),
-            transforms.RandomHorizontalFlip(p=0.5),
-        ]
-        if use_autoaugment:
+        if augmentation == "none":
+            return transforms.Compose([transforms.ToTensor(), _normalize()])
+
+        if augmentation in {"standard", "standard_mixup", "standard_cutmix"}:
+            train_ops: list[object] = [
+                transforms.RandomRotation(degrees=15),
+                transforms.ColorJitter(
+                    brightness=0.2,
+                    contrast=0.2,
+                    saturation=0.2,
+                    hue=0.05,
+                ),
+                transforms.RandomHorizontalFlip(p=0.5),
+                transforms.ToTensor(),
+                _normalize(),
+            ]
+            return transforms.Compose(train_ops)
+
+        if augmentation == "autoaugment":
+            train_ops = []
             train_ops.append(transforms.AutoAugment(policy=transforms.AutoAugmentPolicy.CIFAR10))
-        train_ops.extend([transforms.ToTensor(), _normalize()])
-        return transforms.Compose(train_ops)
+            train_ops.extend([transforms.ToTensor(), _normalize()])
+            return transforms.Compose(train_ops)
+
+        raise ValueError(f"Unsupported augmentation mode: {augmentation}")
 
     return transforms.Compose([transforms.ToTensor(), _normalize()])
 
@@ -304,14 +324,50 @@ def _seed_worker(worker_id: int) -> None:
     np.random.seed(worker_seed)
 
 
+def _build_train_collate(
+    augmentation: AugmentationMode,
+    num_classes: int,
+    mix_alpha: float,
+) -> Callable | None:
+    """Build optional batch-level mixing collate function for train loader.
+
+    Args:
+        augmentation: Augmentation strategy.
+        num_classes: Number of classes for one-hot targets.
+        mix_alpha: Beta(alpha, alpha) parameter used by MixUp/CutMix.
+
+    Returns:
+        Collate function applying torchvision v2 MixUp/CutMix, or None.
+    """
+    batch_transform: Callable | None = None
+    if augmentation == "standard_mixup":
+        batch_transform = v2.MixUp(alpha=mix_alpha, num_classes=num_classes)
+    elif augmentation == "standard_cutmix":
+        batch_transform = v2.CutMix(alpha=mix_alpha, num_classes=num_classes)
+
+    if batch_transform is None:
+        return None
+
+    def _collate_with_batch_transform(
+        batch: list[tuple[torch.Tensor, int]],
+    ) -> tuple[torch.Tensor, torch.Tensor]:
+        images, labels = default_collate(batch)
+        mixed_images, mixed_labels = batch_transform(images, labels)
+        return mixed_images, mixed_labels
+
+    return _collate_with_batch_transform
+
+
 def create_dataloader(
     data_root: Path,
     split: SplitName,
     batch_size: int,
     num_workers: int,
-    use_autoaugment: bool,
+    augmentation: AugmentationMode,
     train_fraction: float,
     seed: int,
+    mix_alpha: float = 1.0,
+    num_classes: int = 10,
 ) -> DataLoader[tuple[torch.Tensor, torch.Tensor]]:
     """Build one CINIC-10 dataloader.
 
@@ -320,9 +376,11 @@ def create_dataloader(
         split: Dataset split name.
         batch_size: Batch size.
         num_workers: Number of workers.
-        use_autoaugment: Use autoaugment on train split.
+        augmentation: Augmentation strategy used for train split.
         train_fraction: Fraction of train data for reduction experiments.
         seed: Random seed.
+        mix_alpha: Beta(alpha, alpha) parameter for MixUp/CutMix.
+        num_classes: Number of classes used by batch mixing transforms.
 
     Returns:
         Configured dataloader.
@@ -332,7 +390,7 @@ def create_dataloader(
     split_path = _resolve_split_path(resolved_data_root, split)
     dataset = datasets.ImageFolder(
         root=str(split_path),
-        transform=build_transforms(train=is_train, use_autoaugment=use_autoaugment),
+        transform=build_transforms(train=is_train, augmentation=augmentation),
     )
     materialized: Dataset[tuple[torch.Tensor, int]]
     if is_train:
@@ -347,6 +405,15 @@ def create_dataloader(
     split_seed = seed + {"train": 0, "validate": 10_000, "test": 20_000}[split]
     generator = torch.Generator()
     generator.manual_seed(split_seed)
+    collate_fn = (
+        _build_train_collate(
+            augmentation=augmentation,
+            num_classes=num_classes,
+            mix_alpha=mix_alpha,
+        )
+        if is_train
+        else None
+    )
 
     return DataLoader(
         materialized,
@@ -357,4 +424,5 @@ def create_dataloader(
         persistent_workers=num_workers > 0,
         generator=generator,
         worker_init_fn=_seed_worker,
+        collate_fn=collate_fn,
     )

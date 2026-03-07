@@ -85,15 +85,16 @@ Review `outputs/01_grid_mobilenet/seed_*/grid_results.csv` and set `BEST_*` valu
 
 ## 2) Augmentation ablation on MobileNetV3 Small
 
-Run all four variants per seed:
+Run all five variants per seed:
 
 ```bash
-run_seeded_train outputs/02_aug/mobilenet_none_geom_photo mobilenet_v3_small "--no-autoaugment"
+run_seeded_train outputs/02_aug/mobilenet_none mobilenet_v3_small "--augmentation none"
+run_seeded_train outputs/02_aug/mobilenet_standard mobilenet_v3_small "--augmentation standard"
 for SEED in $SEEDS; do
-  make train-mixup DATA_ROOT=$DATA_ROOT OUTPUT_DIR=outputs/02_aug/mobilenet_mixup_geom_photo/seed_${SEED} DEVICE=$DEVICE ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS=$BEST_EPOCHS SEED=$SEED EXTRA_ARGS="--no-autoaugment"
-  make train-cutmix DATA_ROOT=$DATA_ROOT OUTPUT_DIR=outputs/02_aug/mobilenet_cutmix_geom_photo/seed_${SEED} DEVICE=$DEVICE ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS=$BEST_EPOCHS SEED=$SEED EXTRA_ARGS="--no-autoaugment"
+  make train-mixup DATA_ROOT=$DATA_ROOT OUTPUT_DIR=outputs/02_aug/mobilenet_standard_mixup/seed_${SEED} DEVICE=$DEVICE ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS=$BEST_EPOCHS SEED=$SEED
+  make train-cutmix DATA_ROOT=$DATA_ROOT OUTPUT_DIR=outputs/02_aug/mobilenet_standard_cutmix/seed_${SEED} DEVICE=$DEVICE ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS=$BEST_EPOCHS SEED=$SEED
 done
-run_seeded_train outputs/02_aug/mobilenet_autoaugment mobilenet_v3_small ""
+run_seeded_train outputs/02_aug/mobilenet_autoaugment mobilenet_v3_small "--augmentation autoaugment"
 ```
 
 Pick best augmentation and set `BEST_AUG_EXTRA_ARGS`.

@@ -13,8 +13,7 @@ from torch.optim import Optimizer
 from torch.utils.data import DataLoader
 from tqdm.auto import tqdm
 
-from cinic10.config import TrainingConfig
-from cinic10.training.mixing import BatchMixer, mixed_loss
+from cinic10.config import AugmentationMode, TrainingConfig
 from cinic10.utils import (
     atomic_torch_save,
     cpu_time_seconds,
@@ -42,12 +41,6 @@ class EpochMetrics:
 
     loss: float
     accuracy: float
-
-
-def _accuracy(logits: torch.Tensor, labels: torch.Tensor) -> float:
-    """Compute batch accuracy."""
-    preds = logits.argmax(dim=1)
-    return float((preds == labels).float().mean().item())
 
 
 def evaluate(
@@ -87,9 +80,11 @@ def evaluate(
             logits = model(images)
             loss = criterion(logits, labels)
 
-            batch_size = labels.size(0)
+            # Handle both hard labels (1D) and soft labels (2D from MixUp/CutMix)
+            labels_for_accuracy = labels.argmax(dim=1) if labels.ndim > 1 else labels
+            batch_size = labels_for_accuracy.size(0)
             total_loss += float(loss.item()) * batch_size
-            total_correct += int((logits.argmax(dim=1) == labels).sum().item())
+            total_correct += int((logits.argmax(dim=1) == labels_for_accuracy).sum().item())
             total_examples += batch_size
 
     return EpochMetrics(
@@ -104,9 +99,7 @@ def train_one_epoch(
     criterion: nn.Module,
     optimizer: Optimizer,
     device: torch.device,
-    mixer: BatchMixer | None,
-    use_mixup: bool,
-    use_cutmix: bool,
+    augmentation: AugmentationMode,
     nas_entropy_weight: float,
     verbose: bool = True,
     architecture_optimizer: Optimizer | None = None,
@@ -120,9 +113,7 @@ def train_one_epoch(
         criterion: Loss function.
         optimizer: Optimizer.
         device: Computation device.
-        mixer: Optional batch mixer.
-        use_mixup: Whether to apply MixUp.
-        use_cutmix: Whether to apply CutMix.
+        augmentation: Active augmentation strategy.
         nas_entropy_weight: Coefficient for architecture entropy regularization.
         architecture_optimizer: Optional optimizer for NAS architecture parameters.
         architecture_dataloader: Optional validation loader for bilevel NAS updates.
@@ -132,11 +123,9 @@ def train_one_epoch(
     """
     model.train()
     logger.debug(
-        "train_one_epoch: model=%s mixer=%s use_mixup=%s use_cutmix=%s",
+        "train_one_epoch: model=%s augmentation=%s",
         model.__class__.__name__,
-        mixer is not None,
-        use_mixup,
-        use_cutmix,
+        augmentation,
     )
     total_loss = 0.0
     total_correct = 0
@@ -176,16 +165,8 @@ def train_one_epoch(
 
         optimizer.zero_grad(set_to_none=True)
 
-        if mixer is not None and (use_mixup or use_cutmix):
-            if use_cutmix:
-                mixed_images, labels_a, labels_b, lam = mixer.cutmix(images, labels)
-            else:
-                mixed_images, labels_a, labels_b, lam = mixer.mixup(images, labels)
-            logits = model(mixed_images)
-            loss = mixed_loss(logits, labels_a, labels_b, lam, criterion)
-        else:
-            logits = model(images)
-            loss = criterion(logits, labels)
+        logits = model(images)
+        loss = criterion(logits, labels)
 
         if nas_entropy_weight > 0.0 and hasattr(model, "architecture_entropy_loss"):
             entropy_loss = model.architecture_entropy_loss()
@@ -197,9 +178,10 @@ def train_one_epoch(
             parameter.grad = None
         optimizer.step()
 
-        batch_size = labels.size(0)
+        labels_for_accuracy = labels.argmax(dim=1) if labels.ndim > 1 else labels
+        batch_size = labels_for_accuracy.size(0)
         total_loss += float(loss.item()) * batch_size
-        total_correct += int((logits.argmax(dim=1) == labels).sum().item())
+        total_correct += int((logits.argmax(dim=1) == labels_for_accuracy).sum().item())
         total_examples += batch_size
 
     return EpochMetrics(
@@ -342,8 +324,10 @@ def fit(
     logger.info(
         "fit: starting run output=%s epochs=%d device=%s", config.output_dir, config.epochs, device
     )
-    criterion = nn.CrossEntropyLoss()
-    mixer = BatchMixer(config.mix_alpha) if (config.use_mixup or config.use_cutmix) else None
+    # CrossEntropyLoss with reduction='mean' handles both hard labels (integers)
+    # and soft labels (probability distributions from MixUp/CutMix).
+    # With soft targets (2D), it computes KL divergence: -sum(target * log(softmax(input)))
+    criterion = nn.CrossEntropyLoss(reduction="mean")
     last_checkpoint_path = config.output_dir / "last.ckpt"
     best_checkpoint_path = config.output_dir / "best.pt"
 
@@ -417,9 +401,7 @@ def fit(
                 criterion=criterion,
                 optimizer=optimizer,
                 device=device,
-                mixer=mixer,
-                use_mixup=config.use_mixup,
-                use_cutmix=config.use_cutmix,
+                augmentation=config.augmentation,
                 nas_entropy_weight=config.nas_entropy_weight,
                 verbose=verbose,
                 architecture_optimizer=architecture_optimizer,

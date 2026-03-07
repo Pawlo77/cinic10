@@ -2,10 +2,20 @@
 
 Framework for CINIC-10 supervised and few-shot experiments with reproducible runs, resumable checkpoints, and per-epoch resource telemetry.
 
+## Features
+
+- **Multiple architectures**: MobileNetV3 Small, SqueezeNet, ResNet18, DenseNet121, ConvKAN variants, NAS-derived CNN
+- **Augmentation strategies**: None, Standard, MixUp, CutMix, AutoAugment
+- **Few-shot learning**: Prototypical Networks with episodic training
+- **Hyperparameter grid search**: Automated 24-run grid on MobileNetV3
+- **Two-stage NAS**: Architecture search followed by discrete retraining
+- **Resource telemetry**: Per-epoch/episode wall time, CPU time, and memory tracking
+- **Resumable checkpoints**: All experiments support interruption and resume
+
 ## Docs
 
-- [EXPERIMENT_PLAN.md](./EXPERIMENT_PLAN.md)
-- [PACKAGE_STRUCTURE.md](./PACKAGE_STRUCTURE.md)
+- [EXPERIMENT_PLAN.md](./EXPERIMENT_PLAN.md) — Stage-by-stage workflow with seed loops
+- [PACKAGE_STRUCTURE.md](./PACKAGE_STRUCTURE.md) — Python package layout and runtime flow
 
 ## Quick Start
 
@@ -14,47 +24,80 @@ make install
 make help
 ```
 
-Set environment once:
+Set environment in `.env` file (home directory or workspace root). Variables configurable via Makefile (see top of file):
 
 ```bash
-export DATA_ROOT=/path/to/cinic10
-export DEVICE=mps
-```
-
-If `DATA_ROOT` is missing, auto-download from Kaggle is used. To disable auto-download:
-
-```bash
-export CINIC10_AUTO_DOWNLOAD=0
+DATA_ROOT=/path/to/cinic10
+DEVICE=mps              # or cuda, cpu
+SEEDS="0 42 3407"       # for multi-seed experiments
 ```
 
 ## Core Commands
 
-Their descriptions and hyperparameter options are in `EXPERIMENT_PLAN.md`. Refer to `make help` for usage.
+Refer to `make help` for full descriptions. All targets accept variable overrides.
 
+**Supervised Training:**
 ```bash
-make train
-make train-mixup
-make train-cutmix
-make train-reduced
-make grid
-make grid-resume
-make nas-two-stage
+make train              # Standard augmentation
+make train-no-aug       # No augmentation
+make train-mixup        # Standard + MixUp
+make train-cutmix       # Standard + CutMix
+make train-autoaugment  # AutoAugment
+make train-reduced      # Reduced training data
+```
+
+**Grid & NAS:**
+```bash
+make grid               # 24-run hyperparameter grid (MobileNetV3)
+make grid-resume        # Resume/skip completed grid runs
+make nas-two-stage      # Two-stage architecture search
 make nas-two-stage-resume
-make fewshot
-make fewshot-resume
 ```
 
-All targets accept overrides (example):
-
+**Few-Shot Learning:**
 ```bash
-make train DATA_ROOT=data OUTPUT_DIR=outputs/run1 ARCH=resnet18 SEED=42 DEVICE=cpu
+make fewshot            # Prototypical Network
+See [EXPERIMENT_PLAN.md](./EXPERIMENT_PLAN.md) for the complete multi-stage, multi-seed execution order:
+
+1. **Hyperparameter grid** on MobileNetV3 Small (per seed)
+2. **Augmentation ablation** (5 variants per seed)
+3. **Architecture comparison** with best hyperparameters
+4. **Final evaluation** with data reduction and few-shot learning
+
+## Output Artifacts
+
+**Per-run:**
+- `metrics.json` — Training/validation metrics
+- `test_metrics.json` — Final test set evaluation
+- `epoch_resource_stats.json` — Per-epoch wall/CPU time and memory
+- `last.ckpt` — Resumable checkpoint (optimizer + RNG state)
+- `model.safetensors` — Final weights (optimized format)
+
+**Grid search:**
+- `grid_results.csv`, `grid_results.json` — All 24 runs with hyperparameters
+
+**NAS:**
+- `architecture.json` — Searched architecture definition
+- `two_stage_summary.json` — Search and retrain metrics
+
+**Few-shot:**
+- `fewshot_metrics.json` — Episode-averaged accuracy
+- `fewshot_episode_resource_stats.json` — Per-episode resource usage
+
+## Package Structure
+
+```
+src/cinic10/
+  config.py          # Typed configs and grid builder
+  data.py            # Dataloaders and transforms
+  utils.py           # Telemetry and checkpoint helpers
+  experiments/       # CLI entrypoints (run_train, run_grid_search, run_fewshot, run_nas_two_stage)
+  models/            # Architecture factory, NAS CNN, ConvKAN layers
+  training/          # Supervised engine, optimizer builders
+  fewshot/           # Prototypical Network episodic training
 ```
 
-## Experiment Workflow
-
-Full, seed-aware execution order is documented in [EXPERIMENT_PLAN.md](./EXPERIMENT_PLAN.md).
-
-## Artifacts
+See [PACKAGE_STRUCTURE.md](./PACKAGE_STRUCTURE.md) for detailed layout and runtime flow
 
 - `metrics.json`, `test_metrics.json`
 - `epoch_resource_stats.json` (supervised per-epoch timing/memory)

@@ -1,3 +1,8 @@
+ifneq ("$(wildcard .env)","")
+    include .env
+    export
+endif
+
 UV ?= uv run
 PYTHONPATH ?= src
 DATA_ROOT ?= /path/to/cinic10
@@ -20,15 +25,17 @@ EPOCHS_SEARCH ?= 30
 EPOCHS_RETRAIN ?= 30
 EXTRA_ARGS ?=
 
-.PHONY: help install clean test train train-mixup train-cutmix train-reduced fewshot fewshot-resume grid grid-resume nas-two-stage nas-two-stage-resume
+.PHONY: help install clean test train train-no-aug train-mixup train-cutmix train-autoaugment train-reduced fewshot fewshot-resume grid grid-resume nas-two-stage nas-two-stage-resume
 
 help:
 	@echo "Available targets:"
 	@echo "  make install                - Install dependencies and hooks"
 	@echo "  make test                   - Run tests"
-	@echo "  make train                  - Supervised training"
+	@echo "  make train                  - Supervised training with standard augmentation"
+	@echo "  make train-no-aug           - Supervised training with no augmentation"
 	@echo "  make train-mixup            - Supervised training with MixUp"
 	@echo "  make train-cutmix           - Supervised training with CutMix"
+	@echo "  make train-autoaugment      - Supervised training with AutoAugment"
 	@echo "  make train-reduced          - Supervised training with reduced data"
 	@echo "  make fewshot                - Few-shot Prototypical Network"
 	@echo "  make fewshot-resume         - Resume few-shot training"
@@ -74,9 +81,24 @@ train:
 		--learning-rate $(LR) \
 		--train-fraction $(TRAIN_FRACTION) \
 		--seed $(SEED) \
-		--device $(DEVICE) $(EXTRA_ARGS)
+		--device $(DEVICE) \
+		--augmentation standard $(EXTRA_ARGS)
 
-# train with MixUp data augmentation
+# train with no image or batch-level augmentation
+train-no-aug:
+	PYTHONPATH=$(PYTHONPATH) $(UV) python -m cinic10.experiments.run_train \
+		--data-root $(DATA_ROOT) \
+		--output-dir $(OUTPUT_DIR) \
+		--architecture $(ARCH) \
+		--epochs $(EPOCHS) \
+		--batch-size $(BATCH_SIZE) \
+		--optimizer $(OPTIMIZER) \
+		--learning-rate $(LR) \
+		--seed $(SEED) \
+		--device $(DEVICE) $(EXTRA_ARGS) \
+		--augmentation none
+
+# train with standard + MixUp augmentation
 train-mixup:
 	PYTHONPATH=$(PYTHONPATH) $(UV) python -m cinic10.experiments.run_train \
 		--data-root $(DATA_ROOT) \
@@ -88,9 +110,9 @@ train-mixup:
 		--learning-rate $(LR) \
 		--seed $(SEED) \
 		--device $(DEVICE) $(EXTRA_ARGS) \
-		--mixup
+		--augmentation standard_mixup
 
-# train with CutMix data augmentation
+# train with standard + CutMix augmentation
 train-cutmix:
 	PYTHONPATH=$(PYTHONPATH) $(UV) python -m cinic10.experiments.run_train \
 		--data-root $(DATA_ROOT) \
@@ -102,7 +124,21 @@ train-cutmix:
 		--learning-rate $(LR) \
 		--seed $(SEED) \
 		--device $(DEVICE) $(EXTRA_ARGS) \
-		--cutmix
+		--augmentation standard_cutmix
+
+# train with AutoAugment image-level augmentation
+train-autoaugment:
+	PYTHONPATH=$(PYTHONPATH) $(UV) python -m cinic10.experiments.run_train \
+		--data-root $(DATA_ROOT) \
+		--output-dir $(OUTPUT_DIR) \
+		--architecture $(ARCH) \
+		--epochs $(EPOCHS) \
+		--batch-size $(BATCH_SIZE) \
+		--optimizer $(OPTIMIZER) \
+		--learning-rate $(LR) \
+		--seed $(SEED) \
+		--device $(DEVICE) $(EXTRA_ARGS) \
+		--augmentation autoaugment
 
 # train with reduced training data (train fraction < 1.0)
 train-reduced:

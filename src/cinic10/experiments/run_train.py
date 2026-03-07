@@ -7,7 +7,7 @@ from typing import get_args
 
 import torch
 
-from cinic10.config import ArchitectureName, TrainingConfig
+from cinic10.config import ArchitectureName, AugmentationMode, TrainingConfig
 from cinic10.data import create_dataloader, resolve_data_root
 from cinic10.models import create_model
 from cinic10.training.engine import evaluate, fit
@@ -42,9 +42,13 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--device", type=str, default="cpu")
     parser.add_argument("--pretrained", action="store_true")
     parser.add_argument("--train-fraction", type=float, default=1.0)
-    parser.add_argument("--no-autoaugment", action="store_true")
-    parser.add_argument("--mixup", action="store_true")
-    parser.add_argument("--cutmix", action="store_true")
+    augmentation_choices = tuple(get_args(AugmentationMode))
+    parser.add_argument(
+        "--augmentation",
+        type=str,
+        default="standard",
+        choices=augmentation_choices,
+    )
     parser.add_argument("--mix-alpha", type=float, default=1.0)
     parser.add_argument("--checkpoint-interval", type=int, default=1)
     parser.add_argument("--nas-entropy-weight", type=float, default=1e-3)
@@ -73,9 +77,7 @@ def main() -> None:
         arch_weight_decay=args.arch_weight_decay,
         dropout=args.dropout,
         num_workers=args.num_workers,
-        use_autoaugment=not args.no_autoaugment,
-        use_mixup=args.mixup,
-        use_cutmix=args.cutmix,
+        augmentation=args.augmentation,
         mix_alpha=args.mix_alpha,
         pretrained=args.pretrained,
         train_fraction=args.train_fraction,
@@ -103,27 +105,31 @@ def main() -> None:
         split="train",
         batch_size=config.batch_size,
         num_workers=config.num_workers,
-        use_autoaugment=config.use_autoaugment,
+        augmentation=config.augmentation,
         train_fraction=config.train_fraction,
         seed=config.seed,
+        mix_alpha=config.mix_alpha,
+        num_classes=10,
     )
     val_loader = create_dataloader(
         data_root=data_root,
         split="validate",
         batch_size=config.batch_size,
         num_workers=config.num_workers,
-        use_autoaugment=False,
-        train_fraction=1.0,
+        augmentation="none",
         seed=config.seed,
+        mix_alpha=config.mix_alpha,
+        num_classes=10,
     )
     test_loader = create_dataloader(
         data_root=data_root,
         split="test",
         batch_size=config.batch_size,
         num_workers=config.num_workers,
-        use_autoaugment=False,
-        train_fraction=1.0,
+        augmentation="none",
         seed=config.seed,
+        mix_alpha=config.mix_alpha,
+        num_classes=10,
     )
 
     model = create_model(

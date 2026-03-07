@@ -7,12 +7,13 @@ from dataclasses import replace
 from pathlib import Path
 
 import pandas as pd
+import torch
 from tqdm.auto import tqdm
 
 from cinic10.config import build_mobilenet_grid
 from cinic10.data import create_dataloader, resolve_data_root
 from cinic10.models import create_model
-from cinic10.training.engine import fit
+from cinic10.training.engine import evaluate, fit
 from cinic10.training.optimizer import create_optimizer, create_scheduler
 from cinic10.utils import dump_json, pick_device, set_seed
 
@@ -32,6 +33,9 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--force-rerun", action="store_true")
     parser.add_argument("--quiet", action="store_true")
+    parser.add_argument(
+        "--stop-after", type=int, default=None, help="Optional run_id to stop after (inclusive)"
+    )
     return parser.parse_args()
 
 
@@ -58,6 +62,8 @@ def main() -> None:
         disable=args.quiet,
     )
     for run_id, config in run_progress:
+        if args.stop_after is not None and run_id > args.stop_after:
+            break
         if not args.quiet:
             run_progress.set_postfix(
                 {
@@ -75,10 +81,8 @@ def main() -> None:
             num_workers=args.num_workers,
             device=args.device,
             checkpoint_interval=args.checkpoint_interval,
-            pretrained=True,
-            use_autoaugment=True,
-            use_mixup=True,
-            use_cutmix=False,
+            pretrained=False,
+            augmentation="none",
         )
 
         metrics_path = run_config.output_dir / "metrics.json"
@@ -111,18 +115,32 @@ def main() -> None:
             split="train",
             batch_size=run_config.batch_size,
             num_workers=run_config.num_workers,
-            use_autoaugment=run_config.use_autoaugment,
+            augmentation=run_config.augmentation,
             train_fraction=run_config.train_fraction,
             seed=run_config.seed,
+            mix_alpha=run_config.mix_alpha,
+            num_classes=10,
         )
         val_loader = create_dataloader(
             data_root=run_config.data_root,
             split="validate",
             batch_size=run_config.batch_size,
             num_workers=run_config.num_workers,
-            use_autoaugment=False,
-            train_fraction=1.0,
+            augmentation="none",
             seed=run_config.seed,
+            mix_alpha=run_config.mix_alpha,
+            num_classes=10,
+        )
+
+        test_loader = create_dataloader(
+            data_root=run_config.data_root,
+            split="test",
+            batch_size=run_config.batch_size,
+            num_workers=run_config.num_workers,
+            augmentation="none",
+            seed=run_config.seed,
+            mix_alpha=run_config.mix_alpha,
+            num_classes=10,
         )
 
         model = create_model(
@@ -153,6 +171,16 @@ def main() -> None:
                     "best_val_acc": f"{float(metrics['best_val_accuracy']):.4f}",
                 }
             )
+
+        test_metrics = evaluate(
+            model=model,
+            dataloader=test_loader,
+            criterion=torch.nn.CrossEntropyLoss(),
+            device=device,
+            progress_desc="test",
+            verbose=not args.quiet,
+        )
+
         rows.append(
             {
                 "run_id": run_id,
@@ -163,6 +191,8 @@ def main() -> None:
                 "weight_decay": run_config.weight_decay,
                 "best_val_accuracy": metrics["best_val_accuracy"],
                 "best_val_loss": metrics["best_val_loss"],
+                "test_accuracy": test_metrics.accuracy,
+                "test_loss": test_metrics.loss,
             }
         )
 
