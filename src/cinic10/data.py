@@ -364,8 +364,8 @@ def create_dataloader(
     batch_size: int,
     num_workers: int,
     augmentation: AugmentationMode,
-    train_fraction: float,
     seed: int,
+    train_fraction: float = 1.0,
     mix_alpha: float = 1.0,
     num_classes: int = 10,
 ) -> DataLoader[tuple[torch.Tensor, torch.Tensor]]:
@@ -377,8 +377,8 @@ def create_dataloader(
         batch_size: Batch size.
         num_workers: Number of workers.
         augmentation: Augmentation strategy used for train split.
-        train_fraction: Fraction of train data for reduction experiments.
         seed: Random seed.
+        train_fraction: Fraction of train data for reduction experiments.
         mix_alpha: Beta(alpha, alpha) parameter for MixUp/CutMix.
         num_classes: Number of classes used by batch mixing transforms.
 

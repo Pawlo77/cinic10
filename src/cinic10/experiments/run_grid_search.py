@@ -106,7 +106,6 @@ def main() -> None:
                     batch_size=run_config.batch_size,
                     num_workers=run_config.num_workers,
                     use_autoaugment=False,
-                    train_fraction=1.0,
                     seed=run_config.seed,
                 )
                 best_checkpoint = run_config.output_dir / "best.pt"

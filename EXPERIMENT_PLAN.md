@@ -35,11 +35,9 @@ run_seeded_train() {
   local OUT_PREFIX="$1"
   local ARCH_NAME="$2"
   local EXTRA="$3"
-  for SEED in $SEEDS; do
+  for SEED in ${=SEEDS}; do
     make train \
-      DATA_ROOT=$DATA_ROOT \
       OUTPUT_DIR=${OUT_PREFIX}/seed_${SEED} \
-      DEVICE=$DEVICE \
       ARCH=$ARCH_NAME \
       OPTIMIZER=$BEST_OPTIMIZER \
       BATCH_SIZE=$BEST_BATCH_SIZE \
@@ -58,11 +56,9 @@ run_seeded_train() {
 Run the per-seed grid (24 runs per seed):
 
 ```bash
-for SEED in $SEEDS; do
+for SEED in ${=SEEDS}; do
   make grid \
-    DATA_ROOT=$DATA_ROOT \
     OUTPUT_ROOT=outputs/01_grid_mobilenet/seed_${SEED} \
-    DEVICE=$DEVICE \
     SEED=$SEED
 done
 ```
@@ -70,11 +66,9 @@ done
 If interrupted:
 
 ```bash
-for SEED in $SEEDS; do
+for SEED in ${=SEEDS}; do
   make grid-resume \
-    DATA_ROOT=$DATA_ROOT \
     OUTPUT_ROOT=outputs/01_grid_mobilenet/seed_${SEED} \
-    DEVICE=$DEVICE \
     SEED=$SEED
 done
 ```
@@ -90,9 +84,9 @@ Run all five variants per seed:
 ```bash
 run_seeded_train outputs/02_aug/mobilenet_none mobilenet_v3_small "--augmentation none"
 run_seeded_train outputs/02_aug/mobilenet_standard mobilenet_v3_small "--augmentation standard"
-for SEED in $SEEDS; do
-  make train-mixup DATA_ROOT=$DATA_ROOT OUTPUT_DIR=outputs/02_aug/mobilenet_standard_mixup/seed_${SEED} DEVICE=$DEVICE ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS=$BEST_EPOCHS SEED=$SEED
-  make train-cutmix DATA_ROOT=$DATA_ROOT OUTPUT_DIR=outputs/02_aug/mobilenet_standard_cutmix/seed_${SEED} DEVICE=$DEVICE ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS=$BEST_EPOCHS SEED=$SEED
+for SEED in ${=SEEDS}; do
+  make train-mixup OUTPUT_DIR=outputs/02_aug/mobilenet_standard_mixup/seed_${SEED} ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS=$BEST_EPOCHS SEED=$SEED
+  make train-cutmix OUTPUT_DIR=outputs/02_aug/mobilenet_standard_cutmix/seed_${SEED} ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS=$BEST_EPOCHS SEED=$SEED
 done
 run_seeded_train outputs/02_aug/mobilenet_autoaugment mobilenet_v3_small "--augmentation autoaugment"
 ```
@@ -110,16 +104,16 @@ run_seeded_train outputs/03_models/densenet121_finetune densenet121 "--pretraine
 run_seeded_train outputs/03_models/convkan_mobilenet_v3_small convkan_mobilenet_v3_small "$BEST_AUG_EXTRA_ARGS"
 run_seeded_train outputs/03_models/convkan_squeezenet1_0 convkan_squeezenet1_0 "$BEST_AUG_EXTRA_ARGS"
 
-for SEED in $SEEDS; do
-  make nas-two-stage DATA_ROOT=$DATA_ROOT OUTPUT_ROOT=outputs/03_models/nas_two_stage/seed_${SEED} DEVICE=$DEVICE SEED=$SEED BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS_SEARCH=$BEST_EPOCHS EPOCHS_RETRAIN=$BEST_EPOCHS
+for SEED in ${=SEEDS}; do
+  make nas-two-stage OUTPUT_ROOT=outputs/03_models/nas_two_stage/seed_${SEED} SEED=$SEED BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS_SEARCH=$BEST_EPOCHS EPOCHS_RETRAIN=$BEST_EPOCHS
 done
 ```
 
 Resume NAS if needed:
 
 ```bash
-for SEED in $SEEDS; do
-  make nas-two-stage-resume DATA_ROOT=$DATA_ROOT OUTPUT_ROOT=outputs/03_models/nas_two_stage/seed_${SEED} DEVICE=$DEVICE SEED=$SEED BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS_SEARCH=$BEST_EPOCHS EPOCHS_RETRAIN=$BEST_EPOCHS
+for SEED in ${=SEEDS}; do
+  make nas-two-stage-resume OUTPUT_ROOT=outputs/03_models/nas_two_stage/seed_${SEED} SEED=$SEED BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS_SEARCH=$BEST_EPOCHS EPOCHS_RETRAIN=$BEST_EPOCHS
 done
 ```
 
@@ -128,17 +122,17 @@ done
 ## 4) Final stage with best model configuration
 
 ```bash
-for SEED in $SEEDS; do
-  make train-reduced DATA_ROOT=$DATA_ROOT OUTPUT_DIR=outputs/04_final/dataset_reduction_5pct/seed_${SEED} DEVICE=$DEVICE ARCH=$FINAL_ARCH OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS=$BEST_EPOCHS SEED=$SEED TRAIN_FRACTION=0.05 EXTRA_ARGS="$FINAL_AUG_EXTRA_ARGS"
-  make fewshot DATA_ROOT=$DATA_ROOT OUTPUT_DIR=outputs/04_final/fewshot_protonet/seed_${SEED} DEVICE=$DEVICE SEED=$SEED WAYS=5 SHOTS=5 QUERIES=15 EPISODES=2000 EVAL_EPISODES=400
+for SEED in ${=SEEDS}; do
+  make train-reduced OUTPUT_DIR=outputs/04_final/dataset_reduction_5pct/seed_${SEED} ARCH=$FINAL_ARCH OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS=$BEST_EPOCHS SEED=$SEED TRAIN_FRACTION=0.05 EXTRA_ARGS="$FINAL_AUG_EXTRA_ARGS"
+  make fewshot OUTPUT_DIR=outputs/04_final/fewshot_protonet/seed_${SEED} SEED=$SEED WAYS=5 SHOTS=5 QUERIES=15 EPISODES=2000 EVAL_EPISODES=400
 done
 ```
 
 Resume few-shot if needed:
 
 ```bash
-for SEED in $SEEDS; do
-  make fewshot-resume DATA_ROOT=$DATA_ROOT OUTPUT_DIR=outputs/04_final/fewshot_protonet/seed_${SEED} DEVICE=$DEVICE SEED=$SEED
+for SEED in ${=SEEDS}; do
+  make fewshot-resume OUTPUT_DIR=outputs/04_final/fewshot_protonet/seed_${SEED} SEED=$SEED
 done
 ```
 
