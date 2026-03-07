@@ -130,10 +130,14 @@ def train_one_epoch(
     total_loss = 0.0
     total_correct = 0
     total_examples = 0
+
+    # list of architecture parameters to exclude from optimizer step if using bilevel NAS
     architecture_params: list[torch.nn.Parameter] = []
     if hasattr(model, "architecture_parameters") and callable(model.architecture_parameters):
         architecture_params = [p for p in model.architecture_parameters() if p.requires_grad]
 
+    # iterator for architecture updates in bilevel NAS;
+    # if enabled, one val batch is used for architecture step per train batch
     architecture_iter: Any = None
     use_bilevel = architecture_optimizer is not None and architecture_dataloader is not None
     if use_bilevel:
@@ -143,37 +147,48 @@ def train_one_epoch(
         images = images.to(device)
         labels = labels.to(device)
 
+        # If using bilevel NAS, perform architecture update
+        # on a validation batch before each training step
         if use_bilevel and architecture_iter is not None:
             try:
                 val_images, val_labels = next(architecture_iter)
-            except StopIteration:
+            except StopIteration:  # reached end of architecture dataloader, restart for next epoch
                 architecture_iter = iter(architecture_dataloader)
                 val_images, val_labels = next(architecture_iter)
 
             val_images = val_images.to(device)
             val_labels = val_labels.to(device)
 
+            # clear architecture gradients before backward pass
             architecture_optimizer.zero_grad(set_to_none=True)
+
             val_logits = model(val_images)
             architecture_loss = criterion(val_logits, val_labels)
+
+            # Optionally add entropy regularization for NAS models to encourage exploration
             if nas_entropy_weight > 0.0 and hasattr(model, "architecture_entropy_loss"):
                 entropy_loss = model.architecture_entropy_loss()
                 if isinstance(entropy_loss, torch.Tensor):
                     architecture_loss = architecture_loss + nas_entropy_weight * entropy_loss
+
             architecture_loss.backward()
             architecture_optimizer.step()
 
+        # zero training gradients after architecture step to avoid interference
         optimizer.zero_grad(set_to_none=True)
 
         logits = model(images)
         loss = criterion(logits, labels)
 
+        # Optionally add entropy regularization for NAS models to encourage exploration
         if nas_entropy_weight > 0.0 and hasattr(model, "architecture_entropy_loss"):
             entropy_loss = model.architecture_entropy_loss()
             if isinstance(entropy_loss, torch.Tensor):
                 loss = loss + nas_entropy_weight * entropy_loss
 
         loss.backward()
+        # exclude architecture parameters
+        # from optimizer step if using bilevel NAS
         for parameter in architecture_params:
             parameter.grad = None
         optimizer.step()
@@ -370,6 +385,7 @@ def fit(
     last_completed_epoch = start_epoch - 1
 
     def _nas_temperature(epoch_idx: int) -> float:
+        """Compute NAS softmax temperature for given epoch index."""
         if config.epochs <= 1:
             return float(config.nas_temperature_end)
         progress = (epoch_idx - 1) / (config.epochs - 1)
@@ -392,6 +408,7 @@ def fit(
             epoch_cpu_start = cpu_time_seconds()
             memory_start = process_memory_snapshot()
 
+            # If model supports setting NAS temperature, update it for current epoch
             if hasattr(model, "set_arch_temperature"):
                 model.set_arch_temperature(_nas_temperature(epoch))
 
@@ -473,6 +490,8 @@ def fit(
                 )
                 logger.debug("Saved running checkpoint for epoch %d", epoch)
 
+            # If model has architecture diagnostics (e.g. for NAS),
+            # capture and persist them after each epoch
             if hasattr(model, "architecture_diagnostics") and callable(
                 model.architecture_diagnostics
             ):
@@ -503,6 +522,7 @@ def fit(
                     }
                 )
             last_completed_epoch = epoch
+
     except KeyboardInterrupt:
         _save_checkpoint(
             last_checkpoint_path,
@@ -539,6 +559,8 @@ def fit(
         "completed_epochs": float(config.epochs),
     }
 
+    # If model supports reporting selected architecture (e.g. for NAS),
+    # capture and persist it at the end of training
     if hasattr(model, "selected_architecture") and callable(model.selected_architecture):
         selected_ops = model.selected_architecture()
         selected_operation_names: list[str] = []
