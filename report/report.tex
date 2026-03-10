@@ -34,7 +34,7 @@ CINIC-10 \cite{cinic} contains $270{,}000$ RGB images at $32 \times 32$ resoluti
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{../src/cinic10/eda/plots/sample_images.png}
+    \includegraphics[width=\linewidth]{../notebooks/plots/sample_images.png}
     \caption{Example images from CINIC-10 for four classes.}
     \label{fig:sample_img}
 \end{figure}
@@ -90,14 +90,14 @@ The training pipeline includes geometric and photometric transforms and mixing-b
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{../src/cinic10/eda/plots/augmentation_sample.png}
+    \includegraphics[width=\linewidth]{../notebooks/plots/augmentation_sample.png}
     \caption{Showcase of basic augmentation methods and autoaugment.}
     \label{fig:basic_aug}
 \end{figure}
 
 \begin{figure}
     \centering
-    \includegraphics[width=\linewidth]{../src/cinic10/eda/plots/mixing_methods.png}
+    \includegraphics[width=\linewidth]{../notebooks/plots/mixing_methods.png}
     \caption{Showcase of mixing methods.}
     \label{fig:aug_mixing}
 \end{figure}
@@ -151,7 +151,7 @@ Primary metrics are classification accuracy and error rate on validation and tes
 \subsection{Reproducibility and compute reporting}
 All experiments are executed through a unified command interface with explicit seed control. We log per-epoch (or per-episode) wall-clock and CPU time and memory usage to support reproducibility and practical comparison of computational cost.
 
-Experiments are run on macOS with Apple Metal backend enabled through PyTorch MPS execution (\textit{Apple M4 16gb RAM MacBook Pro}). The software stack follows project-pinned requirements: Python $\geq 3.13$, PyTorch $\geq 2.8.0$ \cite{NEURIPS2019_9015}, and torchvision $\geq 0.23.0$ \cite{torchvision}. This context allows interpreting runtime and memory numbers as platform-specific measurements rather than framework-agnostic absolutes. For more specifics, refer to the repository \footnote{\url{https://github.com/Pawlo77/cinic10}}.
+Experiments are run on macOS with Apple Metal backend enabled through PyTorch MPS execution (\textit{Apple M4 16gb RAM MacBook Pro}, only default system tasks running in background, plug-in performance mode). The software stack follows project-pinned requirements: Python $\geq 3.13$, PyTorch $\geq 2.8.0$ \cite{NEURIPS2019_9015}, and torchvision $\geq 0.23.0$ \cite{torchvision}. This context allows interpreting runtime and memory numbers as platform-specific measurements rather than framework-agnostic absolutes. For more specifics, refer to the repository \footnote{\url{https://github.com/Pawlo77/cinic10}}.
 
 \subsection{Limitations}
 The complete hyperparameter grid is applied only to MobileNetV3 Small due to computational budget. Results for other families rely on reduced tuning and therefore should be interpreted as strong reference configurations rather than exhaustive optima. Our work is based only on the CINIC-10 dataset, so generalization to other benchmarks or real-world applications may be limited. The NAS search space is relatively small and may not capture all promising architectures. Finally, the few-shot evaluation focuses on Prototypical Networks, so conclusions about low-data performance may not extend to optimization-based meta-learning methods.
