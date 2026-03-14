@@ -25,12 +25,23 @@ EPOCHS_SEARCH ?= 30
 EPOCHS_RETRAIN ?= 30
 EXTRA_ARGS ?=
 
-.PHONY: help install clean test train train-no-aug train-mixup train-cutmix train-autoaugment train-reduced fewshot fewshot-resume grid grid-resume nas-two-stage nas-two-stage-resume
+.PHONY: help install clean test pre-commit pre-commit-all \
+	train train-no-aug train-mixup train-cutmix train-autoaugment train-reduced \
+	fewshot fewshot-resume grid grid-resume nas-two-stage nas-two-stage-resume
+
+############################
+# Repo Maintenance Targets #
+############################
 
 help:
 	@echo "Available targets:"
+	@echo "  make help                   - Show this help message"
 	@echo "  make install                - Install dependencies and hooks"
+	@echo "  make clean                  - Clean virtual environment and lockfile"
 	@echo "  make test                   - Run tests"
+	@echo "  make pre-commit             - Run pre-commit checks on changed files"
+	@echo "  make pre-commit-all         - Run pre-commit checks on all files"
+	@echo ""
 	@echo "  make train                  - Supervised training with standard augmentation"
 	@echo "  make train-no-aug           - Supervised training with no augmentation"
 	@echo "  make train-mixup            - Supervised training with MixUp"
@@ -61,13 +72,17 @@ clean:
 test::
 	uv run pytest -v
 
+# pre-commit checks on changed files only
+pre-commit:
+	uv run pre-commit run
+
 # pre-commit checks (linting, formatting, type checking)
 pre-commit-all:
 	uv run pre-commit run --all-files
 
-# pre-commit checks on changed files only
-pre-commit:
-	uv run pre-commit run
+######################
+# Experiment Targets #
+######################
 
 # supervised training with configurable options (see vars above)
 train:
