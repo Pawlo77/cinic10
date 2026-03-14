@@ -288,7 +288,7 @@ def _load_checkpoint(
         Last completed epoch, last epoch metrics, and best validation accuracy.
     """
     logger.info("Loading checkpoint %s", path)
-    state = torch.load(path, map_location="cpu")
+    state = torch.load(path, map_location="cpu", weights_only=False)
     model.load_state_dict(state["model_state_dict"])
     optimizer.load_state_dict(state["optimizer_state_dict"])
     scheduler.load_state_dict(state["scheduler_state_dict"])
@@ -365,7 +365,7 @@ def fit(
         start_epoch = resumed_from_epoch + 1
 
         if best_checkpoint_path.exists():
-            best_state = torch.load(best_checkpoint_path, map_location="cpu")
+            best_state = torch.load(best_checkpoint_path, map_location="cpu", weights_only=False)
             best_metrics = EpochMetrics(
                 loss=float(best_state.get("val_loss", best_metrics.loss)),
                 accuracy=float(best_state.get("val_accuracy", best_metrics.accuracy)),

@@ -105,12 +105,12 @@ def main() -> None:
                     split="test",
                     batch_size=run_config.batch_size,
                     num_workers=run_config.num_workers,
-                    use_autoaugment=False,
+                    augmentation="autoaugment",
                     seed=run_config.seed,
                 )
                 best_checkpoint = run_config.output_dir / "best.pt"
                 if best_checkpoint.exists():
-                    state = torch.load(best_checkpoint, map_location=device)
+                    state = torch.load(best_checkpoint, map_location=device, weights_only=False)
                     model.load_state_dict(state["model_state_dict"])
                 evaluated = evaluate(
                     model=model,
@@ -205,7 +205,7 @@ def main() -> None:
         )
         best_checkpoint = run_config.output_dir / "best.pt"
         if best_checkpoint.exists():
-            state = torch.load(best_checkpoint, map_location=device)
+            state = torch.load(best_checkpoint, map_location=device, weights_only=False)
             model.load_state_dict(state["model_state_dict"])
 
         test_metrics = evaluate(
