@@ -54,6 +54,9 @@ def main() -> None:
 
     rows: list[dict[str, float | int | str]] = []
 
+    if args.stop_after is not None:
+        runs = runs[: args.stop_after + 1]
+
     run_progress = tqdm(
         enumerate(runs),
         total=len(runs),
@@ -62,8 +65,6 @@ def main() -> None:
         disable=args.quiet,
     )
     for run_id, config in run_progress:
-        if args.stop_after is not None and run_id > args.stop_after:
-            break
         if not args.quiet:
             run_progress.set_postfix(
                 {
@@ -75,6 +76,8 @@ def main() -> None:
                     "wd": config.weight_decay,
                 }
             )
+        logger.info("Starting run %d with config: %s", run_id, config)
+
         set_seed(config.seed)
         run_config = replace(
             config,
@@ -93,6 +96,7 @@ def main() -> None:
                 test_metrics_payload = json.loads(test_metrics_path.read_text(encoding="utf-8"))
                 test_loss = float(test_metrics_payload.get("test_loss", float("inf")))
                 test_accuracy = float(test_metrics_payload.get("test_accuracy", 0.0))
+
             else:
                 model = create_model(
                     architecture=run_config.architecture,
@@ -108,6 +112,7 @@ def main() -> None:
                     augmentation="autoaugment",
                     seed=run_config.seed,
                 )
+
                 best_checkpoint = run_config.output_dir / "best.pt"
                 if best_checkpoint.exists():
                     state = torch.load(best_checkpoint, map_location=device, weights_only=False)
@@ -122,10 +127,18 @@ def main() -> None:
                 )
                 test_loss = evaluated.loss
                 test_accuracy = evaluated.accuracy
+
                 dump_json(
                     test_metrics_path,
                     {"test_loss": test_loss, "test_accuracy": test_accuracy},
                 )
+
+                del model, test_loader
+                if torch.cuda.is_available():
+                    torch.cuda.empty_cache()
+                if torch.mps.is_available():
+                    torch.mps.empty_cache()
+
             if not args.quiet:
                 run_progress.set_postfix(
                     {
@@ -148,6 +161,7 @@ def main() -> None:
                     "test_loss": test_loss,
                 }
             )
+
             continue
 
         train_loader = create_dataloader(
@@ -171,7 +185,6 @@ def main() -> None:
             mix_alpha=run_config.mix_alpha,
             num_classes=10,
         )
-
         test_loader = create_dataloader(
             data_root=run_config.data_root,
             split="test",
@@ -232,15 +245,6 @@ def main() -> None:
                 }
             )
 
-        test_metrics = evaluate(
-            model=model,
-            dataloader=test_loader,
-            criterion=torch.nn.CrossEntropyLoss(),
-            device=device,
-            progress_desc="test",
-            verbose=not args.quiet,
-        )
-
         rows.append(
             {
                 "run_id": run_id,
@@ -256,10 +260,18 @@ def main() -> None:
             }
         )
 
+        del model, optimizer, scheduler, train_loader, val_loader, test_loader
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+        if torch.mps.is_available():
+            torch.mps.empty_cache()
+
+    logger.info("Grid search completed with %d runs. Saving summary CSV and JSON.", len(rows))
     summary = pd.DataFrame(rows)
     args.output_root.mkdir(parents=True, exist_ok=True)
     summary.to_csv(args.output_root / "grid_results.csv", index=False)
     dump_json(args.output_root / "grid_results.json", summary.to_dict(orient="records"))
+    logger.info("All done! Summary saved to %s", args.output_root)
 
 
 if __name__ == "__main__":

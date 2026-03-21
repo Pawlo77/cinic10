@@ -351,6 +351,7 @@ def fit(
     start_epoch = 1
     resumed_from_epoch = 0
     nas_diagnostics: list[dict[str, Any]] = []
+    epoch_metrics: list[dict[str, Any]] = []
     epoch_resource_stats: list[dict[str, Any]] = []
 
     if resume and last_checkpoint_path.exists():
@@ -433,6 +434,16 @@ def fit(
                 verbose=verbose,
             )
             scheduler.step()
+            epoch_metrics.append(
+                {
+                    "epoch": epoch,
+                    "train_loss": float(train_metrics.loss),
+                    "train_accuracy": float(train_metrics.accuracy),
+                    "val_loss": float(val_metrics.loss),
+                    "val_accuracy": float(val_metrics.accuracy),
+                }
+            )
+            dump_json(config.output_dir / "epoch_metrics.json", epoch_metrics)
 
             synchronize_device(device)
             epoch_wall_end = wall_time_seconds()
@@ -467,11 +478,10 @@ def fit(
                     best_val_acc,
                     status="best",
                 )
-                exported = save_model_weights_optimized(
+                save_model_weights_optimized(
                     model,
                     config.output_dir / "best.safetensors",
                 )
-                dump_json(config.output_dir / "best_weights.json", {"path": str(exported.name)})
                 logger.info(
                     "New best checkpoint at epoch %d best_val_acc=%.4f", epoch, best_val_acc
                 )
@@ -576,9 +586,6 @@ def fit(
 
     if nas_diagnostics:
         dump_json(config.output_dir / "nas_diagnostics.json", nas_diagnostics)
-
-    if epoch_resource_stats:
-        dump_json(config.output_dir / "epoch_resource_stats.json", epoch_resource_stats)
 
     dump_json(config.output_dir / "metrics.json", results)
     return results

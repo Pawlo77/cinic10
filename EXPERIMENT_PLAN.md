@@ -16,6 +16,20 @@ export SEEDS="0 42 3407"
 
 All stages run per seed and store results in `.../seed_<seed>`.
 
+Search for the ideal number of epochs:
+
+```bash
+for SEED in ${=SEEDS}; do
+  export CINIC10_LOG_FILE_NAME="grid_epochs_mobilenet_seed_${SEED}.log"
+  echo "Starting epoch grid for seed ${SEED} at $(date)"
+  make grid \
+    OUTPUT_ROOT=outputs/01_grid__epochs_mobilenet/seed_${SEED} \
+    EXTRA_ARGS="--stop-after 0 --epochs 1" \
+    SEED=$SEED
+  echo "Completed epoch grid for seed ${SEED} at $(date)"
+done
+```
+
 Set selected hyperparameters after Stage 1:
 
 ```bash
