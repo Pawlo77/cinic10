@@ -24,7 +24,7 @@ for SEED in ${=SEEDS}; do
   echo "Starting epoch grid for seed ${SEED} at $(date)"
   make grid \
     OUTPUT_ROOT=outputs/01_grid__epochs_mobilenet/seed_${SEED} \
-    EXTRA_ARGS="--stop-after 0 --epochs 1" \
+    EXTRA_ARGS="--stop-after 0 --epochs 100" \
     SEED=$SEED
   echo "Completed epoch grid for seed ${SEED} at $(date)"
 done

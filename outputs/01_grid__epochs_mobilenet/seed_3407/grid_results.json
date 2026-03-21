@@ -1,0 +1,14 @@
+[
+  {
+    "batch_size": 128,
+    "best_val_accuracy": 0.45164444444444446,
+    "best_val_loss": 1.5378894205305311,
+    "dropout": 0.0,
+    "optimizer": "sgd",
+    "run_id": 0,
+    "seed": 3407,
+    "test_accuracy": 0.44984444444444444,
+    "test_loss": 1.5397664221021865,
+    "weight_decay": 0.0
+  }
+]

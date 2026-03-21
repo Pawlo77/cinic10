@@ -137,7 +137,7 @@ Published CINIC-10 baselines report representative validation error rates around
 \label{sec:execution_plan}
 Our experiments follow a fixed staged protocol consistent with the project execution plan.
 
-\textbf{Stage $0$ (initial grid search).} For each seed, we run a first grid search call (refer to next point) with $100$ epochs to identify the elbow point in the training curve where validation performance plateaus. This informs the epoch budget for subsequent stages, ensuring that all models are trained to convergence without unnecessary overfitting or undertraining.
+\textbf{Stage $0$ (initial grid search).} For each seed, we run a first grid search call (refer to next stage) with $100$ epochs to identify the elbow point in the training curve where validation performance plateaus. This informs the epoch budget for subsequent stages, ensuring that all models are trained to convergence without unnecessary overfitting or undertraining.
 
 \textbf{Stage $1$ (grid search on MobileNetV3-Small).} For each seed, we run a $24$-configuration grid over optimizer, batch size, dropout, and weight decay. Across three seeds this yields $72$ runs in total. The resulting \texttt{grid\_results.csv} files are used to select \texttt{BEST\_*} training settings.
 

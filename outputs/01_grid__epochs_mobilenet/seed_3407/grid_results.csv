@@ -1,0 +1,2 @@
+run_id,seed,optimizer,batch_size,dropout,weight_decay,best_val_accuracy,best_val_loss,test_accuracy,test_loss
+0,3407,sgd,128,0.0,0.0,0.45164444444444446,1.5378894205305311,0.44984444444444444,1.5397664221021865

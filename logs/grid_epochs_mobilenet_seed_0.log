@@ -1,0 +1,557 @@
+2026-03-21 12:27:59 INFO [__main__] run_grid_search: data=data output=outputs/01_grid__epochs_mobilenet/seed_0
+2026-03-21 12:27:59 INFO [cinic10.config] build_mobilenet_grid: data_root=data seed=0 epochs=100
+2026-03-21 12:27:59 INFO [__main__] Starting run 0 with config: TrainingConfig(data_root=PosixPath('data'), output_dir=PosixPath('outputs/01_grid__epochs_mobilenet/seed_0/run_000'), architecture='mobilenet_v3_small', seed=0, epochs=100, batch_size=128, learning_rate=0.0003, optimizer='sgd', momentum=0.9, weight_decay=0.0, dropout=0.0, num_workers=4, augmentation='standard', mix_alpha=1.0, pretrained=True, train_fraction=1.0, checkpoint_interval=1, nas_entropy_weight=0.001, nas_temperature_start=5.0, nas_temperature_end=0.5, arch_learning_rate=0.0003, arch_weight_decay=0.0, device='cpu')
+2026-03-21 12:27:59 INFO [cinic10.models.factory] create_model: mobilenet_v3_small pretrained=False dropout=0.0
+2026-03-21 12:27:59 INFO [cinic10.training.engine] fit: starting run output=outputs/01_grid__epochs_mobilenet/seed_0/run_000 epochs=100 device=mps
+2026-03-21 12:28:29 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:28:29 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:28:29 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=1
+2026-03-21 12:28:29 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:28:29 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:28:29 INFO [cinic10.training.engine] New best checkpoint at epoch 1 best_val_acc=0.1654
+2026-03-21 12:28:29 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=1
+2026-03-21 12:28:29 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:28:49 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:28:49 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:28:49 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=2
+2026-03-21 12:28:49 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:28:50 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:28:50 INFO [cinic10.training.engine] New best checkpoint at epoch 2 best_val_acc=0.2398
+2026-03-21 12:28:50 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=2
+2026-03-21 12:28:50 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:29:09 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:29:09 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:29:09 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=3
+2026-03-21 12:29:09 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:29:09 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:29:09 INFO [cinic10.training.engine] New best checkpoint at epoch 3 best_val_acc=0.2779
+2026-03-21 12:29:09 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=3
+2026-03-21 12:29:09 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:29:29 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:29:29 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:29:29 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=4
+2026-03-21 12:29:29 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:29:29 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:29:29 INFO [cinic10.training.engine] New best checkpoint at epoch 4 best_val_acc=0.3041
+2026-03-21 12:29:29 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=4
+2026-03-21 12:29:29 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:29:49 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:29:49 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:29:49 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=5
+2026-03-21 12:29:49 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:29:49 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:29:49 INFO [cinic10.training.engine] New best checkpoint at epoch 5 best_val_acc=0.3319
+2026-03-21 12:29:49 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=5
+2026-03-21 12:29:49 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:30:08 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:30:08 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:30:08 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=6
+2026-03-21 12:30:08 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:30:08 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:30:08 INFO [cinic10.training.engine] New best checkpoint at epoch 6 best_val_acc=0.3494
+2026-03-21 12:30:08 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=6
+2026-03-21 12:30:08 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:30:28 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:30:28 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:30:28 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=7
+2026-03-21 12:30:28 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:30:28 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:30:28 INFO [cinic10.training.engine] New best checkpoint at epoch 7 best_val_acc=0.3617
+2026-03-21 12:30:28 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=7
+2026-03-21 12:30:28 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:30:48 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:30:48 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:30:48 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=8
+2026-03-21 12:30:48 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:30:48 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:30:48 INFO [cinic10.training.engine] New best checkpoint at epoch 8 best_val_acc=0.3740
+2026-03-21 12:30:48 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=8
+2026-03-21 12:30:48 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:31:08 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:31:08 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:31:08 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=9
+2026-03-21 12:31:08 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:31:08 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:31:08 INFO [cinic10.training.engine] New best checkpoint at epoch 9 best_val_acc=0.3815
+2026-03-21 12:31:08 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=9
+2026-03-21 12:31:08 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:31:28 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:31:28 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:31:28 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=10
+2026-03-21 12:31:28 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:31:28 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:31:28 INFO [cinic10.training.engine] New best checkpoint at epoch 10 best_val_acc=0.3898
+2026-03-21 12:31:28 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=10
+2026-03-21 12:31:28 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:31:48 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:31:48 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:31:48 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=11
+2026-03-21 12:31:48 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:31:48 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:31:48 INFO [cinic10.training.engine] New best checkpoint at epoch 11 best_val_acc=0.3942
+2026-03-21 12:31:48 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=11
+2026-03-21 12:31:48 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:32:07 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:32:07 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:32:07 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=12
+2026-03-21 12:32:07 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:32:07 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:32:07 INFO [cinic10.training.engine] New best checkpoint at epoch 12 best_val_acc=0.4003
+2026-03-21 12:32:07 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=12
+2026-03-21 12:32:07 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:32:27 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:32:27 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:32:27 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=13
+2026-03-21 12:32:27 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:32:27 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:32:27 INFO [cinic10.training.engine] New best checkpoint at epoch 13 best_val_acc=0.4007
+2026-03-21 12:32:27 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=13
+2026-03-21 12:32:27 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:32:47 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:32:47 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:32:47 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=14
+2026-03-21 12:32:47 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:32:47 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:32:47 INFO [cinic10.training.engine] New best checkpoint at epoch 14 best_val_acc=0.4107
+2026-03-21 12:32:47 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=14
+2026-03-21 12:32:47 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:33:06 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:33:06 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:33:06 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=15
+2026-03-21 12:33:06 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:33:06 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:33:06 INFO [cinic10.training.engine] New best checkpoint at epoch 15 best_val_acc=0.4147
+2026-03-21 12:33:06 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=15
+2026-03-21 12:33:06 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:33:26 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:33:26 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:33:26 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=16
+2026-03-21 12:33:26 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:33:27 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:33:27 INFO [cinic10.training.engine] New best checkpoint at epoch 16 best_val_acc=0.4166
+2026-03-21 12:33:27 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=16
+2026-03-21 12:33:27 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:33:47 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:33:47 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:33:47 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=17
+2026-03-21 12:33:47 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:33:47 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:33:47 INFO [cinic10.training.engine] New best checkpoint at epoch 17 best_val_acc=0.4212
+2026-03-21 12:33:47 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=17
+2026-03-21 12:33:47 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:34:08 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:34:08 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:34:08 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=18
+2026-03-21 12:34:08 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:34:08 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:34:08 INFO [cinic10.training.engine] New best checkpoint at epoch 18 best_val_acc=0.4232
+2026-03-21 12:34:08 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=18
+2026-03-21 12:34:08 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:34:31 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:34:31 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:34:31 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=19
+2026-03-21 12:34:31 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:34:31 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:34:31 INFO [cinic10.training.engine] New best checkpoint at epoch 19 best_val_acc=0.4233
+2026-03-21 12:34:31 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=19
+2026-03-21 12:34:31 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:34:54 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:34:54 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:34:54 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=20
+2026-03-21 12:34:54 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:34:54 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:34:54 INFO [cinic10.training.engine] New best checkpoint at epoch 20 best_val_acc=0.4265
+2026-03-21 12:34:54 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=20
+2026-03-21 12:34:54 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:35:17 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:35:17 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:35:17 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=21
+2026-03-21 12:35:17 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:35:17 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:35:17 INFO [cinic10.training.engine] New best checkpoint at epoch 21 best_val_acc=0.4285
+2026-03-21 12:35:17 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=21
+2026-03-21 12:35:17 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:35:39 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:35:39 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:35:39 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=22
+2026-03-21 12:35:39 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:36:01 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:36:01 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:36:01 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=23
+2026-03-21 12:36:01 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:36:22 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:36:22 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:36:22 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=24
+2026-03-21 12:36:22 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:36:22 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:36:22 INFO [cinic10.training.engine] New best checkpoint at epoch 24 best_val_acc=0.4330
+2026-03-21 12:36:22 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=24
+2026-03-21 12:36:22 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:36:42 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:36:42 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:36:42 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=25
+2026-03-21 12:36:42 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:37:02 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:37:02 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:37:02 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=26
+2026-03-21 12:37:02 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:37:02 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:37:02 INFO [cinic10.training.engine] New best checkpoint at epoch 26 best_val_acc=0.4358
+2026-03-21 12:37:02 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=26
+2026-03-21 12:37:02 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:37:25 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:37:25 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:37:25 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=27
+2026-03-21 12:37:25 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:37:46 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:37:46 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:37:46 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=28
+2026-03-21 12:37:46 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:37:46 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:37:46 INFO [cinic10.training.engine] New best checkpoint at epoch 28 best_val_acc=0.4368
+2026-03-21 12:37:46 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=28
+2026-03-21 12:37:46 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:38:06 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:38:06 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:38:06 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=29
+2026-03-21 12:38:06 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:38:06 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:38:06 INFO [cinic10.training.engine] New best checkpoint at epoch 29 best_val_acc=0.4393
+2026-03-21 12:38:06 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=29
+2026-03-21 12:38:06 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:38:28 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:38:28 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:38:28 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=30
+2026-03-21 12:38:28 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:38:49 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:38:49 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:38:49 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=31
+2026-03-21 12:38:49 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:39:11 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:39:11 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:39:11 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=32
+2026-03-21 12:39:11 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:39:11 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:39:11 INFO [cinic10.training.engine] New best checkpoint at epoch 32 best_val_acc=0.4398
+2026-03-21 12:39:11 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=32
+2026-03-21 12:39:11 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:39:33 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:39:33 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:39:33 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=33
+2026-03-21 12:39:33 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:39:33 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:39:33 INFO [cinic10.training.engine] New best checkpoint at epoch 33 best_val_acc=0.4416
+2026-03-21 12:39:33 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=33
+2026-03-21 12:39:33 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:39:55 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:39:55 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:39:55 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=34
+2026-03-21 12:39:55 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:40:16 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:40:16 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:40:16 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=35
+2026-03-21 12:40:16 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:40:39 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:40:39 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:40:39 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=36
+2026-03-21 12:40:39 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:40:39 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:40:39 INFO [cinic10.training.engine] New best checkpoint at epoch 36 best_val_acc=0.4441
+2026-03-21 12:40:39 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=36
+2026-03-21 12:40:39 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:41:00 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:41:00 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:41:00 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=37
+2026-03-21 12:41:00 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:41:21 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:41:21 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:41:21 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=38
+2026-03-21 12:41:21 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:41:44 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:41:44 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:41:44 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=39
+2026-03-21 12:41:44 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:41:44 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:41:44 INFO [cinic10.training.engine] New best checkpoint at epoch 39 best_val_acc=0.4446
+2026-03-21 12:41:44 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=39
+2026-03-21 12:41:44 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:42:05 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:42:05 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:42:05 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=40
+2026-03-21 12:42:05 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:42:26 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:42:26 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:42:26 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=41
+2026-03-21 12:42:26 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:42:26 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:42:26 INFO [cinic10.training.engine] New best checkpoint at epoch 41 best_val_acc=0.4452
+2026-03-21 12:42:26 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=41
+2026-03-21 12:42:26 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:42:47 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:42:47 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:42:47 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=42
+2026-03-21 12:42:47 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:43:09 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:43:09 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:43:09 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=43
+2026-03-21 12:43:09 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:43:33 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:43:33 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:43:33 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=44
+2026-03-21 12:43:33 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:43:33 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:43:33 INFO [cinic10.training.engine] New best checkpoint at epoch 44 best_val_acc=0.4455
+2026-03-21 12:43:33 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=44
+2026-03-21 12:43:33 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:43:54 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:43:54 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:43:54 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=45
+2026-03-21 12:43:54 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:43:54 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:43:54 INFO [cinic10.training.engine] New best checkpoint at epoch 45 best_val_acc=0.4462
+2026-03-21 12:43:54 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=45
+2026-03-21 12:43:54 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:44:15 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:44:15 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:44:15 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=46
+2026-03-21 12:44:15 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:44:37 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:44:37 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:44:37 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=47
+2026-03-21 12:44:37 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:45:01 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:45:01 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:45:01 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=48
+2026-03-21 12:45:01 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:45:22 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:45:22 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:45:22 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=49
+2026-03-21 12:45:22 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:45:22 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:45:23 INFO [cinic10.training.engine] New best checkpoint at epoch 49 best_val_acc=0.4464
+2026-03-21 12:45:23 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=49
+2026-03-21 12:45:23 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:45:43 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:45:43 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:45:43 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=50
+2026-03-21 12:45:43 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:46:04 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:46:04 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:46:04 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=51
+2026-03-21 12:46:04 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:46:04 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:46:04 INFO [cinic10.training.engine] New best checkpoint at epoch 51 best_val_acc=0.4479
+2026-03-21 12:46:04 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=51
+2026-03-21 12:46:04 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:46:24 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:46:24 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:46:24 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=52
+2026-03-21 12:46:24 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:46:45 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:46:45 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:46:45 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=53
+2026-03-21 12:46:45 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:47:08 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:47:08 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:47:08 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=54
+2026-03-21 12:47:08 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:47:32 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:47:32 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:47:32 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=55
+2026-03-21 12:47:32 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:47:32 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:47:32 INFO [cinic10.training.engine] New best checkpoint at epoch 55 best_val_acc=0.4480
+2026-03-21 12:47:32 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=55
+2026-03-21 12:47:32 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:47:55 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:47:55 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:47:55 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=56
+2026-03-21 12:47:55 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:48:18 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:48:18 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:48:18 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=57
+2026-03-21 12:48:18 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:48:40 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:48:40 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:48:40 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt status=best epoch=58
+2026-03-21 12:48:40 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.pt
+2026-03-21 12:48:40 INFO [cinic10.utils] save_model_weights_optimized -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/best.safetensors
+2026-03-21 12:48:40 INFO [cinic10.training.engine] New best checkpoint at epoch 58 best_val_acc=0.4483
+2026-03-21 12:48:40 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=58
+2026-03-21 12:48:40 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:49:04 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:49:04 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:49:04 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=59
+2026-03-21 12:49:04 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:49:24 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:49:24 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:49:24 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=60
+2026-03-21 12:49:24 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:49:46 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:49:46 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:49:46 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=61
+2026-03-21 12:49:46 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:50:10 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:50:10 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:50:10 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=62
+2026-03-21 12:50:10 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:50:35 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:50:35 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:50:35 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=63
+2026-03-21 12:50:35 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:50:58 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:50:58 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:50:58 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=64
+2026-03-21 12:50:58 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:51:19 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:51:19 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:51:19 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=65
+2026-03-21 12:51:19 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:51:46 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:51:46 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:51:46 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=66
+2026-03-21 12:51:46 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:52:15 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:52:15 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:52:15 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=67
+2026-03-21 12:52:15 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:52:38 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:52:38 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:52:38 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=68
+2026-03-21 12:52:38 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:53:04 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:53:04 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:53:04 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=69
+2026-03-21 12:53:04 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:53:25 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:53:25 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:53:25 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=70
+2026-03-21 12:53:25 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:53:47 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:53:47 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:53:47 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=71
+2026-03-21 12:53:47 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:54:10 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:54:10 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:54:10 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=72
+2026-03-21 12:54:10 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:54:32 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:54:32 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:54:32 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=73
+2026-03-21 12:54:32 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:54:56 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:54:56 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:54:56 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=74
+2026-03-21 12:54:56 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:55:18 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:55:18 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:55:18 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=75
+2026-03-21 12:55:18 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:55:41 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:55:41 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:55:41 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=76
+2026-03-21 12:55:41 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:56:03 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:56:03 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:56:03 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=77
+2026-03-21 12:56:03 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:56:25 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:56:25 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:56:25 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=78
+2026-03-21 12:56:25 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:56:48 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:56:48 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:56:48 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=79
+2026-03-21 12:56:48 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:57:11 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:57:11 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:57:11 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=80
+2026-03-21 12:57:11 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:57:34 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:57:34 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:57:34 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=81
+2026-03-21 12:57:34 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:57:57 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:57:57 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:57:57 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=82
+2026-03-21 12:57:57 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:58:18 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:58:18 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:58:18 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=83
+2026-03-21 12:58:18 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:58:39 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:58:39 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:58:39 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=84
+2026-03-21 12:58:39 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:59:01 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:59:01 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:59:01 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=85
+2026-03-21 12:59:01 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:59:22 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:59:22 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:59:22 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=86
+2026-03-21 12:59:22 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 12:59:43 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 12:59:43 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 12:59:43 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=87
+2026-03-21 12:59:43 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 13:00:03 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 13:00:03 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 13:00:03 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=88
+2026-03-21 13:00:03 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 13:00:24 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 13:00:24 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 13:00:24 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=89
+2026-03-21 13:00:24 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 13:00:44 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 13:00:44 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 13:00:44 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=90
+2026-03-21 13:00:44 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 13:01:04 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 13:01:04 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 13:01:04 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=91
+2026-03-21 13:01:04 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 13:01:24 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 13:01:24 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 13:01:24 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=92
+2026-03-21 13:01:24 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 13:01:46 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 13:01:46 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 13:01:46 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=93
+2026-03-21 13:01:46 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 13:02:07 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 13:02:07 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 13:02:07 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=94
+2026-03-21 13:02:07 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 13:02:29 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 13:02:29 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 13:02:29 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=95
+2026-03-21 13:02:29 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 13:02:52 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 13:02:52 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 13:02:52 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=96
+2026-03-21 13:02:52 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 13:03:14 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 13:03:14 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 13:03:14 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=97
+2026-03-21 13:03:14 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 13:03:34 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 13:03:34 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 13:03:34 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=98
+2026-03-21 13:03:34 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 13:03:56 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 13:03:56 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 13:03:56 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=99
+2026-03-21 13:03:56 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 13:04:19 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_metrics.json
+2026-03-21 13:04:19 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/epoch_resource_stats.json
+2026-03-21 13:04:19 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=running epoch=100
+2026-03-21 13:04:19 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 13:04:19 INFO [cinic10.training.engine] Saving checkpoint outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt status=completed epoch=100
+2026-03-21 13:04:19 INFO [cinic10.utils] atomic_torch_save -> outputs/01_grid__epochs_mobilenet/seed_0/run_000/last.ckpt
+2026-03-21 13:04:19 INFO [cinic10.training.engine] fit: completed run output=outputs/01_grid__epochs_mobilenet/seed_0/run_000 best_val_acc=0.4483
+2026-03-21 13:04:19 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/metrics.json
+2026-03-21 13:04:32 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/run_000/test_metrics.json
+2026-03-21 13:05:32 INFO [__main__] Grid search completed with 1 runs. Saving summary CSV and JSON.
+2026-03-21 13:05:32 INFO [cinic10.utils] Writing JSON to outputs/01_grid__epochs_mobilenet/seed_0/grid_results.json
+2026-03-21 13:05:32 INFO [__main__] All done! Summary saved to outputs/01_grid__epochs_mobilenet/seed_0
