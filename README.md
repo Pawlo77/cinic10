@@ -6,6 +6,7 @@ Framework for CINIC-10 supervised and few-shot experiments with reproducible run
 
 - **Multiple architectures**: MobileNetV3 Small, SqueezeNet, ResNet18, DenseNet121, ConvKAN variants, NAS-derived CNN
 - **Augmentation strategies**: None, Standard, MixUp, CutMix, AutoAugment
+- **Early stopping**: Optional validation loss–based stopping (improves by <0.01 for 10 epochs)
 - **Few-shot learning**: Prototypical Networks with episodic training
 - **Hyperparameter grid search**: Automated 24-run grid on MobileNetV3
 - **Two-stage NAS**: Architecture search followed by discrete retraining
@@ -43,7 +44,13 @@ make train-no-aug       # No augmentation
 make train-mixup        # Standard + MixUp
 make train-cutmix       # Standard + CutMix
 make train-autoaugment  # AutoAugment
-make train-reduced      # Reduced training data
+make train-reduced      # Reduced training data (supports --early-stopping flag)
+```
+
+Optional flags:
+```bash
+# Use --early-stopping to stop training if val loss doesn't improve by ≥0.01 for 10 epochs
+make train EXTRA_ARGS="--early-stopping"
 ```
 
 **Grid & NAS:**

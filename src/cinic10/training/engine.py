@@ -103,7 +103,7 @@ def train_one_epoch(
     nas_entropy_weight: float,
     verbose: bool = True,
     architecture_optimizer: Optimizer | None = None,
-    architecture_dataloader: DataLoader[tuple[torch.Tensor, torch.Tensor]] | None = None,
+    architecture_dataloader: (DataLoader[tuple[torch.Tensor, torch.Tensor]] | None) = None,
 ) -> EpochMetrics:
     """Run one training epoch.
 
@@ -317,6 +317,7 @@ def fit(
     verbose: bool = True,
     architecture_optimizer: Optimizer | None = None,
     architecture_loader: DataLoader[tuple[torch.Tensor, torch.Tensor]] | None = None,
+    early_stopping: bool = False,
 ) -> dict[str, float]:
     """Train model and persist run artifacts.
 
@@ -331,13 +332,18 @@ def fit(
         resume: Resume from `last.ckpt` in output directory if available.
         architecture_optimizer: Optional architecture optimizer used for bilevel NAS.
         architecture_loader: Optional validation loader for architecture updates.
+        early_stopping: If True, stop training if validation loss does not improve
+            or improves by less than 0.01 for the last 10 epochs.
 
     Returns:
         Final metrics dictionary.
     """
     ensure_dir(config.output_dir)
     logger.info(
-        "fit: starting run output=%s epochs=%d device=%s", config.output_dir, config.epochs, device
+        "fit: starting run output=%s epochs=%d device=%s",
+        config.output_dir,
+        config.epochs,
+        device,
     )
     # CrossEntropyLoss with reduction='mean' handles both hard labels (integers)
     # and soft labels (probability distributions from MixUp/CutMix).
@@ -353,6 +359,7 @@ def fit(
     nas_diagnostics: list[dict[str, Any]] = []
     epoch_metrics: list[dict[str, Any]] = []
     epoch_resource_stats: list[dict[str, Any]] = []
+    val_loss_history: list[float] = []  # Track validation loss for early stopping
 
     if resume and last_checkpoint_path.exists():
         resumed_from_epoch, last_metrics, best_val_acc = _load_checkpoint(
@@ -445,6 +452,30 @@ def fit(
             )
             dump_json(config.output_dir / "epoch_metrics.json", epoch_metrics)
 
+            # Track validation loss for early stopping
+            val_loss_history.append(val_metrics.loss)
+
+            # Early stopping logic: stop if val loss doesn't improve or improves by < 0.01
+            # for last 10 epochs
+            if early_stopping and len(val_loss_history) >= 10:
+                last_10_losses = val_loss_history[-10:]
+                best_loss_last_10 = min(last_10_losses)
+                best_loss_before_10 = (
+                    min(val_loss_history[:-10]) if len(val_loss_history) > 10 else float("inf")
+                )
+
+                # Stop if no improvement or improvement less than 0.01
+                if best_loss_last_10 >= best_loss_before_10 - 0.01:
+                    logger.info(
+                        "Early stopping triggered at epoch %d: val_loss=%f did not improve by "
+                        ">= 0.01 (best in last 10: %f, best before: %f)",
+                        epoch,
+                        val_metrics.loss,
+                        best_loss_last_10,
+                        best_loss_before_10,
+                    )
+                    break
+
             synchronize_device(device)
             epoch_wall_end = wall_time_seconds()
             epoch_cpu_end = cpu_time_seconds()
@@ -483,7 +514,9 @@ def fit(
                     config.output_dir / "best.safetensors",
                 )
                 logger.info(
-                    "New best checkpoint at epoch %d best_val_acc=%.4f", epoch, best_val_acc
+                    "New best checkpoint at epoch %d best_val_acc=%.4f",
+                    epoch,
+                    best_val_acc,
                 )
 
             if epoch % max(1, config.checkpoint_interval) == 0:
@@ -555,18 +588,22 @@ def fit(
         scheduler,
         architecture_optimizer,
         best_metrics,
-        config.epochs,
+        last_completed_epoch,
         best_val_acc,
         status="completed",
     )
 
-    logger.info("fit: completed run output=%s best_val_acc=%.4f", config.output_dir, best_val_acc)
+    logger.info(
+        "fit: completed run output=%s best_val_acc=%.4f",
+        config.output_dir,
+        best_val_acc,
+    )
 
     results = {
         "best_val_loss": best_metrics.loss,
         "best_val_accuracy": best_metrics.accuracy,
         "resumed_from_epoch": float(resumed_from_epoch),
-        "completed_epochs": float(config.epochs),
+        "completed_epochs": float(last_completed_epoch),
     }
 
     # If model supports reporting selected architecture (e.g. for NAS),

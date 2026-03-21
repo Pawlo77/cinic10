@@ -111,12 +111,14 @@ Pick best augmentation and set `BEST_AUG_EXTRA_ARGS`.
 
 ## 3) Train other architectures with best hyperparams + best augmentation
 
+With early stopping—stops training if validation loss doesn't improve by ≥0.01 for 10 consecutive epochs:
+
 ```bash
-run_seeded_train outputs/03_models/squeezenet squeezenet1_0 "$BEST_AUG_EXTRA_ARGS"
-run_seeded_train outputs/03_models/resnet18_finetune resnet18 "--pretrained $BEST_AUG_EXTRA_ARGS"
-run_seeded_train outputs/03_models/densenet121_finetune densenet121 "--pretrained $BEST_AUG_EXTRA_ARGS"
-run_seeded_train outputs/03_models/convkan_mobilenet_v3_small convkan_mobilenet_v3_small "$BEST_AUG_EXTRA_ARGS"
-run_seeded_train outputs/03_models/convkan_squeezenet1_0 convkan_squeezenet1_0 "$BEST_AUG_EXTRA_ARGS"
+run_seeded_train outputs/03_models/squeezenet squeezenet1_0 "--early-stopping $BEST_AUG_EXTRA_ARGS"
+run_seeded_train outputs/03_models/resnet18_finetune resnet18 "--pretrained --early-stopping $BEST_AUG_EXTRA_ARGS"
+run_seeded_train outputs/03_models/densenet121_finetune densenet121 "--pretrained --early-stopping $BEST_AUG_EXTRA_ARGS"
+run_seeded_train outputs/03_models/convkan_mobilenet_v3_small convkan_mobilenet_v3_small "--early-stopping $BEST_AUG_EXTRA_ARGS"
+run_seeded_train outputs/03_models/convkan_squeezenet1_0 convkan_squeezenet1_0 "--early-stopping $BEST_AUG_EXTRA_ARGS"
 
 for SEED in ${=SEEDS}; do
   make nas-two-stage OUTPUT_ROOT=outputs/03_models/nas_two_stage/seed_${SEED} SEED=$SEED BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS_SEARCH=$BEST_EPOCHS EPOCHS_RETRAIN=$BEST_EPOCHS

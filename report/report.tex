@@ -158,6 +158,18 @@ Experiments are run on macOS with Apple Metal backend enabled through PyTorch MP
 \subsection{Limitations}
 The complete hyperparameter grid is applied only to MobileNetV3 Small due to computational budget. Results for other families rely on reduced tuning and therefore should be interpreted as strong reference configurations rather than exhaustive optima. Our work is based only on the CINIC-10 dataset, so generalization to other benchmarks or real-world applications may be limited. The NAS search space is relatively small and may not capture all promising architectures. Finally, the few-shot evaluation focuses on Prototypical Networks, so conclusions about low-data performance may not extend to optimization-based meta-learning methods.
 
+\section{Results}
+This section will present the results of the experiments as outlined in the execution plan (refer to subsection \ref{sec:execution_plan}). We will present the findings for each stage, starting with the initial grid search, followed by the augmentation ablation, architecture comparison, NAS results, and finally the low-data evaluation. Each subsection will include relevant tables and figures to illustrate the performance of the models under different configurations and training regimes.
+\subsection{Stage 0}
+This stage involves running the initial grid search for MobileNetV3 Small across three seeds to identify the optimal epoch budget for training. The results are summarized in Figure \ref{fig:stage0_grid}, which shows the accuracy and loss on the validation set for each seed. The optimal epoch budget is determined by identifying the point at which the validation performance plateaus, indicating that further training would not yield significant improvements and may lead to overfitting. The selected epoch budget of $60$ will be used for all subsequent stages to ensure consistent training across models and configurations.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\linewidth]{../notebooks/plots/stage0_grid.png}
+    \caption{Accuracy and loss on validation set for MobileNetV3 Small across three seeds for stage 0 initial grid search.}
+    \label{fig:stage0_grid}
+\end{figure}
+
 \section{Conclusion}
 This study defines a consistent and reproducible framework for comparing CNN architectures on CINIC-10 across efficiency, capacity, and low-data regimes. By combining NAS, ConvKAN variants, transfer baselines, and few-shot methods under shared protocols, the project provides a practical basis for selecting models under different resource and data constraints.
 

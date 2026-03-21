@@ -56,6 +56,11 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--nas-temperature-end", type=float, default=0.5)
     parser.add_argument("--resume", action="store_true")
     parser.add_argument("--quiet", action="store_true")
+    parser.add_argument(
+        "--early-stopping",
+        action="store_true",
+        help="Enable early stopping based on validation loss",
+    )
     return parser.parse_args()
 
 
@@ -156,6 +161,7 @@ def main() -> None:
         verbose=not args.quiet,
         architecture_optimizer=optimizers.architecture_optimizer,
         architecture_loader=val_loader,
+        early_stopping=args.early_stopping,
     )
 
     logger.info("Fit finished")
