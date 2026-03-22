@@ -324,6 +324,50 @@ def _seed_worker(worker_id: int) -> None:
     np.random.seed(worker_seed)
 
 
+class _TrainCollate:
+    """Picklable collate function with batch-level augmentation (MixUp/CutMix).
+
+    This is implemented as a class (not a nested function) to ensure it can be
+    pickled when using num_workers > 0 in DataLoader.
+    """
+
+    def __init__(
+        self,
+        augmentation: AugmentationMode,
+        num_classes: int,
+        mix_alpha: float,
+    ) -> None:
+        """Initialize collate function.
+
+        Args:
+            augmentation: Augmentation strategy.
+            num_classes: Number of classes for one-hot targets.
+            mix_alpha: Beta(alpha, alpha) parameter used by MixUp/CutMix.
+        """
+        self.batch_transform: Callable | None = None
+        if augmentation == "standard_mixup":
+            self.batch_transform = v2.MixUp(alpha=mix_alpha, num_classes=num_classes)
+        elif augmentation == "standard_cutmix":
+            self.batch_transform = v2.CutMix(alpha=mix_alpha, num_classes=num_classes)
+
+    def __call__(
+        self,
+        batch: list[tuple[torch.Tensor, int]],
+    ) -> tuple[torch.Tensor, torch.Tensor]:
+        """Collate batch with optional batch-level mixing.
+
+        Args:
+            batch: List of (image, label) tuples.
+
+        Returns:
+            Tuple of (images, labels) tensors, optionally mixed.
+        """
+        images, labels = default_collate(batch)
+        if self.batch_transform is not None:
+            images, labels = self.batch_transform(images, labels)
+        return images, labels
+
+
 def _build_train_collate(
     augmentation: AugmentationMode,
     num_classes: int,
@@ -339,23 +383,9 @@ def _build_train_collate(
     Returns:
         Collate function applying torchvision v2 MixUp/CutMix, or None.
     """
-    batch_transform: Callable | None = None
-    if augmentation == "standard_mixup":
-        batch_transform = v2.MixUp(alpha=mix_alpha, num_classes=num_classes)
-    elif augmentation == "standard_cutmix":
-        batch_transform = v2.CutMix(alpha=mix_alpha, num_classes=num_classes)
-
-    if batch_transform is None:
+    if augmentation not in ("standard_mixup", "standard_cutmix"):
         return None
-
-    def _collate_with_batch_transform(
-        batch: list[tuple[torch.Tensor, int]],
-    ) -> tuple[torch.Tensor, torch.Tensor]:
-        images, labels = default_collate(batch)
-        mixed_images, mixed_labels = batch_transform(images, labels)
-        return mixed_images, mixed_labels
-
-    return _collate_with_batch_transform
+    return _TrainCollate(augmentation, num_classes, mix_alpha)
 
 
 def create_dataloader(

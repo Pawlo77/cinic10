@@ -45,7 +45,6 @@ run_seeded_train() {
       ARCH=$ARCH_NAME \
       OPTIMIZER=$BEST_OPTIMIZER \
       BATCH_SIZE=$BEST_BATCH_SIZE \
-      LR=$BEST_LR \
       EPOCHS=$BEST_EPOCHS \
       SEED=$SEED \
       EXTRA_ARGS="$EXTRA"
@@ -83,18 +82,16 @@ for SEED in ${=SEEDS}; do
 done
 ```
 
-Review `outputs/01_grid_mobilenet/seed_*/grid_results.csv` and set `BEST_*` values.
+Review `outputs/01_grid_mobilenet/seed_*/grid_results.csv` and identify best hyperparameters (optimizer, batch size, epochs, dropout, weight decay).
 
-Set selected hyperparameters for the next stages:
+Set selected hyperparameters for the next stages (update these values based on grid results):
 
 ```bash
 export BEST_OPTIMIZER=adamw
 export BEST_BATCH_SIZE=128
-export BEST_LR=3e-4
 export BEST_EPOCHS=60
-export BEST_AUG_EXTRA_ARGS=""
-export FINAL_ARCH=resnet18
-export FINAL_AUG_EXTRA_ARGS="$BEST_AUG_EXTRA_ARGS"
+export BEST_DROPOUT=0.5
+export WEIGHT_DECAY=0.0001
 ```
 
 ---
@@ -104,13 +101,13 @@ export FINAL_AUG_EXTRA_ARGS="$BEST_AUG_EXTRA_ARGS"
 Run all five variants per seed:
 
 ```bash
-run_seeded_train 02_aug/mobilenet_none mobilenet_v3_small "--augmentation none"
-run_seeded_train 02_aug/mobilenet_standard mobilenet_v3_small "--augmentation standard"
 for SEED in ${=SEEDS}; do
-  make train-mixup OUTPUT_DIR=02_aug/mobilenet_standard_mixup/seed_${SEED} ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS=$BEST_EPOCHS SEED=$SEED
-  make train-cutmix OUTPUT_DIR=02_aug/mobilenet_standard_cutmix/seed_${SEED} ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS=$BEST_EPOCHS SEED=$SEED
+  make train-no-aug OUTPUT_DIR=outputs/02_aug/mobilenet_none/seed_${SEED} ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS=$BEST_EPOCHS SEED=$SEED EXTRA_ARGS="--weight-decay $WEIGHT_DECAY --dropout $BEST_DROPOUT"
+  make train OUTPUT_DIR=outputs/02_aug/mobilenet_standard/seed_${SEED} ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS=$BEST_EPOCHS SEED=$SEED EXTRA_ARGS="--weight-decay $WEIGHT_DECAY --dropout $BEST_DROPOUT"
+  make train-mixup OUTPUT_DIR=outputs/02_aug/mobilenet_standard_mixup/seed_${SEED} ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS=$BEST_EPOCHS SEED=$SEED EXTRA_ARGS="--weight-decay $WEIGHT_DECAY --dropout $BEST_DROPOUT"
+  make train-cutmix OUTPUT_DIR=outputs/02_aug/mobilenet_standard_cutmix/seed_${SEED} ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS=$BEST_EPOCHS SEED=$SEED EXTRA_ARGS="--weight-decay $WEIGHT_DECAY --dropout $BEST_DROPOUT"
+  make train-autoaugment OUTPUT_DIR=outputs/02_aug/mobilenet_autoaugment/seed_${SEED} ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS=$BEST_EPOCHS SEED=$SEED EXTRA_ARGS="--weight-decay $WEIGHT_DECAY --dropout $BEST_DROPOUT"
 done
-run_seeded_train 02_aug/mobilenet_autoaugment mobilenet_v3_small "--augmentation autoaugment"
 ```
 
 Pick best augmentation and set `BEST_AUG_EXTRA_ARGS`.
@@ -121,6 +118,14 @@ Pick best augmentation and set `BEST_AUG_EXTRA_ARGS`.
 
 With early stopping—stops training if validation loss doesn't improve by ≥0.01 for 10 consecutive epochs:
 
+Set selected hyperparameters for the next stages:
+
+```bash
+export BEST_AUG_EXTRA_ARGS=""
+export FINAL_ARCH=resnet18
+export FINAL_AUG_EXTRA_ARGS="$BEST_AUG_EXTRA_ARGS"
+```
+
 ```bash
 run_seeded_train outputs/03_models/squeezenet squeezenet1_0 "--early-stopping $BEST_AUG_EXTRA_ARGS"
 run_seeded_train outputs/03_models/resnet18_finetune resnet18 "--pretrained --early-stopping $BEST_AUG_EXTRA_ARGS"
@@ -129,7 +134,7 @@ run_seeded_train outputs/03_models/convkan_mobilenet_v3_small convkan_mobilenet_
 run_seeded_train outputs/03_models/convkan_squeezenet1_0 convkan_squeezenet1_0 "--early-stopping $BEST_AUG_EXTRA_ARGS"
 
 for SEED in ${=SEEDS}; do
-  make nas-two-stage OUTPUT_ROOT=outputs/03_models/nas_two_stage/seed_${SEED} SEED=$SEED BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS_SEARCH=$BEST_EPOCHS EPOCHS_RETRAIN=$BEST_EPOCHS
+  make nas-two-stage OUTPUT_ROOT=outputs/03_models/nas_two_stage/seed_${SEED} SEED=$SEED BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS_SEARCH=$BEST_EPOCHS EPOCHS_RETRAIN=$BEST_EPOCHS
 done
 ```
 
@@ -137,7 +142,7 @@ Resume NAS if needed:
 
 ```bash
 for SEED in ${=SEEDS}; do
-  make nas-two-stage-resume OUTPUT_ROOT=outputs/03_models/nas_two_stage/seed_${SEED} SEED=$SEED BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS_SEARCH=$BEST_EPOCHS EPOCHS_RETRAIN=$BEST_EPOCHS
+  make nas-two-stage-resume OUTPUT_ROOT=outputs/03_models/nas_two_stage/seed_${SEED} SEED=$SEED BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS_SEARCH=$BEST_EPOCHS EPOCHS_RETRAIN=$BEST_EPOCHS
 done
 ```
 
@@ -147,7 +152,7 @@ done
 
 ```bash
 for SEED in ${=SEEDS}; do
-  make train-reduced OUTPUT_DIR=outputs/04_final/dataset_reduction_5pct/seed_${SEED} ARCH=$FINAL_ARCH OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS=$BEST_EPOCHS SEED=$SEED TRAIN_FRACTION=0.05 EXTRA_ARGS="$FINAL_AUG_EXTRA_ARGS"
+  make train-reduced OUTPUT_DIR=outputs/04_final/dataset_reduction_5pct/seed_${SEED} ARCH=$FINAL_ARCH OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS=$BEST_EPOCHS SEED=$SEED TRAIN_FRACTION=0.05 EXTRA_ARGS="$FINAL_AUG_EXTRA_ARGS"
   make fewshot OUTPUT_DIR=outputs/04_final/fewshot_protonet/seed_${SEED} SEED=$SEED WAYS=5 SHOTS=5 QUERIES=15 EPISODES=2000 EVAL_EPISODES=400
 done
 ```

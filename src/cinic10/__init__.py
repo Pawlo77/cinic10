@@ -49,5 +49,3 @@ else:
 from cinic10.config import ArchitectureName, TrainingConfig  # noqa: E402
 
 __all__: list[str] = ["ArchitectureName", "TrainingConfig"]
-
-raise
