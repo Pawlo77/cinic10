@@ -21,6 +21,8 @@ _log_dir = Path(os.environ.get("CINIC10_LOG_DIR", str(_repo_root / "logs")))
 _log_file_name = os.environ.get("CINIC10_LOG_FILE_NAME", "cinic10.log")
 _log_file = _log_dir / _log_file_name
 
+print(f"Logging to file: {_log_file}")
+
 _handlers: list[logging.Handler] = [logging.StreamHandler()]
 _file_handler_error: OSError | None = None
 try:
@@ -47,3 +49,5 @@ else:
 from cinic10.config import ArchitectureName, TrainingConfig  # noqa: E402
 
 __all__: list[str] = ["ArchitectureName", "TrainingConfig"]
+
+raise

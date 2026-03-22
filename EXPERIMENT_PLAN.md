@@ -30,18 +30,6 @@ for SEED in ${=SEEDS}; do
 done
 ```
 
-Set selected hyperparameters after Stage 1:
-
-```bash
-export BEST_OPTIMIZER=adamw
-export BEST_BATCH_SIZE=128
-export BEST_LR=3e-4
-export BEST_EPOCHS=30
-export BEST_AUG_EXTRA_ARGS=""
-export FINAL_ARCH=resnet18
-export FINAL_AUG_EXTRA_ARGS="$BEST_AUG_EXTRA_ARGS"
-```
-
 Reusable helper (keeps the plan short):
 
 ```bash
@@ -50,8 +38,10 @@ run_seeded_train() {
   local ARCH_NAME="$2"
   local EXTRA="$3"
   for SEED in ${=SEEDS}; do
+    export CINIC10_LOG_DIR="logs/${OUT_PREFIX}"
+    export CINIC10_LOG_FILE_NAME="train_${ARCH_NAME}_seed_${SEED}.log"
     make train \
-      OUTPUT_DIR=${OUT_PREFIX}/seed_${SEED} \
+      OUTPUT_DIR="outputs/${OUT_PREFIX}/seed_${SEED}" \
       ARCH=$ARCH_NAME \
       OPTIMIZER=$BEST_OPTIMIZER \
       BATCH_SIZE=$BEST_BATCH_SIZE \
@@ -71,9 +61,12 @@ Run the per-seed grid (24 runs per seed):
 
 ```bash
 for SEED in ${=SEEDS}; do
+  echo "Starting epoch grid for seed ${SEED} at $(date)"
+  export CINIC10_LOG_FILE_NAME="grid_mobilenet_seed_${SEED}.log"
   make grid \
     OUTPUT_ROOT=outputs/01_grid_mobilenet/seed_${SEED} \
     SEED=$SEED
+
 done
 ```
 
@@ -81,13 +74,28 @@ If interrupted:
 
 ```bash
 for SEED in ${=SEEDS}; do
+  echo "Starting epoch grid for seed ${SEED} at $(date)"
+  export CINIC10_LOG_FILE_NAME="grid_mobilenet_seed_${SEED}.log"
   make grid-resume \
     OUTPUT_ROOT=outputs/01_grid_mobilenet/seed_${SEED} \
     SEED=$SEED
+  echo "Completed epoch grid for seed ${SEED} at $(date)"
 done
 ```
 
 Review `outputs/01_grid_mobilenet/seed_*/grid_results.csv` and set `BEST_*` values.
+
+Set selected hyperparameters for the next stages:
+
+```bash
+export BEST_OPTIMIZER=adamw
+export BEST_BATCH_SIZE=128
+export BEST_LR=3e-4
+export BEST_EPOCHS=60
+export BEST_AUG_EXTRA_ARGS=""
+export FINAL_ARCH=resnet18
+export FINAL_AUG_EXTRA_ARGS="$BEST_AUG_EXTRA_ARGS"
+```
 
 ---
 
@@ -96,13 +104,13 @@ Review `outputs/01_grid_mobilenet/seed_*/grid_results.csv` and set `BEST_*` valu
 Run all five variants per seed:
 
 ```bash
-run_seeded_train outputs/02_aug/mobilenet_none mobilenet_v3_small "--augmentation none"
-run_seeded_train outputs/02_aug/mobilenet_standard mobilenet_v3_small "--augmentation standard"
+run_seeded_train 02_aug/mobilenet_none mobilenet_v3_small "--augmentation none"
+run_seeded_train 02_aug/mobilenet_standard mobilenet_v3_small "--augmentation standard"
 for SEED in ${=SEEDS}; do
-  make train-mixup OUTPUT_DIR=outputs/02_aug/mobilenet_standard_mixup/seed_${SEED} ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS=$BEST_EPOCHS SEED=$SEED
-  make train-cutmix OUTPUT_DIR=outputs/02_aug/mobilenet_standard_cutmix/seed_${SEED} ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS=$BEST_EPOCHS SEED=$SEED
+  make train-mixup OUTPUT_DIR=02_aug/mobilenet_standard_mixup/seed_${SEED} ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS=$BEST_EPOCHS SEED=$SEED
+  make train-cutmix OUTPUT_DIR=02_aug/mobilenet_standard_cutmix/seed_${SEED} ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE LR=$BEST_LR EPOCHS=$BEST_EPOCHS SEED=$SEED
 done
-run_seeded_train outputs/02_aug/mobilenet_autoaugment mobilenet_v3_small "--augmentation autoaugment"
+run_seeded_train 02_aug/mobilenet_autoaugment mobilenet_v3_small "--augmentation autoaugment"
 ```
 
 Pick best augmentation and set `BEST_AUG_EXTRA_ARGS`.
