@@ -331,7 +331,7 @@ class FewShotCheckpointStore:
         Returns:
             Tuple of episode, best validation accuracy, and RNG state.
         """
-        state = torch.load(path, map_location="cpu")
+        state = torch.load(path, map_location="cpu", weights_only=False)
         model.load_state_dict(state["model_state_dict"])
         optimizer.load_state_dict(state["optimizer_state_dict"])
         return (
@@ -491,7 +491,7 @@ def train_protonet(
             raise
 
     if best_checkpoint_path.exists():
-        best_state = torch.load(best_checkpoint_path, map_location=device)
+        best_state = torch.load(best_checkpoint_path, map_location=device, weights_only=False)
         model.load_state_dict(best_state["model_state_dict"])
 
     test_rng = np.random.default_rng(config.seed + 30_000)

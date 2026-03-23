@@ -219,7 +219,7 @@ def main() -> None:
 
     best_checkpoint = retrain_output / "best.pt"
     if best_checkpoint.exists():
-        state = torch.load(best_checkpoint, map_location=device)
+        state = torch.load(best_checkpoint, map_location=device, weights_only=False)
         retrain_model.load_state_dict(state["model_state_dict"])
 
     test_metrics = evaluate(

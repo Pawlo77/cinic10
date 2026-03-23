@@ -168,7 +168,7 @@ def main() -> None:
 
     best_checkpoint = config.output_dir / "best.pt"
     if best_checkpoint.exists():
-        state = torch.load(best_checkpoint, map_location=device)
+        state = torch.load(best_checkpoint, map_location=device, weights_only=False)
         model.load_state_dict(state["model_state_dict"])
 
     test_metrics = evaluate(

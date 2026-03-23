@@ -102,11 +102,19 @@ Run all five variants per seed:
 
 ```bash
 for SEED in ${=SEEDS}; do
-  make train-no-aug OUTPUT_DIR=outputs/02_aug/mobilenet_none/seed_${SEED} ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS=$BEST_EPOCHS SEED=$SEED EXTRA_ARGS="--weight-decay $WEIGHT_DECAY --dropout $BEST_DROPOUT"
-  make train OUTPUT_DIR=outputs/02_aug/mobilenet_standard/seed_${SEED} ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS=$BEST_EPOCHS SEED=$SEED EXTRA_ARGS="--weight-decay $WEIGHT_DECAY --dropout $BEST_DROPOUT"
-  make train-mixup OUTPUT_DIR=outputs/02_aug/mobilenet_standard_mixup/seed_${SEED} ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS=$BEST_EPOCHS SEED=$SEED EXTRA_ARGS="--weight-decay $WEIGHT_DECAY --dropout $BEST_DROPOUT"
-  make train-cutmix OUTPUT_DIR=outputs/02_aug/mobilenet_standard_cutmix/seed_${SEED} ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS=$BEST_EPOCHS SEED=$SEED EXTRA_ARGS="--weight-decay $WEIGHT_DECAY --dropout $BEST_DROPOUT"
+  echo "Starting epoch grid for seed ${SEED} at $(date)"
+  export CINIC10_LOG_FILE_NAME="aug_mobilenet_seed_${SEED}.log"
+
+  make train-no-aug OUTPUT_DIR=outputs/02_aug/mobilenet_none/seed_${SEED} ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS=$BEST_EPOCHS SEED=$SEED EXTRA_ARGS="--weight-decay $WEIGHT_DECAY --dropout $BEST_DROPOUT" && \
+
+  make train OUTPUT_DIR=outputs/02_aug/mobilenet_standard/seed_${SEED} ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS=$BEST_EPOCHS SEED=$SEED EXTRA_ARGS="--weight-decay $WEIGHT_DECAY --dropout $BEST_DROPOUT" && \
+
+  make train-mixup OUTPUT_DIR=outputs/02_aug/mobilenet_standard_mixup/seed_${SEED} ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS=$BEST_EPOCHS SEED=$SEED EXTRA_ARGS="--weight-decay $WEIGHT_DECAY --dropout $BEST_DROPOUT" && \
+
+  make train-cutmix OUTPUT_DIR=outputs/02_aug/mobilenet_standard_cutmix/seed_${SEED} ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS=$BEST_EPOCHS SEED=$SEED EXTRA_ARGS="--weight-decay $WEIGHT_DECAY --dropout $BEST_DROPOUT" && \
+
   make train-autoaugment OUTPUT_DIR=outputs/02_aug/mobilenet_autoaugment/seed_${SEED} ARCH=mobilenet_v3_small OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS=$BEST_EPOCHS SEED=$SEED EXTRA_ARGS="--weight-decay $WEIGHT_DECAY --dropout $BEST_DROPOUT"
+
 done
 ```
 

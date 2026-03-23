@@ -1,0 +1,6 @@
+{
+  "best_val_accuracy": 0.5453333333333333,
+  "best_val_loss": 1.3304315101729498,
+  "completed_epochs": 60.0,
+  "resumed_from_epoch": 0.0
+}
