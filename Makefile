@@ -222,6 +222,7 @@ nas-two-stage:
 		--epochs-search $(EPOCHS_SEARCH) \
 		--epochs-retrain $(EPOCHS_RETRAIN) \
 		--batch-size $(BATCH_SIZE) \
+		--optimizer $(OPTIMIZER) \
 		--learning-rate $(LR) \
 		--device $(DEVICE) $(EXTRA_ARGS)
 
@@ -234,6 +235,7 @@ nas-two-stage-resume:
 		--epochs-search $(EPOCHS_SEARCH) \
 		--epochs-retrain $(EPOCHS_RETRAIN) \
 		--batch-size $(BATCH_SIZE) \
+		--optimizer $(OPTIMIZER) \
 		--learning-rate $(LR) \
 		--device $(DEVICE) $(EXTRA_ARGS) \
 		--resume

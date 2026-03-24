@@ -8,7 +8,7 @@ from typing import get_args
 
 import torch
 
-from cinic10.config import AugmentationMode, TrainingConfig
+from cinic10.config import AugmentationMode, OptimizerName, TrainingConfig
 from cinic10.data import create_dataloader, resolve_data_root
 from cinic10.models import create_model
 from cinic10.models.nas_cnn import DiscreteNasCnn
@@ -29,6 +29,13 @@ def _parse_args() -> argparse.Namespace:
     parser.add_argument("--epochs-retrain", type=int, default=30)
     parser.add_argument("--batch-size", type=int, default=128)
     parser.add_argument("--num-workers", type=int, default=4)
+    optimizer_choices = tuple(get_args(OptimizerName))
+    parser.add_argument(
+        "--optimizer",
+        type=str,
+        default="adamw",
+        choices=optimizer_choices,
+    )
     parser.add_argument("--learning-rate", type=float, default=3e-4)
     parser.add_argument("--weight-decay", type=float, default=1e-4)
     parser.add_argument("--arch-learning-rate", type=float, default=3e-4)
@@ -134,6 +141,7 @@ def main() -> None:
         seed=args.seed,
         epochs=args.epochs_search,
         batch_size=args.batch_size,
+        optimizer=args.optimizer,
         learning_rate=args.learning_rate,
         weight_decay=args.weight_decay,
         arch_learning_rate=args.arch_learning_rate,
@@ -183,6 +191,7 @@ def main() -> None:
         seed=args.seed,
         epochs=args.epochs_retrain,
         batch_size=args.batch_size,
+        optimizer=args.optimizer,
         learning_rate=args.learning_rate,
         weight_decay=args.weight_decay,
         dropout=args.dropout,

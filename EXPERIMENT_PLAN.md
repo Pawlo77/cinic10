@@ -118,7 +118,11 @@ for SEED in ${=SEEDS}; do
 done
 ```
 
-Pick best augmentation and set `BEST_AUG_EXTRA_ARGS`.
+Pick best augmentation and set `BEST_AUG`.
+
+```bash
+export BEST_AUG=standard
+```
 
 ---
 
@@ -126,23 +130,49 @@ Pick best augmentation and set `BEST_AUG_EXTRA_ARGS`.
 
 With early stopping—stops training if validation loss doesn't improve by ≥0.01 for 10 consecutive epochs:
 
-Set selected hyperparameters for the next stages:
-
 ```bash
-export BEST_AUG_EXTRA_ARGS=""
-export FINAL_ARCH=resnet18
-export FINAL_AUG_EXTRA_ARGS="$BEST_AUG_EXTRA_ARGS"
-```
+run_seeded_train_with_best_aug() {
+  local OUT_PREFIX="$1"
+  local ARCH_NAME="$2"
+  local EXTRA="$3"
+  local TARGET=""
 
-```bash
-run_seeded_train outputs/03_models/squeezenet squeezenet1_0 "--early-stopping $BEST_AUG_EXTRA_ARGS"
-run_seeded_train outputs/03_models/resnet18_finetune resnet18 "--pretrained --early-stopping $BEST_AUG_EXTRA_ARGS"
-run_seeded_train outputs/03_models/densenet121_finetune densenet121 "--pretrained --early-stopping $BEST_AUG_EXTRA_ARGS"
-run_seeded_train outputs/03_models/convkan_mobilenet_v3_small convkan_mobilenet_v3_small "--early-stopping $BEST_AUG_EXTRA_ARGS"
-run_seeded_train outputs/03_models/convkan_squeezenet1_0 convkan_squeezenet1_0 "--early-stopping $BEST_AUG_EXTRA_ARGS"
+  case "$BEST_AUG" in
+    none) TARGET="train-no-aug" ;;
+    standard) TARGET="train" ;;
+    standard_mixup) TARGET="train-mixup" ;;
+    standard_cutmix) TARGET="train-cutmix" ;;
+    autoaugment) TARGET="train-autoaugment" ;;
+    *)
+      echo "Unsupported BEST_AUG='$BEST_AUG'. Use one of: none, standard, standard_mixup, standard_cutmix, autoaugment"
+      return 1
+      ;;
+  esac
+
+  for SEED in ${=SEEDS}; do
+    export CINIC10_LOG_DIR="logs/${OUT_PREFIX}"
+    export CINIC10_LOG_FILE_NAME="train_${ARCH_NAME}_seed_${SEED}.log"
+    make $TARGET \
+      OUTPUT_DIR="outputs/${OUT_PREFIX}/seed_${SEED}" \
+      ARCH=$ARCH_NAME \
+      OPTIMIZER=$BEST_OPTIMIZER \
+      BATCH_SIZE=$BEST_BATCH_SIZE \
+      EPOCHS=$BEST_EPOCHS \
+      SEED=$SEED \
+      EXTRA_ARGS="--weight-decay $WEIGHT_DECAY --dropout $BEST_DROPOUT --early-stopping $EXTRA"
+  done
+}
+
+run_seeded_train_with_best_aug 03_models/squeezenet squeezenet1_0 ""
+run_seeded_train_with_best_aug 03_models/resnet18_finetune resnet18 "--pretrained"
+run_seeded_train_with_best_aug 03_models/densenet121_finetune densenet121 "--pretrained"
+run_seeded_train_with_best_aug 03_models/convkan_mobilenet_v3_small convkan_mobilenet_v3_small ""
+run_seeded_train_with_best_aug 03_models/convkan_squeezenet1_0 convkan_squeezenet1_0 ""
 
 for SEED in ${=SEEDS}; do
-  make nas-two-stage OUTPUT_ROOT=outputs/03_models/nas_two_stage/seed_${SEED} SEED=$SEED BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS_SEARCH=$BEST_EPOCHS EPOCHS_RETRAIN=$BEST_EPOCHS
+  export CINIC10_LOG_DIR="logs/03_models/nas_two_stage"
+  export CINIC10_LOG_FILE_NAME="nas_two_stage_seed_${SEED}.log"
+  make nas-two-stage OUTPUT_ROOT=outputs/03_models/nas_two_stage/seed_${SEED} SEED=$SEED OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS_SEARCH=$BEST_EPOCHS EPOCHS_RETRAIN=$BEST_EPOCHS EXTRA_ARGS="--augmentation $BEST_AUG --weight-decay $WEIGHT_DECAY --dropout $BEST_DROPOUT"
 done
 ```
 
@@ -150,7 +180,9 @@ Resume NAS if needed:
 
 ```bash
 for SEED in ${=SEEDS}; do
-  make nas-two-stage-resume OUTPUT_ROOT=outputs/03_models/nas_two_stage/seed_${SEED} SEED=$SEED BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS_SEARCH=$BEST_EPOCHS EPOCHS_RETRAIN=$BEST_EPOCHS
+  export CINIC10_LOG_DIR="logs/03_models/nas_two_stage"
+  export CINIC10_LOG_FILE_NAME="nas_two_stage_resume_seed_${SEED}.log"
+  make nas-two-stage-resume OUTPUT_ROOT=outputs/03_models/nas_two_stage/seed_${SEED} SEED=$SEED OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS_SEARCH=$BEST_EPOCHS EPOCHS_RETRAIN=$BEST_EPOCHS EXTRA_ARGS="--augmentation $BEST_AUG --weight-decay $WEIGHT_DECAY --dropout $BEST_DROPOUT"
 done
 ```
 
