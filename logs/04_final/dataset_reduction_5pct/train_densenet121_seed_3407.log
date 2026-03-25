@@ -1,0 +1,183 @@
+2026-03-25 12:10:33 INFO [__main__] Starting training run: architecture=densenet121 seed=3407 output=outputs/04_final/dataset_reduction_5pct/seed_3407
+2026-03-25 12:10:33 INFO [__main__] Resolved device: mps
+2026-03-25 12:10:33 INFO [cinic10.models.factory] create_model: densenet121 pretrained=False dropout=0.5
+2026-03-25 12:10:33 INFO [__main__] Model created: densenet121
+2026-03-25 12:10:33 INFO [__main__] Beginning fit
+2026-03-25 12:10:33 INFO [cinic10.training.engine] fit: starting run output=outputs/04_final/dataset_reduction_5pct/seed_3407 epochs=60 device=mps
+2026-03-25 12:11:04 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:11:04 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:11:04 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt status=best epoch=1
+2026-03-25 12:11:04 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt
+2026-03-25 12:11:04 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.safetensors
+2026-03-25 12:11:04 INFO [cinic10.training.engine] New best checkpoint at epoch 1 best_val_acc=0.2522
+2026-03-25 12:11:04 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=1
+2026-03-25 12:11:04 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:11:26 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:11:26 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:11:26 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt status=best epoch=2
+2026-03-25 12:11:26 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt
+2026-03-25 12:11:26 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.safetensors
+2026-03-25 12:11:26 INFO [cinic10.training.engine] New best checkpoint at epoch 2 best_val_acc=0.2870
+2026-03-25 12:11:26 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=2
+2026-03-25 12:11:26 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:11:47 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:11:47 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:11:47 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt status=best epoch=3
+2026-03-25 12:11:47 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt
+2026-03-25 12:11:48 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.safetensors
+2026-03-25 12:11:48 INFO [cinic10.training.engine] New best checkpoint at epoch 3 best_val_acc=0.3162
+2026-03-25 12:11:48 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=3
+2026-03-25 12:11:48 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:12:09 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:12:09 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:12:09 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt status=best epoch=4
+2026-03-25 12:12:09 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt
+2026-03-25 12:12:09 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.safetensors
+2026-03-25 12:12:10 INFO [cinic10.training.engine] New best checkpoint at epoch 4 best_val_acc=0.3392
+2026-03-25 12:12:10 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=4
+2026-03-25 12:12:10 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:12:31 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:12:31 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:12:31 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt status=best epoch=5
+2026-03-25 12:12:31 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt
+2026-03-25 12:12:31 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.safetensors
+2026-03-25 12:12:32 INFO [cinic10.training.engine] New best checkpoint at epoch 5 best_val_acc=0.3497
+2026-03-25 12:12:32 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=5
+2026-03-25 12:12:32 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:12:53 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:12:53 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:12:53 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt status=best epoch=6
+2026-03-25 12:12:53 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt
+2026-03-25 12:12:54 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.safetensors
+2026-03-25 12:12:54 INFO [cinic10.training.engine] New best checkpoint at epoch 6 best_val_acc=0.3596
+2026-03-25 12:12:54 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=6
+2026-03-25 12:12:54 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:13:16 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:13:16 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:13:16 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt status=best epoch=7
+2026-03-25 12:13:16 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt
+2026-03-25 12:13:16 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.safetensors
+2026-03-25 12:13:16 INFO [cinic10.training.engine] New best checkpoint at epoch 7 best_val_acc=0.3691
+2026-03-25 12:13:16 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=7
+2026-03-25 12:13:16 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:13:38 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:13:38 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:13:38 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt status=best epoch=8
+2026-03-25 12:13:38 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt
+2026-03-25 12:13:39 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.safetensors
+2026-03-25 12:13:39 INFO [cinic10.training.engine] New best checkpoint at epoch 8 best_val_acc=0.3758
+2026-03-25 12:13:39 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=8
+2026-03-25 12:13:39 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:14:01 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:14:01 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:14:01 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt status=best epoch=9
+2026-03-25 12:14:01 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt
+2026-03-25 12:14:01 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.safetensors
+2026-03-25 12:14:01 INFO [cinic10.training.engine] New best checkpoint at epoch 9 best_val_acc=0.3812
+2026-03-25 12:14:01 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=9
+2026-03-25 12:14:01 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:14:23 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:14:23 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:14:23 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=10
+2026-03-25 12:14:23 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:14:45 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:14:45 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:14:45 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt status=best epoch=11
+2026-03-25 12:14:45 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt
+2026-03-25 12:14:45 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.safetensors
+2026-03-25 12:14:45 INFO [cinic10.training.engine] New best checkpoint at epoch 11 best_val_acc=0.3919
+2026-03-25 12:14:45 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=11
+2026-03-25 12:14:45 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:15:07 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:15:07 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:15:07 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt status=best epoch=12
+2026-03-25 12:15:07 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt
+2026-03-25 12:15:07 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.safetensors
+2026-03-25 12:15:08 INFO [cinic10.training.engine] New best checkpoint at epoch 12 best_val_acc=0.3957
+2026-03-25 12:15:08 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=12
+2026-03-25 12:15:08 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:15:29 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:15:29 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:15:29 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt status=best epoch=13
+2026-03-25 12:15:29 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt
+2026-03-25 12:15:30 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.safetensors
+2026-03-25 12:15:30 INFO [cinic10.training.engine] New best checkpoint at epoch 13 best_val_acc=0.4061
+2026-03-25 12:15:30 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=13
+2026-03-25 12:15:30 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:15:51 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:15:51 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:15:51 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=14
+2026-03-25 12:15:51 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:16:13 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:16:13 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:16:13 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=15
+2026-03-25 12:16:13 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:16:35 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:16:35 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:16:35 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt status=best epoch=16
+2026-03-25 12:16:35 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt
+2026-03-25 12:16:35 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.safetensors
+2026-03-25 12:16:35 INFO [cinic10.training.engine] New best checkpoint at epoch 16 best_val_acc=0.4123
+2026-03-25 12:16:35 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=16
+2026-03-25 12:16:35 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:16:57 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:16:57 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:16:57 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt status=best epoch=17
+2026-03-25 12:16:57 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt
+2026-03-25 12:16:57 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.safetensors
+2026-03-25 12:16:57 INFO [cinic10.training.engine] New best checkpoint at epoch 17 best_val_acc=0.4189
+2026-03-25 12:16:57 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=17
+2026-03-25 12:16:57 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:17:18 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:17:18 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:17:19 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=18
+2026-03-25 12:17:19 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:17:40 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:17:40 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:17:40 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt status=best epoch=19
+2026-03-25 12:17:40 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt
+2026-03-25 12:17:40 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.safetensors
+2026-03-25 12:17:40 INFO [cinic10.training.engine] New best checkpoint at epoch 19 best_val_acc=0.4270
+2026-03-25 12:17:40 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=19
+2026-03-25 12:17:40 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:18:02 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:18:02 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:18:02 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=20
+2026-03-25 12:18:02 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:18:23 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:18:23 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:18:23 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt status=best epoch=21
+2026-03-25 12:18:23 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt
+2026-03-25 12:18:24 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.safetensors
+2026-03-25 12:18:24 INFO [cinic10.training.engine] New best checkpoint at epoch 21 best_val_acc=0.4279
+2026-03-25 12:18:24 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=21
+2026-03-25 12:18:24 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:18:45 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:18:45 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:18:45 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=22
+2026-03-25 12:18:45 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:19:06 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:19:06 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:19:06 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=23
+2026-03-25 12:19:06 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:19:28 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:19:28 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:19:28 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt status=best epoch=24
+2026-03-25 12:19:28 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.pt
+2026-03-25 12:19:28 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/dataset_reduction_5pct/seed_3407/best.safetensors
+2026-03-25 12:19:28 INFO [cinic10.training.engine] New best checkpoint at epoch 24 best_val_acc=0.4310
+2026-03-25 12:19:28 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=24
+2026-03-25 12:19:28 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:19:50 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:19:50 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_resource_stats.json
+2026-03-25 12:19:50 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=running epoch=25
+2026-03-25 12:19:50 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:20:11 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/epoch_metrics.json
+2026-03-25 12:20:11 INFO [cinic10.training.engine] Early stopping triggered at epoch 26: val_loss=1.692342 did not improve by >= 0.01 (best in last 10: 1.607118, best before: 1.611714)
+2026-03-25 12:20:11 INFO [cinic10.training.engine] Saving checkpoint outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt status=completed epoch=25
+2026-03-25 12:20:11 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/dataset_reduction_5pct/seed_3407/last.ckpt
+2026-03-25 12:20:11 INFO [cinic10.training.engine] fit: completed run output=outputs/04_final/dataset_reduction_5pct/seed_3407 best_val_acc=0.4310
+2026-03-25 12:20:11 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/metrics.json
+2026-03-25 12:20:11 INFO [__main__] Fit finished
+2026-03-25 12:20:34 INFO [__main__] Test metrics: loss=1.6401450428009032 accuracy=0.42856666666666665
+2026-03-25 12:20:34 INFO [cinic10.utils] Writing JSON to outputs/04_final/dataset_reduction_5pct/seed_3407/test_metrics.json
