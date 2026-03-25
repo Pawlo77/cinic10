@@ -23,11 +23,15 @@ EPISODES ?= 2000
 EVAL_EPISODES ?= 400
 EPOCHS_SEARCH ?= 30
 EPOCHS_RETRAIN ?= 30
+NAS_OUTPUT_ROOT ?= outputs/03_models/nas_two_stage
+CONVKAN_MIN_KERNEL_SIZE ?= 5
+CONVKAN_MAX_CHANNELS ?= 64
 EXTRA_ARGS ?=
 
 .PHONY: help install clean test pre-commit pre-commit-all \
 	train train-no-aug train-mixup train-cutmix train-autoaugment train-reduced \
-	fewshot fewshot-resume grid grid-resume nas-two-stage nas-two-stage-resume
+	fewshot fewshot-resume grid grid-resume nas-two-stage nas-two-stage-resume \
+	nas-convkan
 
 ############################
 # Repo Maintenance Targets #
@@ -54,6 +58,7 @@ help:
 	@echo "  make grid-resume            - Resume/skip completed grid runs"
 	@echo "  make nas-two-stage          - Search then retrain discrete NAS"
 	@echo "  make nas-two-stage-resume   - Resume two-stage NAS"
+	@echo "  make nas-convkan-from-arch  - Train ConvKAN model from NAS-selected architecture"
 	@echo ""
 	@echo "Override vars, e.g.:"
 	@echo "  make train DATA_ROOT=./data/cinic10 OUTPUT_DIR=outputs/run1 DEVICE=cpu"
@@ -239,3 +244,18 @@ nas-two-stage-resume:
 		--learning-rate $(LR) \
 		--device $(DEVICE) $(EXTRA_ARGS) \
 		--resume
+
+# train ConvKAN-converted model from NAS-selected architecture (from scratch)
+nas-convkan:
+	PYTHONPATH=$(PYTHONPATH) $(UV) python -m cinic10.experiments.run_nas_convkan \
+		--data-root $(DATA_ROOT) \
+		--output-dir $(OUTPUT_DIR) \
+		--nas-output-root $(NAS_OUTPUT_ROOT) \
+		--seed $(SEED) \
+		--epochs $(EPOCHS) \
+		--batch-size $(BATCH_SIZE) \
+		--optimizer $(OPTIMIZER) \
+		--learning-rate $(LR) \
+		--device $(DEVICE) \
+		--convkan-min-kernel-size $(CONVKAN_MIN_KERNEL_SIZE) \
+		--convkan-max-channels $(CONVKAN_MAX_CHANNELS) $(EXTRA_ARGS)

@@ -186,6 +186,24 @@ for SEED in ${=SEEDS}; do
 done
 ```
 
+Train NAS-derived ConvKAN architecture from scratch (loads searched architecture for each seed from `outputs/03_models/nas_two_stage`):
+
+```bash
+for SEED in ${=SEEDS}; do
+  export CINIC10_LOG_DIR="logs/03_models/nas_convkan"
+  export CINIC10_LOG_FILE_NAME="nas_convkan_seed_${SEED}.log"
+  make nas-convkan \
+    OUTPUT_DIR=outputs/03_models/nas_convkan/seed_${SEED} \
+    NAS_OUTPUT_ROOT=outputs/03_models/nas_two_stage \
+    CONVKAN_MIN_KERNEL_SIZE=3 \
+    SEED=$SEED \
+    OPTIMIZER=$BEST_OPTIMIZER \
+    BATCH_SIZE=32 \
+    EPOCHS=$BEST_EPOCHS \
+    EXTRA_ARGS="--augmentation $BEST_AUG --weight-decay $WEIGHT_DECAY --dropout $BEST_DROPOUT --early-stopping" && \
+done
+```
+
 ---
 
 Select the best architecture for the next stage and set `$FINAL_ARCH`
