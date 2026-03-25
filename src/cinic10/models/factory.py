@@ -4,6 +4,7 @@ import logging
 from collections.abc import Iterator
 from typing import cast
 
+from convkan import ConvKAN
 from torch import nn
 from torchvision.models import (
     DenseNet121_Weights,
@@ -17,7 +18,6 @@ from torchvision.models import (
 )
 
 from cinic10.config import ArchitectureName
-from cinic10.models.convkan import KANConvolutionalLayer
 from cinic10.models.nas_cnn import NasCnn
 
 logger = logging.getLogger(__name__)
@@ -31,7 +31,6 @@ def _iter_named_children(module: nn.Module) -> Iterator[tuple[str, nn.Module]]:
 def replace_conv2d_with_convkan(
     module: nn.Module,
     min_kernel_size: int = 3,
-    max_channels: int | None = None,
 ) -> nn.Module:
     """Recursively replace Conv2d layers with KAN convolutional layers.
 
@@ -53,23 +52,11 @@ def replace_conv2d_with_convkan(
             )
             if kernel_h < min_kernel_size or kernel_w < min_kernel_size:
                 continue
-            if max_channels is not None and (
-                child.in_channels > max_channels or child.out_channels > max_channels
-            ):
-                logger.debug(
-                    "Skipping ConvKAN replacement in %s.%s due to channel cap: %d->%d > %d",
-                    module.__class__.__name__,
-                    name,
-                    child.in_channels,
-                    child.out_channels,
-                    max_channels,
-                )
-                continue
 
             setattr(
                 module,
                 name,
-                KANConvolutionalLayer(
+                ConvKAN(
                     in_channels=child.in_channels,
                     out_channels=child.out_channels,
                     kernel_size=(kernel_h, kernel_w),
@@ -84,7 +71,6 @@ def replace_conv2d_with_convkan(
             replace_conv2d_with_convkan(
                 child,
                 min_kernel_size=min_kernel_size,
-                max_channels=max_channels,
             )
     return module
 

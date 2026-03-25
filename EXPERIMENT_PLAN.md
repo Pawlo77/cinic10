@@ -198,7 +198,7 @@ for SEED in ${=SEEDS}; do
     CONVKAN_MIN_KERNEL_SIZE=3 \
     SEED=$SEED \
     OPTIMIZER=$BEST_OPTIMIZER \
-    BATCH_SIZE=32 \
+    BATCH_SIZE=$BEST_BATCH_SIZE \
     EPOCHS=$BEST_EPOCHS \
     EXTRA_ARGS="--augmentation $BEST_AUG --weight-decay $WEIGHT_DECAY --dropout $BEST_DROPOUT --early-stopping" && \
 done

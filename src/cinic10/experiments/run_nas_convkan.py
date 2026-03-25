@@ -189,7 +189,6 @@ def main() -> None:
     model = replace_conv2d_with_convkan(
         model,
         min_kernel_size=args.convkan_min_kernel_size,
-        max_channels=args.convkan_max_channels,
     ).to(device)
 
     optimizers = create_optimizers(model, config)
