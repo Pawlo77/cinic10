@@ -163,16 +163,16 @@ run_seeded_train_with_best_aug() {
   done
 }
 
-run_seeded_train_with_best_aug 03_models/squeezenet squeezenet1_0 ""
-run_seeded_train_with_best_aug 03_models/resnet18_finetune resnet18 "--pretrained"
-run_seeded_train_with_best_aug 03_models/densenet121_finetune densenet121 "--pretrained"
-run_seeded_train_with_best_aug 03_models/convkan_mobilenet_v3_small convkan_mobilenet_v3_small ""
-run_seeded_train_with_best_aug 03_models/convkan_squeezenet1_0 convkan_squeezenet1_0 ""
+run_seeded_train_with_best_aug 03_models/squeezenet squeezenet1_0 "" && \
+run_seeded_train_with_best_aug 03_models/resnet18_finetune resnet18 "--pretrained" && \
+run_seeded_train_with_best_aug 03_models/densenet121_finetune densenet121 "--pretrained" && \
+# run_seeded_train_with_best_aug 03_models/convkan_mobilenet_v3_small convkan_mobilenet_v3_small "" && \
+# run_seeded_train_with_best_aug 03_models/convkan_squeezenet1_0 convkan_squeezenet1_0 "" && \
 
 for SEED in ${=SEEDS}; do
   export CINIC10_LOG_DIR="logs/03_models/nas_two_stage"
   export CINIC10_LOG_FILE_NAME="nas_two_stage_seed_${SEED}.log"
-  make nas-two-stage OUTPUT_ROOT=outputs/03_models/nas_two_stage/seed_${SEED} SEED=$SEED OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS_SEARCH=$BEST_EPOCHS EPOCHS_RETRAIN=$BEST_EPOCHS EXTRA_ARGS="--augmentation $BEST_AUG --weight-decay $WEIGHT_DECAY --dropout $BEST_DROPOUT"
+  make nas-two-stage OUTPUT_ROOT=outputs/03_models/nas_two_stage/seed_${SEED} SEED=$SEED OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS_SEARCH=$BEST_EPOCHS EPOCHS_RETRAIN=$BEST_EPOCHS EXTRA_ARGS="--augmentation $BEST_AUG --weight-decay $WEIGHT_DECAY --dropout $BEST_DROPOUT" && \
 done
 ```
 

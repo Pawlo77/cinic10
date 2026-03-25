@@ -1,0 +1,131 @@
+2026-03-24 11:59:59 INFO [__main__] Starting training run: architecture=resnet18 seed=42 output=outputs/03_models/resnet18_finetune/seed_42
+2026-03-24 11:59:59 INFO [__main__] Resolved device: mps
+2026-03-24 12:00:00 INFO [cinic10.models.factory] create_model: resnet18 pretrained=True dropout=0.5
+2026-03-24 12:00:00 INFO [__main__] Model created: resnet18
+2026-03-24 12:00:00 INFO [__main__] Beginning fit
+2026-03-24 12:00:00 INFO [cinic10.training.engine] fit: starting run output=outputs/03_models/resnet18_finetune/seed_42 epochs=60 device=mps
+2026-03-24 12:00:49 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_metrics.json
+2026-03-24 12:00:49 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_resource_stats.json
+2026-03-24 12:00:49 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/best.pt status=best epoch=1
+2026-03-24 12:00:49 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/best.pt
+2026-03-24 12:00:49 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/resnet18_finetune/seed_42/best.safetensors
+2026-03-24 12:00:49 INFO [cinic10.training.engine] New best checkpoint at epoch 1 best_val_acc=0.6135
+2026-03-24 12:00:49 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/last.ckpt status=running epoch=1
+2026-03-24 12:00:49 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/last.ckpt
+2026-03-24 12:01:30 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_metrics.json
+2026-03-24 12:01:30 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_resource_stats.json
+2026-03-24 12:01:30 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/best.pt status=best epoch=2
+2026-03-24 12:01:30 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/best.pt
+2026-03-24 12:01:30 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/resnet18_finetune/seed_42/best.safetensors
+2026-03-24 12:01:30 INFO [cinic10.training.engine] New best checkpoint at epoch 2 best_val_acc=0.6639
+2026-03-24 12:01:30 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/last.ckpt status=running epoch=2
+2026-03-24 12:01:30 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/last.ckpt
+2026-03-24 12:02:11 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_metrics.json
+2026-03-24 12:02:11 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_resource_stats.json
+2026-03-24 12:02:11 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/last.ckpt status=running epoch=3
+2026-03-24 12:02:11 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/last.ckpt
+2026-03-24 12:02:53 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_metrics.json
+2026-03-24 12:02:53 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_resource_stats.json
+2026-03-24 12:02:53 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/best.pt status=best epoch=4
+2026-03-24 12:02:53 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/best.pt
+2026-03-24 12:02:53 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/resnet18_finetune/seed_42/best.safetensors
+2026-03-24 12:02:53 INFO [cinic10.training.engine] New best checkpoint at epoch 4 best_val_acc=0.6853
+2026-03-24 12:02:53 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/last.ckpt status=running epoch=4
+2026-03-24 12:02:53 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/last.ckpt
+2026-03-24 12:03:34 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_metrics.json
+2026-03-24 12:03:34 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_resource_stats.json
+2026-03-24 12:03:34 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/best.pt status=best epoch=5
+2026-03-24 12:03:34 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/best.pt
+2026-03-24 12:03:35 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/resnet18_finetune/seed_42/best.safetensors
+2026-03-24 12:03:35 INFO [cinic10.training.engine] New best checkpoint at epoch 5 best_val_acc=0.6939
+2026-03-24 12:03:35 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/last.ckpt status=running epoch=5
+2026-03-24 12:03:35 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/last.ckpt
+2026-03-24 12:04:16 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_metrics.json
+2026-03-24 12:04:16 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_resource_stats.json
+2026-03-24 12:04:16 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/best.pt status=best epoch=6
+2026-03-24 12:04:16 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/best.pt
+2026-03-24 12:04:16 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/resnet18_finetune/seed_42/best.safetensors
+2026-03-24 12:04:16 INFO [cinic10.training.engine] New best checkpoint at epoch 6 best_val_acc=0.7005
+2026-03-24 12:04:16 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/last.ckpt status=running epoch=6
+2026-03-24 12:04:16 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/last.ckpt
+2026-03-24 12:04:58 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_metrics.json
+2026-03-24 12:04:58 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_resource_stats.json
+2026-03-24 12:04:58 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/best.pt status=best epoch=7
+2026-03-24 12:04:58 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/best.pt
+2026-03-24 12:04:58 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/resnet18_finetune/seed_42/best.safetensors
+2026-03-24 12:04:58 INFO [cinic10.training.engine] New best checkpoint at epoch 7 best_val_acc=0.7027
+2026-03-24 12:04:58 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/last.ckpt status=running epoch=7
+2026-03-24 12:04:58 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/last.ckpt
+2026-03-24 12:05:39 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_metrics.json
+2026-03-24 12:05:39 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_resource_stats.json
+2026-03-24 12:05:39 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/best.pt status=best epoch=8
+2026-03-24 12:05:39 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/best.pt
+2026-03-24 12:05:40 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/resnet18_finetune/seed_42/best.safetensors
+2026-03-24 12:05:40 INFO [cinic10.training.engine] New best checkpoint at epoch 8 best_val_acc=0.7071
+2026-03-24 12:05:40 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/last.ckpt status=running epoch=8
+2026-03-24 12:05:40 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/last.ckpt
+2026-03-24 12:06:21 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_metrics.json
+2026-03-24 12:06:21 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_resource_stats.json
+2026-03-24 12:06:21 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/best.pt status=best epoch=9
+2026-03-24 12:06:21 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/best.pt
+2026-03-24 12:06:21 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/resnet18_finetune/seed_42/best.safetensors
+2026-03-24 12:06:21 INFO [cinic10.training.engine] New best checkpoint at epoch 9 best_val_acc=0.7170
+2026-03-24 12:06:21 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/last.ckpt status=running epoch=9
+2026-03-24 12:06:21 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/last.ckpt
+2026-03-24 12:07:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_metrics.json
+2026-03-24 12:07:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_resource_stats.json
+2026-03-24 12:07:02 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/last.ckpt status=running epoch=10
+2026-03-24 12:07:02 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/last.ckpt
+2026-03-24 12:07:43 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_metrics.json
+2026-03-24 12:07:43 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_resource_stats.json
+2026-03-24 12:07:43 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/best.pt status=best epoch=11
+2026-03-24 12:07:43 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/best.pt
+2026-03-24 12:07:43 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/resnet18_finetune/seed_42/best.safetensors
+2026-03-24 12:07:43 INFO [cinic10.training.engine] New best checkpoint at epoch 11 best_val_acc=0.7197
+2026-03-24 12:07:43 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/last.ckpt status=running epoch=11
+2026-03-24 12:07:43 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/last.ckpt
+2026-03-24 12:08:24 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_metrics.json
+2026-03-24 12:08:24 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_resource_stats.json
+2026-03-24 12:08:24 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/last.ckpt status=running epoch=12
+2026-03-24 12:08:24 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/last.ckpt
+2026-03-24 12:09:05 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_metrics.json
+2026-03-24 12:09:05 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_resource_stats.json
+2026-03-24 12:09:05 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/best.pt status=best epoch=13
+2026-03-24 12:09:05 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/best.pt
+2026-03-24 12:09:05 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/resnet18_finetune/seed_42/best.safetensors
+2026-03-24 12:09:05 INFO [cinic10.training.engine] New best checkpoint at epoch 13 best_val_acc=0.7202
+2026-03-24 12:09:05 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/last.ckpt status=running epoch=13
+2026-03-24 12:09:05 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/last.ckpt
+2026-03-24 12:09:46 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_metrics.json
+2026-03-24 12:09:46 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_resource_stats.json
+2026-03-24 12:09:46 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/best.pt status=best epoch=14
+2026-03-24 12:09:46 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/best.pt
+2026-03-24 12:09:46 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/resnet18_finetune/seed_42/best.safetensors
+2026-03-24 12:09:46 INFO [cinic10.training.engine] New best checkpoint at epoch 14 best_val_acc=0.7239
+2026-03-24 12:09:46 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/last.ckpt status=running epoch=14
+2026-03-24 12:09:46 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/last.ckpt
+2026-03-24 12:10:27 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_metrics.json
+2026-03-24 12:10:27 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_resource_stats.json
+2026-03-24 12:10:27 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/last.ckpt status=running epoch=15
+2026-03-24 12:10:27 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/last.ckpt
+2026-03-24 12:11:08 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_metrics.json
+2026-03-24 12:11:08 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_resource_stats.json
+2026-03-24 12:11:08 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/last.ckpt status=running epoch=16
+2026-03-24 12:11:08 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/last.ckpt
+2026-03-24 12:11:48 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_metrics.json
+2026-03-24 12:11:48 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_resource_stats.json
+2026-03-24 12:11:48 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/last.ckpt status=running epoch=17
+2026-03-24 12:11:48 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/last.ckpt
+2026-03-24 12:12:29 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_metrics.json
+2026-03-24 12:12:29 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_resource_stats.json
+2026-03-24 12:12:29 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/last.ckpt status=running epoch=18
+2026-03-24 12:12:29 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/last.ckpt
+2026-03-24 12:13:10 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/epoch_metrics.json
+2026-03-24 12:13:10 INFO [cinic10.training.engine] Early stopping triggered at epoch 19: val_loss=0.903761 did not improve by >= 0.01 (best in last 10: 0.810164, best before: 0.811529)
+2026-03-24 12:13:10 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/resnet18_finetune/seed_42/last.ckpt status=completed epoch=18
+2026-03-24 12:13:10 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/resnet18_finetune/seed_42/last.ckpt
+2026-03-24 12:13:10 INFO [cinic10.training.engine] fit: completed run output=outputs/03_models/resnet18_finetune/seed_42 best_val_acc=0.7239
+2026-03-24 12:13:10 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/metrics.json
+2026-03-24 12:13:10 INFO [__main__] Fit finished
+2026-03-24 12:13:24 INFO [__main__] Test metrics: loss=0.8123689440303379 accuracy=0.7255666666666667
+2026-03-24 12:13:24 INFO [cinic10.utils] Writing JSON to outputs/03_models/resnet18_finetune/seed_42/test_metrics.json

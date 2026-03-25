@@ -1,0 +1,24 @@
+{
+  "retrain": {
+    "best_val_accuracy": 0.5491888888888888,
+    "best_val_loss": 1.2523026562584771,
+    "completed_epochs": 60.0,
+    "resumed_from_epoch": 0.0
+  },
+  "search": {
+    "best_val_accuracy": 0.6677555555555555,
+    "best_val_loss": 0.9631997612741259,
+    "completed_epochs": 60.0,
+    "resumed_from_epoch": 0.0
+  },
+  "selected_operation_names": [
+    "maxpool3x3_proj",
+    "skip_proj",
+    "depthwise3x3",
+    "depthwise3x3",
+    "skip_proj",
+    "conv3x3"
+  ],
+  "test_accuracy": 0.5491555555555555,
+  "test_loss": 1.2535683547125922
+}

@@ -1,0 +1,367 @@
+2026-03-24 11:31:08 INFO [__main__] Starting training run: architecture=squeezenet1_0 seed=3407 output=outputs/03_models/squeezenet/seed_3407
+2026-03-24 11:31:08 INFO [__main__] Resolved device: mps
+2026-03-24 11:31:08 INFO [cinic10.models.factory] create_model: squeezenet1_0 pretrained=False dropout=0.5
+2026-03-24 11:31:08 INFO [__main__] Model created: squeezenet1_0
+2026-03-24 11:31:08 INFO [__main__] Beginning fit
+2026-03-24 11:31:08 INFO [cinic10.training.engine] fit: starting run output=outputs/03_models/squeezenet/seed_3407 epochs=60 device=mps
+2026-03-24 11:31:30 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:31:30 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:31:30 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=1
+2026-03-24 11:31:30 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:31:30 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:31:30 INFO [cinic10.training.engine] New best checkpoint at epoch 1 best_val_acc=0.3339
+2026-03-24 11:31:30 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=1
+2026-03-24 11:31:30 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:31:43 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:31:43 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:31:43 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=2
+2026-03-24 11:31:43 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:31:43 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:31:43 INFO [cinic10.training.engine] New best checkpoint at epoch 2 best_val_acc=0.3806
+2026-03-24 11:31:43 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=2
+2026-03-24 11:31:43 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:31:57 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:31:57 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:31:57 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=3
+2026-03-24 11:31:57 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:31:57 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:31:57 INFO [cinic10.training.engine] New best checkpoint at epoch 3 best_val_acc=0.3991
+2026-03-24 11:31:57 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=3
+2026-03-24 11:31:57 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:32:11 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:32:11 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:32:11 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=4
+2026-03-24 11:32:11 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:32:11 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:32:11 INFO [cinic10.training.engine] New best checkpoint at epoch 4 best_val_acc=0.4279
+2026-03-24 11:32:11 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=4
+2026-03-24 11:32:11 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:32:24 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:32:24 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:32:24 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=5
+2026-03-24 11:32:24 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:32:24 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:32:24 INFO [cinic10.training.engine] New best checkpoint at epoch 5 best_val_acc=0.4504
+2026-03-24 11:32:24 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=5
+2026-03-24 11:32:24 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:32:38 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:32:38 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:32:38 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=6
+2026-03-24 11:32:38 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:32:38 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:32:38 INFO [cinic10.training.engine] New best checkpoint at epoch 6 best_val_acc=0.4724
+2026-03-24 11:32:38 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=6
+2026-03-24 11:32:38 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:32:51 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:32:51 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:32:51 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=7
+2026-03-24 11:32:51 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:32:51 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:32:51 INFO [cinic10.training.engine] New best checkpoint at epoch 7 best_val_acc=0.4792
+2026-03-24 11:32:51 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=7
+2026-03-24 11:32:51 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:33:05 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:33:05 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:33:05 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=8
+2026-03-24 11:33:05 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:33:18 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:33:18 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:33:18 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=9
+2026-03-24 11:33:18 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:33:18 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:33:18 INFO [cinic10.training.engine] New best checkpoint at epoch 9 best_val_acc=0.4823
+2026-03-24 11:33:18 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=9
+2026-03-24 11:33:18 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:33:31 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:33:31 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:33:31 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=10
+2026-03-24 11:33:31 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:33:31 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:33:31 INFO [cinic10.training.engine] New best checkpoint at epoch 10 best_val_acc=0.4859
+2026-03-24 11:33:31 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=10
+2026-03-24 11:33:31 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:33:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:33:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:33:45 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=11
+2026-03-24 11:33:45 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:33:45 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:33:45 INFO [cinic10.training.engine] New best checkpoint at epoch 11 best_val_acc=0.5027
+2026-03-24 11:33:45 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=11
+2026-03-24 11:33:45 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:33:58 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:33:58 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:33:58 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=12
+2026-03-24 11:33:58 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:33:58 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:33:58 INFO [cinic10.training.engine] New best checkpoint at epoch 12 best_val_acc=0.5129
+2026-03-24 11:33:58 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=12
+2026-03-24 11:33:58 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:34:12 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:34:12 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:34:12 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=13
+2026-03-24 11:34:12 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:34:12 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:34:12 INFO [cinic10.training.engine] New best checkpoint at epoch 13 best_val_acc=0.5177
+2026-03-24 11:34:12 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=13
+2026-03-24 11:34:12 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:34:25 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:34:25 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:34:25 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=14
+2026-03-24 11:34:25 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:34:25 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:34:25 INFO [cinic10.training.engine] New best checkpoint at epoch 14 best_val_acc=0.5218
+2026-03-24 11:34:25 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=14
+2026-03-24 11:34:25 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:34:38 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:34:38 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:34:38 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=15
+2026-03-24 11:34:38 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:34:38 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:34:38 INFO [cinic10.training.engine] New best checkpoint at epoch 15 best_val_acc=0.5244
+2026-03-24 11:34:38 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=15
+2026-03-24 11:34:38 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:34:52 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:34:52 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:34:52 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=16
+2026-03-24 11:34:52 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:34:52 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:34:52 INFO [cinic10.training.engine] New best checkpoint at epoch 16 best_val_acc=0.5258
+2026-03-24 11:34:52 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=16
+2026-03-24 11:34:52 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:35:05 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:35:05 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:35:05 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=17
+2026-03-24 11:35:05 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:35:05 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:35:05 INFO [cinic10.training.engine] New best checkpoint at epoch 17 best_val_acc=0.5326
+2026-03-24 11:35:05 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=17
+2026-03-24 11:35:05 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:35:18 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:35:18 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:35:18 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=18
+2026-03-24 11:35:18 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:35:18 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:35:18 INFO [cinic10.training.engine] New best checkpoint at epoch 18 best_val_acc=0.5360
+2026-03-24 11:35:18 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=18
+2026-03-24 11:35:18 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:35:32 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:35:32 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:35:32 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=19
+2026-03-24 11:35:32 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:35:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:35:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:35:45 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=20
+2026-03-24 11:35:45 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:35:45 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:35:45 INFO [cinic10.training.engine] New best checkpoint at epoch 20 best_val_acc=0.5416
+2026-03-24 11:35:45 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=20
+2026-03-24 11:35:45 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:35:58 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:35:58 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:35:58 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=21
+2026-03-24 11:35:58 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:35:58 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:35:58 INFO [cinic10.training.engine] New best checkpoint at epoch 21 best_val_acc=0.5456
+2026-03-24 11:35:58 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=21
+2026-03-24 11:35:58 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:36:11 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:36:11 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:36:11 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=22
+2026-03-24 11:36:11 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:36:25 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:36:25 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:36:25 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=23
+2026-03-24 11:36:25 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:36:25 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:36:25 INFO [cinic10.training.engine] New best checkpoint at epoch 23 best_val_acc=0.5472
+2026-03-24 11:36:25 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=23
+2026-03-24 11:36:25 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:36:38 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:36:38 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:36:38 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=24
+2026-03-24 11:36:38 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:36:38 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:36:38 INFO [cinic10.training.engine] New best checkpoint at epoch 24 best_val_acc=0.5525
+2026-03-24 11:36:38 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=24
+2026-03-24 11:36:38 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:36:51 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:36:51 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:36:51 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=25
+2026-03-24 11:36:51 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:36:51 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:36:51 INFO [cinic10.training.engine] New best checkpoint at epoch 25 best_val_acc=0.5610
+2026-03-24 11:36:51 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=25
+2026-03-24 11:36:51 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:37:04 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:37:04 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:37:04 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=26
+2026-03-24 11:37:04 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:37:05 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:37:05 INFO [cinic10.training.engine] New best checkpoint at epoch 26 best_val_acc=0.5616
+2026-03-24 11:37:05 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=26
+2026-03-24 11:37:05 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:37:18 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:37:18 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:37:18 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=27
+2026-03-24 11:37:18 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:37:18 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:37:18 INFO [cinic10.training.engine] New best checkpoint at epoch 27 best_val_acc=0.5627
+2026-03-24 11:37:18 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=27
+2026-03-24 11:37:18 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:37:31 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:37:31 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:37:31 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=28
+2026-03-24 11:37:31 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:37:31 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:37:31 INFO [cinic10.training.engine] New best checkpoint at epoch 28 best_val_acc=0.5629
+2026-03-24 11:37:31 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=28
+2026-03-24 11:37:31 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:37:44 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:37:44 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:37:44 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=29
+2026-03-24 11:37:44 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:37:44 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:37:44 INFO [cinic10.training.engine] New best checkpoint at epoch 29 best_val_acc=0.5669
+2026-03-24 11:37:44 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=29
+2026-03-24 11:37:44 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:37:58 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:37:58 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:37:58 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=30
+2026-03-24 11:37:58 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:38:11 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:38:11 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:38:11 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=31
+2026-03-24 11:38:11 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:38:11 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:38:11 INFO [cinic10.training.engine] New best checkpoint at epoch 31 best_val_acc=0.5671
+2026-03-24 11:38:11 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=31
+2026-03-24 11:38:11 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:38:24 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:38:24 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:38:24 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=32
+2026-03-24 11:38:24 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:38:24 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:38:24 INFO [cinic10.training.engine] New best checkpoint at epoch 32 best_val_acc=0.5751
+2026-03-24 11:38:24 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=32
+2026-03-24 11:38:24 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:38:37 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:38:37 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:38:37 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=33
+2026-03-24 11:38:37 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:38:37 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:38:38 INFO [cinic10.training.engine] New best checkpoint at epoch 33 best_val_acc=0.5754
+2026-03-24 11:38:38 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=33
+2026-03-24 11:38:38 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:38:51 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:38:51 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:38:51 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=34
+2026-03-24 11:38:51 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:39:04 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:39:04 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:39:04 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=35
+2026-03-24 11:39:04 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:39:17 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:39:17 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:39:17 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=36
+2026-03-24 11:39:17 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:39:17 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:39:17 INFO [cinic10.training.engine] New best checkpoint at epoch 36 best_val_acc=0.5811
+2026-03-24 11:39:17 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=36
+2026-03-24 11:39:17 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:39:30 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:39:30 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:39:30 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=37
+2026-03-24 11:39:30 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:39:30 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:39:30 INFO [cinic10.training.engine] New best checkpoint at epoch 37 best_val_acc=0.5813
+2026-03-24 11:39:30 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=37
+2026-03-24 11:39:30 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:39:44 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:39:44 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:39:44 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=38
+2026-03-24 11:39:44 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:39:57 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:39:57 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:39:57 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=39
+2026-03-24 11:39:57 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:39:57 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:39:57 INFO [cinic10.training.engine] New best checkpoint at epoch 39 best_val_acc=0.5835
+2026-03-24 11:39:57 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=39
+2026-03-24 11:39:57 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:40:10 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:40:10 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:40:10 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=40
+2026-03-24 11:40:10 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:40:10 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:40:10 INFO [cinic10.training.engine] New best checkpoint at epoch 40 best_val_acc=0.5846
+2026-03-24 11:40:10 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=40
+2026-03-24 11:40:10 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:40:23 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:40:23 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:40:23 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=41
+2026-03-24 11:40:23 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:40:23 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:40:24 INFO [cinic10.training.engine] New best checkpoint at epoch 41 best_val_acc=0.5851
+2026-03-24 11:40:24 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=41
+2026-03-24 11:40:24 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:40:37 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:40:37 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:40:37 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=42
+2026-03-24 11:40:37 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:40:37 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:40:37 INFO [cinic10.training.engine] New best checkpoint at epoch 42 best_val_acc=0.5858
+2026-03-24 11:40:37 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=42
+2026-03-24 11:40:37 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:40:50 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:40:50 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:40:50 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=43
+2026-03-24 11:40:50 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:41:03 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:41:03 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:41:03 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=44
+2026-03-24 11:41:03 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:41:03 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:41:03 INFO [cinic10.training.engine] New best checkpoint at epoch 44 best_val_acc=0.5893
+2026-03-24 11:41:03 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=44
+2026-03-24 11:41:03 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:41:17 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:41:17 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:41:17 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=45
+2026-03-24 11:41:17 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:41:30 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:41:30 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:41:30 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=46
+2026-03-24 11:41:30 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:41:30 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:41:30 INFO [cinic10.training.engine] New best checkpoint at epoch 46 best_val_acc=0.5905
+2026-03-24 11:41:30 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=46
+2026-03-24 11:41:30 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:41:43 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:41:43 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:41:43 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=47
+2026-03-24 11:41:43 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:41:57 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:41:57 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:41:57 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=48
+2026-03-24 11:41:57 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:42:10 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:42:10 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:42:10 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=49
+2026-03-24 11:42:10 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:42:23 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:42:23 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_resource_stats.json
+2026-03-24 11:42:23 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/best.pt status=best epoch=50
+2026-03-24 11:42:23 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/best.pt
+2026-03-24 11:42:23 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/squeezenet/seed_3407/best.safetensors
+2026-03-24 11:42:23 INFO [cinic10.training.engine] New best checkpoint at epoch 50 best_val_acc=0.5911
+2026-03-24 11:42:23 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=running epoch=50
+2026-03-24 11:42:23 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:42:37 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/epoch_metrics.json
+2026-03-24 11:42:37 INFO [cinic10.training.engine] Early stopping triggered at epoch 51: val_loss=1.151360 did not improve by >= 0.01 (best in last 10: 1.143192, best before: 1.151802)
+2026-03-24 11:42:37 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/squeezenet/seed_3407/last.ckpt status=completed epoch=50
+2026-03-24 11:42:37 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/squeezenet/seed_3407/last.ckpt
+2026-03-24 11:42:37 INFO [cinic10.training.engine] fit: completed run output=outputs/03_models/squeezenet/seed_3407 best_val_acc=0.5911
+2026-03-24 11:42:37 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/metrics.json
+2026-03-24 11:42:37 INFO [__main__] Fit finished
+2026-03-24 11:42:45 INFO [__main__] Test metrics: loss=1.1609108177291023 accuracy=0.5859888888888889
+2026-03-24 11:42:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/squeezenet/seed_3407/test_metrics.json

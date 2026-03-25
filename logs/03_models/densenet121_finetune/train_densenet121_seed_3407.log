@@ -1,0 +1,131 @@
+2026-03-24 13:23:30 INFO [__main__] Starting training run: architecture=densenet121 seed=3407 output=outputs/03_models/densenet121_finetune/seed_3407
+2026-03-24 13:23:30 INFO [__main__] Resolved device: mps
+2026-03-24 13:23:31 INFO [cinic10.models.factory] create_model: densenet121 pretrained=True dropout=0.5
+2026-03-24 13:23:31 INFO [__main__] Model created: densenet121
+2026-03-24 13:23:31 INFO [__main__] Beginning fit
+2026-03-24 13:23:31 INFO [cinic10.training.engine] fit: starting run output=outputs/03_models/densenet121_finetune/seed_3407 epochs=60 device=mps
+2026-03-24 13:25:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_metrics.json
+2026-03-24 13:25:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_resource_stats.json
+2026-03-24 13:25:02 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/best.pt status=best epoch=1
+2026-03-24 13:25:02 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/best.pt
+2026-03-24 13:25:03 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/densenet121_finetune/seed_3407/best.safetensors
+2026-03-24 13:25:03 INFO [cinic10.training.engine] New best checkpoint at epoch 1 best_val_acc=0.6664
+2026-03-24 13:25:03 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/last.ckpt status=running epoch=1
+2026-03-24 13:25:03 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/last.ckpt
+2026-03-24 13:26:25 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_metrics.json
+2026-03-24 13:26:25 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_resource_stats.json
+2026-03-24 13:26:25 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/best.pt status=best epoch=2
+2026-03-24 13:26:25 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/best.pt
+2026-03-24 13:26:25 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/densenet121_finetune/seed_3407/best.safetensors
+2026-03-24 13:26:26 INFO [cinic10.training.engine] New best checkpoint at epoch 2 best_val_acc=0.7014
+2026-03-24 13:26:26 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/last.ckpt status=running epoch=2
+2026-03-24 13:26:26 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/last.ckpt
+2026-03-24 13:27:49 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_metrics.json
+2026-03-24 13:27:49 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_resource_stats.json
+2026-03-24 13:27:49 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/best.pt status=best epoch=3
+2026-03-24 13:27:49 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/best.pt
+2026-03-24 13:27:49 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/densenet121_finetune/seed_3407/best.safetensors
+2026-03-24 13:27:49 INFO [cinic10.training.engine] New best checkpoint at epoch 3 best_val_acc=0.7039
+2026-03-24 13:27:49 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/last.ckpt status=running epoch=3
+2026-03-24 13:27:49 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/last.ckpt
+2026-03-24 13:29:12 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_metrics.json
+2026-03-24 13:29:12 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_resource_stats.json
+2026-03-24 13:29:12 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/last.ckpt status=running epoch=4
+2026-03-24 13:29:12 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/last.ckpt
+2026-03-24 13:30:34 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_metrics.json
+2026-03-24 13:30:34 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_resource_stats.json
+2026-03-24 13:30:34 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/best.pt status=best epoch=5
+2026-03-24 13:30:34 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/best.pt
+2026-03-24 13:30:34 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/densenet121_finetune/seed_3407/best.safetensors
+2026-03-24 13:30:34 INFO [cinic10.training.engine] New best checkpoint at epoch 5 best_val_acc=0.7319
+2026-03-24 13:30:34 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/last.ckpt status=running epoch=5
+2026-03-24 13:30:34 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/last.ckpt
+2026-03-24 13:31:56 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_metrics.json
+2026-03-24 13:31:56 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_resource_stats.json
+2026-03-24 13:31:56 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/best.pt status=best epoch=6
+2026-03-24 13:31:56 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/best.pt
+2026-03-24 13:31:56 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/densenet121_finetune/seed_3407/best.safetensors
+2026-03-24 13:31:57 INFO [cinic10.training.engine] New best checkpoint at epoch 6 best_val_acc=0.7388
+2026-03-24 13:31:57 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/last.ckpt status=running epoch=6
+2026-03-24 13:31:57 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/last.ckpt
+2026-03-24 13:33:19 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_metrics.json
+2026-03-24 13:33:19 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_resource_stats.json
+2026-03-24 13:33:19 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/best.pt status=best epoch=7
+2026-03-24 13:33:19 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/best.pt
+2026-03-24 13:33:19 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/densenet121_finetune/seed_3407/best.safetensors
+2026-03-24 13:33:19 INFO [cinic10.training.engine] New best checkpoint at epoch 7 best_val_acc=0.7445
+2026-03-24 13:33:19 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/last.ckpt status=running epoch=7
+2026-03-24 13:33:19 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/last.ckpt
+2026-03-24 13:34:41 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_metrics.json
+2026-03-24 13:34:41 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_resource_stats.json
+2026-03-24 13:34:41 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/last.ckpt status=running epoch=8
+2026-03-24 13:34:41 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/last.ckpt
+2026-03-24 13:36:03 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_metrics.json
+2026-03-24 13:36:03 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_resource_stats.json
+2026-03-24 13:36:03 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/best.pt status=best epoch=9
+2026-03-24 13:36:03 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/best.pt
+2026-03-24 13:36:04 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/densenet121_finetune/seed_3407/best.safetensors
+2026-03-24 13:36:04 INFO [cinic10.training.engine] New best checkpoint at epoch 9 best_val_acc=0.7514
+2026-03-24 13:36:04 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/last.ckpt status=running epoch=9
+2026-03-24 13:36:04 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/last.ckpt
+2026-03-24 13:37:25 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_metrics.json
+2026-03-24 13:37:25 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_resource_stats.json
+2026-03-24 13:37:25 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/best.pt status=best epoch=10
+2026-03-24 13:37:25 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/best.pt
+2026-03-24 13:37:26 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/densenet121_finetune/seed_3407/best.safetensors
+2026-03-24 13:37:26 INFO [cinic10.training.engine] New best checkpoint at epoch 10 best_val_acc=0.7555
+2026-03-24 13:37:26 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/last.ckpt status=running epoch=10
+2026-03-24 13:37:26 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/last.ckpt
+2026-03-24 13:38:46 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_metrics.json
+2026-03-24 13:38:46 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_resource_stats.json
+2026-03-24 13:38:46 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/last.ckpt status=running epoch=11
+2026-03-24 13:38:46 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/last.ckpt
+2026-03-24 13:40:06 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_metrics.json
+2026-03-24 13:40:06 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_resource_stats.json
+2026-03-24 13:40:06 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/best.pt status=best epoch=12
+2026-03-24 13:40:06 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/best.pt
+2026-03-24 13:40:06 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/densenet121_finetune/seed_3407/best.safetensors
+2026-03-24 13:40:06 INFO [cinic10.training.engine] New best checkpoint at epoch 12 best_val_acc=0.7569
+2026-03-24 13:40:06 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/last.ckpt status=running epoch=12
+2026-03-24 13:40:06 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/last.ckpt
+2026-03-24 13:41:26 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_metrics.json
+2026-03-24 13:41:26 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_resource_stats.json
+2026-03-24 13:41:26 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/best.pt status=best epoch=13
+2026-03-24 13:41:26 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/best.pt
+2026-03-24 13:41:26 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/densenet121_finetune/seed_3407/best.safetensors
+2026-03-24 13:41:26 INFO [cinic10.training.engine] New best checkpoint at epoch 13 best_val_acc=0.7581
+2026-03-24 13:41:26 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/last.ckpt status=running epoch=13
+2026-03-24 13:41:26 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/last.ckpt
+2026-03-24 13:42:46 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_metrics.json
+2026-03-24 13:42:46 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_resource_stats.json
+2026-03-24 13:42:46 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/last.ckpt status=running epoch=14
+2026-03-24 13:42:46 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/last.ckpt
+2026-03-24 13:44:06 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_metrics.json
+2026-03-24 13:44:06 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_resource_stats.json
+2026-03-24 13:44:06 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/best.pt status=best epoch=15
+2026-03-24 13:44:06 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/best.pt
+2026-03-24 13:44:06 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/densenet121_finetune/seed_3407/best.safetensors
+2026-03-24 13:44:06 INFO [cinic10.training.engine] New best checkpoint at epoch 15 best_val_acc=0.7594
+2026-03-24 13:44:06 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/last.ckpt status=running epoch=15
+2026-03-24 13:44:06 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/last.ckpt
+2026-03-24 13:45:26 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_metrics.json
+2026-03-24 13:45:26 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_resource_stats.json
+2026-03-24 13:45:26 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/last.ckpt status=running epoch=16
+2026-03-24 13:45:26 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/last.ckpt
+2026-03-24 13:46:46 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_metrics.json
+2026-03-24 13:46:46 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_resource_stats.json
+2026-03-24 13:46:46 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/last.ckpt status=running epoch=17
+2026-03-24 13:46:46 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/last.ckpt
+2026-03-24 13:48:09 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_metrics.json
+2026-03-24 13:48:09 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_resource_stats.json
+2026-03-24 13:48:09 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/last.ckpt status=running epoch=18
+2026-03-24 13:48:09 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/last.ckpt
+2026-03-24 13:49:29 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/epoch_metrics.json
+2026-03-24 13:49:29 INFO [cinic10.training.engine] Early stopping triggered at epoch 19: val_loss=0.805144 did not improve by >= 0.01 (best in last 10: 0.703902, best before: 0.708865)
+2026-03-24 13:49:29 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/densenet121_finetune/seed_3407/last.ckpt status=completed epoch=18
+2026-03-24 13:49:29 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/densenet121_finetune/seed_3407/last.ckpt
+2026-03-24 13:49:30 INFO [cinic10.training.engine] fit: completed run output=outputs/03_models/densenet121_finetune/seed_3407 best_val_acc=0.7594
+2026-03-24 13:49:30 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/metrics.json
+2026-03-24 13:49:30 INFO [__main__] Fit finished
+2026-03-24 13:49:52 INFO [__main__] Test metrics: loss=0.7298860881911384 accuracy=0.7585666666666666
+2026-03-24 13:49:52 INFO [cinic10.utils] Writing JSON to outputs/03_models/densenet121_finetune/seed_3407/test_metrics.json

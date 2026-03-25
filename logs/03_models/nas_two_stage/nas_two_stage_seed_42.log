@@ -1,0 +1,781 @@
+2026-03-24 20:04:57 INFO [__main__] run_nas_two_stage: data=data output=outputs/03_models/nas_two_stage/seed_42 device=mps
+2026-03-24 20:04:58 INFO [cinic10.models.factory] create_model: architecture=nas_cnn (nas_cnn)
+2026-03-24 20:04:58 INFO [cinic10.models.nas_cnn] NasCnn: init num_classes=10 dropout=0.5
+2026-03-24 20:04:58 INFO [cinic10.training.optimizer] create_optimizers: creating architecture optimizer lr=0.0003
+2026-03-24 20:04:58 INFO [cinic10.training.engine] fit: starting run output=outputs/03_models/nas_two_stage/seed_42/search epochs=60 device=mps
+2026-03-24 20:09:35 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 20:09:35 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 20:09:35 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/best.pt status=best epoch=1
+2026-03-24 20:09:35 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/best.pt
+2026-03-24 20:09:35 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/search/best.safetensors
+2026-03-24 20:09:35 INFO [cinic10.training.engine] New best checkpoint at epoch 1 best_val_acc=0.4761
+2026-03-24 20:09:35 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=1
+2026-03-24 20:09:35 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 20:09:35 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 20:14:09 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 20:14:09 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 20:14:09 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/best.pt status=best epoch=2
+2026-03-24 20:14:09 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/best.pt
+2026-03-24 20:14:09 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/search/best.safetensors
+2026-03-24 20:14:09 INFO [cinic10.training.engine] New best checkpoint at epoch 2 best_val_acc=0.5013
+2026-03-24 20:14:09 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=2
+2026-03-24 20:14:09 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 20:14:09 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 20:18:30 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 20:18:30 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 20:18:30 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/best.pt status=best epoch=3
+2026-03-24 20:18:30 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/best.pt
+2026-03-24 20:18:30 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/search/best.safetensors
+2026-03-24 20:18:30 INFO [cinic10.training.engine] New best checkpoint at epoch 3 best_val_acc=0.5376
+2026-03-24 20:18:30 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=3
+2026-03-24 20:18:30 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 20:18:31 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 20:22:52 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 20:22:52 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 20:22:52 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/best.pt status=best epoch=4
+2026-03-24 20:22:52 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/best.pt
+2026-03-24 20:22:52 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/search/best.safetensors
+2026-03-24 20:22:52 INFO [cinic10.training.engine] New best checkpoint at epoch 4 best_val_acc=0.5438
+2026-03-24 20:22:52 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=4
+2026-03-24 20:22:52 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 20:22:52 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 20:27:19 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 20:27:19 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 20:27:19 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/best.pt status=best epoch=5
+2026-03-24 20:27:19 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/best.pt
+2026-03-24 20:27:19 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/search/best.safetensors
+2026-03-24 20:27:19 INFO [cinic10.training.engine] New best checkpoint at epoch 5 best_val_acc=0.5689
+2026-03-24 20:27:19 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=5
+2026-03-24 20:27:19 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 20:27:19 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 20:31:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 20:31:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 20:31:45 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/best.pt status=best epoch=6
+2026-03-24 20:31:45 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/best.pt
+2026-03-24 20:31:45 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/search/best.safetensors
+2026-03-24 20:31:45 INFO [cinic10.training.engine] New best checkpoint at epoch 6 best_val_acc=0.5720
+2026-03-24 20:31:45 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=6
+2026-03-24 20:31:45 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 20:31:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 20:36:06 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 20:36:06 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 20:36:06 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/best.pt status=best epoch=7
+2026-03-24 20:36:06 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/best.pt
+2026-03-24 20:36:06 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/search/best.safetensors
+2026-03-24 20:36:06 INFO [cinic10.training.engine] New best checkpoint at epoch 7 best_val_acc=0.6129
+2026-03-24 20:36:06 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=7
+2026-03-24 20:36:06 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 20:36:06 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 20:40:28 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 20:40:28 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 20:40:28 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=8
+2026-03-24 20:40:28 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 20:40:29 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 20:44:58 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 20:44:58 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 20:44:58 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/best.pt status=best epoch=9
+2026-03-24 20:44:58 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/best.pt
+2026-03-24 20:44:58 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/search/best.safetensors
+2026-03-24 20:44:58 INFO [cinic10.training.engine] New best checkpoint at epoch 9 best_val_acc=0.6166
+2026-03-24 20:44:58 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=9
+2026-03-24 20:44:58 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 20:44:58 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 20:49:27 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 20:49:27 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 20:49:27 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=10
+2026-03-24 20:49:27 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 20:49:27 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 20:53:56 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 20:53:56 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 20:53:56 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/best.pt status=best epoch=11
+2026-03-24 20:53:56 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/best.pt
+2026-03-24 20:53:56 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/search/best.safetensors
+2026-03-24 20:53:56 INFO [cinic10.training.engine] New best checkpoint at epoch 11 best_val_acc=0.6261
+2026-03-24 20:53:56 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=11
+2026-03-24 20:53:56 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 20:53:56 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 20:58:25 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 20:58:25 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 20:58:25 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/best.pt status=best epoch=12
+2026-03-24 20:58:25 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/best.pt
+2026-03-24 20:58:25 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/search/best.safetensors
+2026-03-24 20:58:25 INFO [cinic10.training.engine] New best checkpoint at epoch 12 best_val_acc=0.6320
+2026-03-24 20:58:25 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=12
+2026-03-24 20:58:25 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 20:58:25 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 21:02:48 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 21:02:48 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 21:02:48 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/best.pt status=best epoch=13
+2026-03-24 21:02:48 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/best.pt
+2026-03-24 21:02:48 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/search/best.safetensors
+2026-03-24 21:02:48 INFO [cinic10.training.engine] New best checkpoint at epoch 13 best_val_acc=0.6421
+2026-03-24 21:02:48 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=13
+2026-03-24 21:02:48 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 21:02:48 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 21:07:09 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 21:07:09 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 21:07:09 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=14
+2026-03-24 21:07:09 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 21:07:09 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 21:11:35 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 21:11:35 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 21:11:35 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/best.pt status=best epoch=15
+2026-03-24 21:11:35 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/best.pt
+2026-03-24 21:11:35 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/search/best.safetensors
+2026-03-24 21:11:35 INFO [cinic10.training.engine] New best checkpoint at epoch 15 best_val_acc=0.6646
+2026-03-24 21:11:35 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=15
+2026-03-24 21:11:35 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 21:11:35 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 21:16:04 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 21:16:04 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 21:16:04 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=16
+2026-03-24 21:16:04 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 21:16:04 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 21:20:33 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 21:20:33 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 21:20:33 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=17
+2026-03-24 21:20:33 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 21:20:33 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 21:25:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 21:25:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 21:25:02 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=18
+2026-03-24 21:25:02 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 21:25:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 21:29:31 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 21:29:31 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 21:29:31 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=19
+2026-03-24 21:29:31 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 21:29:31 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 21:34:00 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 21:34:00 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 21:34:00 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=20
+2026-03-24 21:34:00 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 21:34:00 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 21:38:29 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 21:38:29 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 21:38:29 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/best.pt status=best epoch=21
+2026-03-24 21:38:29 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/best.pt
+2026-03-24 21:38:29 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/search/best.safetensors
+2026-03-24 21:38:29 INFO [cinic10.training.engine] New best checkpoint at epoch 21 best_val_acc=0.6678
+2026-03-24 21:38:29 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=21
+2026-03-24 21:38:29 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 21:38:29 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 21:42:58 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 21:42:58 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 21:42:58 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=22
+2026-03-24 21:42:58 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 21:42:58 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 21:47:27 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 21:47:27 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 21:47:27 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=23
+2026-03-24 21:47:27 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 21:47:27 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 21:51:56 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 21:51:56 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 21:51:56 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=24
+2026-03-24 21:51:56 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 21:51:56 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 21:56:25 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 21:56:25 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 21:56:25 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=25
+2026-03-24 21:56:25 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 21:56:25 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 22:00:54 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 22:00:54 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 22:00:54 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=26
+2026-03-24 22:00:54 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 22:00:54 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 22:05:23 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 22:05:23 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 22:05:23 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=27
+2026-03-24 22:05:23 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 22:05:23 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 22:09:52 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 22:09:52 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 22:09:52 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=28
+2026-03-24 22:09:52 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 22:09:53 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 22:14:21 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 22:14:21 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 22:14:21 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=29
+2026-03-24 22:14:21 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 22:14:22 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 22:18:52 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 22:18:52 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 22:18:52 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=30
+2026-03-24 22:18:52 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 22:18:52 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 22:23:14 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 22:23:14 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 22:23:14 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=31
+2026-03-24 22:23:14 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 22:23:15 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 22:27:36 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 22:27:36 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 22:27:36 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=32
+2026-03-24 22:27:36 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 22:27:36 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 22:32:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 22:32:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 22:32:02 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=33
+2026-03-24 22:32:02 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 22:32:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 22:36:31 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 22:36:31 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 22:36:31 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=34
+2026-03-24 22:36:31 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 22:36:31 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 22:41:01 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 22:41:01 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 22:41:01 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=35
+2026-03-24 22:41:01 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 22:41:01 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 22:45:30 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 22:45:30 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 22:45:30 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=36
+2026-03-24 22:45:30 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 22:45:30 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 22:49:59 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 22:49:59 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 22:49:59 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=37
+2026-03-24 22:49:59 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 22:49:59 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 22:54:28 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 22:54:28 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 22:54:28 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=38
+2026-03-24 22:54:28 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 22:54:28 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 22:58:53 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 22:58:53 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 22:58:53 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=39
+2026-03-24 22:58:53 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 22:58:53 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 23:03:13 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 23:03:13 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 23:03:13 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=40
+2026-03-24 23:03:13 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 23:03:13 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 23:07:34 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 23:07:34 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 23:07:34 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=41
+2026-03-24 23:07:34 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 23:07:34 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 23:12:03 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 23:12:03 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 23:12:03 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=42
+2026-03-24 23:12:03 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 23:12:03 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 23:16:32 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 23:16:32 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 23:16:32 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=43
+2026-03-24 23:16:32 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 23:16:33 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 23:21:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 23:21:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 23:21:02 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=44
+2026-03-24 23:21:02 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 23:21:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 23:25:31 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 23:25:31 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 23:25:31 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=45
+2026-03-24 23:25:31 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 23:25:31 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 23:30:00 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 23:30:00 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 23:30:00 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=46
+2026-03-24 23:30:00 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 23:30:00 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 23:34:29 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 23:34:29 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 23:34:29 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=47
+2026-03-24 23:34:29 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 23:34:29 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 23:38:58 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 23:38:58 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 23:38:58 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=48
+2026-03-24 23:38:58 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 23:38:58 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 23:43:27 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 23:43:27 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 23:43:27 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=49
+2026-03-24 23:43:27 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 23:43:27 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 23:47:51 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 23:47:51 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 23:47:51 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=50
+2026-03-24 23:47:51 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 23:47:51 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 23:52:14 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 23:52:14 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 23:52:14 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=51
+2026-03-24 23:52:14 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 23:52:14 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-24 23:56:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-24 23:56:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-24 23:56:45 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=52
+2026-03-24 23:56:45 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-24 23:56:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-25 00:01:16 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-25 00:01:16 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-25 00:01:16 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=53
+2026-03-25 00:01:16 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-25 00:01:16 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-25 00:05:46 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-25 00:05:46 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-25 00:05:46 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=54
+2026-03-25 00:05:46 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-25 00:05:46 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-25 00:10:16 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-25 00:10:16 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-25 00:10:16 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=55
+2026-03-25 00:10:16 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-25 00:10:16 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-25 00:14:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-25 00:14:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-25 00:14:45 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=56
+2026-03-25 00:14:45 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-25 00:14:46 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-25 00:19:15 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-25 00:19:15 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-25 00:19:15 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=57
+2026-03-25 00:19:15 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-25 00:19:15 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-25 00:23:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-25 00:23:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-25 00:23:45 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=58
+2026-03-25 00:23:45 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-25 00:23:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-25 00:28:15 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-25 00:28:15 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-25 00:28:15 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=59
+2026-03-25 00:28:15 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-25 00:28:15 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-25 00:32:44 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_metrics.json
+2026-03-25 00:32:44 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/epoch_resource_stats.json
+2026-03-25 00:32:44 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=running epoch=60
+2026-03-25 00:32:44 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-25 00:32:44 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-25 00:32:44 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/search/last.ckpt status=completed epoch=60
+2026-03-25 00:32:44 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/search/last.ckpt
+2026-03-25 00:32:45 INFO [cinic10.training.engine] fit: completed run output=outputs/03_models/nas_two_stage/seed_42/search best_val_acc=0.6678
+2026-03-25 00:32:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/architecture.json
+2026-03-25 00:32:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/nas_diagnostics.json
+2026-03-25 00:32:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/search/metrics.json
+2026-03-25 00:32:45 INFO [cinic10.training.engine] fit: starting run output=outputs/03_models/nas_two_stage/seed_42/retrain epochs=60 device=mps
+2026-03-25 00:33:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:33:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:33:02 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=1
+2026-03-25 00:33:02 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:33:02 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:33:02 INFO [cinic10.training.engine] New best checkpoint at epoch 1 best_val_acc=0.3945
+2026-03-25 00:33:02 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=1
+2026-03-25 00:33:02 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:33:19 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:33:19 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:33:19 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=2
+2026-03-25 00:33:19 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:33:19 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:33:19 INFO [cinic10.training.engine] New best checkpoint at epoch 2 best_val_acc=0.4206
+2026-03-25 00:33:19 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=2
+2026-03-25 00:33:19 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:33:36 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:33:36 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:33:36 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=3
+2026-03-25 00:33:36 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:33:36 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:33:36 INFO [cinic10.training.engine] New best checkpoint at epoch 3 best_val_acc=0.4367
+2026-03-25 00:33:36 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=3
+2026-03-25 00:33:36 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:33:54 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:33:54 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:33:54 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=4
+2026-03-25 00:33:54 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:33:54 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:33:54 INFO [cinic10.training.engine] New best checkpoint at epoch 4 best_val_acc=0.4468
+2026-03-25 00:33:54 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=4
+2026-03-25 00:33:54 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:34:11 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:34:11 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:34:11 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=5
+2026-03-25 00:34:11 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:34:11 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:34:11 INFO [cinic10.training.engine] New best checkpoint at epoch 5 best_val_acc=0.4536
+2026-03-25 00:34:11 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=5
+2026-03-25 00:34:11 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:34:28 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:34:28 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:34:28 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=6
+2026-03-25 00:34:28 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:34:28 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:34:28 INFO [cinic10.training.engine] New best checkpoint at epoch 6 best_val_acc=0.4575
+2026-03-25 00:34:28 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=6
+2026-03-25 00:34:28 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:34:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:34:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:34:45 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=7
+2026-03-25 00:34:45 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:34:45 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:34:45 INFO [cinic10.training.engine] New best checkpoint at epoch 7 best_val_acc=0.4673
+2026-03-25 00:34:45 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=7
+2026-03-25 00:34:45 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:35:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:35:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:35:02 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=8
+2026-03-25 00:35:02 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:35:02 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:35:02 INFO [cinic10.training.engine] New best checkpoint at epoch 8 best_val_acc=0.4703
+2026-03-25 00:35:02 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=8
+2026-03-25 00:35:02 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:35:19 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:35:19 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:35:19 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=9
+2026-03-25 00:35:19 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:35:19 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:35:19 INFO [cinic10.training.engine] New best checkpoint at epoch 9 best_val_acc=0.4747
+2026-03-25 00:35:19 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=9
+2026-03-25 00:35:19 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:35:36 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:35:36 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:35:36 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=10
+2026-03-25 00:35:36 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:35:36 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:35:36 INFO [cinic10.training.engine] New best checkpoint at epoch 10 best_val_acc=0.4798
+2026-03-25 00:35:36 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=10
+2026-03-25 00:35:36 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:35:54 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:35:54 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:35:54 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=11
+2026-03-25 00:35:54 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:35:54 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:35:54 INFO [cinic10.training.engine] New best checkpoint at epoch 11 best_val_acc=0.4834
+2026-03-25 00:35:54 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=11
+2026-03-25 00:35:54 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:36:11 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:36:11 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:36:11 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=12
+2026-03-25 00:36:11 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:36:11 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:36:11 INFO [cinic10.training.engine] New best checkpoint at epoch 12 best_val_acc=0.4896
+2026-03-25 00:36:11 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=12
+2026-03-25 00:36:11 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:36:28 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:36:28 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:36:28 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=13
+2026-03-25 00:36:28 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:36:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:36:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:36:45 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=14
+2026-03-25 00:36:45 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:36:45 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:36:45 INFO [cinic10.training.engine] New best checkpoint at epoch 14 best_val_acc=0.4929
+2026-03-25 00:36:45 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=14
+2026-03-25 00:36:45 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:37:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:37:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:37:02 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=15
+2026-03-25 00:37:02 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:37:02 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:37:02 INFO [cinic10.training.engine] New best checkpoint at epoch 15 best_val_acc=0.4973
+2026-03-25 00:37:02 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=15
+2026-03-25 00:37:02 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:37:19 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:37:19 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:37:19 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=16
+2026-03-25 00:37:19 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:37:19 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:37:19 INFO [cinic10.training.engine] New best checkpoint at epoch 16 best_val_acc=0.5006
+2026-03-25 00:37:19 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=16
+2026-03-25 00:37:19 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:37:36 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:37:36 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:37:36 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=17
+2026-03-25 00:37:36 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:37:36 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:37:37 INFO [cinic10.training.engine] New best checkpoint at epoch 17 best_val_acc=0.5038
+2026-03-25 00:37:37 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=17
+2026-03-25 00:37:37 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:37:54 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:37:54 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:37:54 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=18
+2026-03-25 00:37:54 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:37:54 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:37:54 INFO [cinic10.training.engine] New best checkpoint at epoch 18 best_val_acc=0.5071
+2026-03-25 00:37:54 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=18
+2026-03-25 00:37:54 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:38:11 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:38:11 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:38:11 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=19
+2026-03-25 00:38:11 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:38:11 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:38:11 INFO [cinic10.training.engine] New best checkpoint at epoch 19 best_val_acc=0.5092
+2026-03-25 00:38:11 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=19
+2026-03-25 00:38:11 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:38:28 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:38:28 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:38:28 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=20
+2026-03-25 00:38:28 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:38:28 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:38:28 INFO [cinic10.training.engine] New best checkpoint at epoch 20 best_val_acc=0.5127
+2026-03-25 00:38:28 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=20
+2026-03-25 00:38:28 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:38:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:38:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:38:45 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=21
+2026-03-25 00:38:45 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:38:45 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:38:45 INFO [cinic10.training.engine] New best checkpoint at epoch 21 best_val_acc=0.5143
+2026-03-25 00:38:45 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=21
+2026-03-25 00:38:45 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:39:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:39:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:39:02 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=22
+2026-03-25 00:39:02 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:39:02 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:39:02 INFO [cinic10.training.engine] New best checkpoint at epoch 22 best_val_acc=0.5145
+2026-03-25 00:39:02 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=22
+2026-03-25 00:39:02 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:39:19 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:39:19 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:39:19 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=23
+2026-03-25 00:39:19 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:39:19 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:39:19 INFO [cinic10.training.engine] New best checkpoint at epoch 23 best_val_acc=0.5174
+2026-03-25 00:39:19 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=23
+2026-03-25 00:39:19 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:39:36 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:39:36 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:39:36 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=24
+2026-03-25 00:39:36 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:39:53 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:39:53 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:39:53 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=25
+2026-03-25 00:39:53 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:39:53 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:39:53 INFO [cinic10.training.engine] New best checkpoint at epoch 25 best_val_acc=0.5227
+2026-03-25 00:39:53 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=25
+2026-03-25 00:39:53 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:40:11 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:40:11 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:40:11 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=26
+2026-03-25 00:40:11 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:40:11 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:40:11 INFO [cinic10.training.engine] New best checkpoint at epoch 26 best_val_acc=0.5228
+2026-03-25 00:40:11 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=26
+2026-03-25 00:40:11 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:40:28 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:40:28 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:40:28 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=27
+2026-03-25 00:40:28 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:40:28 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:40:28 INFO [cinic10.training.engine] New best checkpoint at epoch 27 best_val_acc=0.5258
+2026-03-25 00:40:28 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=27
+2026-03-25 00:40:28 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:40:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:40:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:40:45 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=28
+2026-03-25 00:40:45 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:40:45 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:40:45 INFO [cinic10.training.engine] New best checkpoint at epoch 28 best_val_acc=0.5275
+2026-03-25 00:40:45 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=28
+2026-03-25 00:40:45 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:41:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:41:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:41:02 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=29
+2026-03-25 00:41:02 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:41:02 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:41:02 INFO [cinic10.training.engine] New best checkpoint at epoch 29 best_val_acc=0.5309
+2026-03-25 00:41:02 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=29
+2026-03-25 00:41:02 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:41:19 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:41:19 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:41:19 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=30
+2026-03-25 00:41:19 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:41:19 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:41:19 INFO [cinic10.training.engine] New best checkpoint at epoch 30 best_val_acc=0.5313
+2026-03-25 00:41:19 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=30
+2026-03-25 00:41:19 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:41:36 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:41:36 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:41:36 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=31
+2026-03-25 00:41:36 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:41:36 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:41:36 INFO [cinic10.training.engine] New best checkpoint at epoch 31 best_val_acc=0.5323
+2026-03-25 00:41:36 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=31
+2026-03-25 00:41:36 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:41:53 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:41:53 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:41:53 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=32
+2026-03-25 00:41:53 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:41:53 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:41:53 INFO [cinic10.training.engine] New best checkpoint at epoch 32 best_val_acc=0.5324
+2026-03-25 00:41:53 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=32
+2026-03-25 00:41:53 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:42:10 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:42:10 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:42:10 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=33
+2026-03-25 00:42:10 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:42:11 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:42:11 INFO [cinic10.training.engine] New best checkpoint at epoch 33 best_val_acc=0.5355
+2026-03-25 00:42:11 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=33
+2026-03-25 00:42:11 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:42:28 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:42:28 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:42:28 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=34
+2026-03-25 00:42:28 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:42:28 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:42:28 INFO [cinic10.training.engine] New best checkpoint at epoch 34 best_val_acc=0.5357
+2026-03-25 00:42:28 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=34
+2026-03-25 00:42:28 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:42:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:42:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:42:45 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=35
+2026-03-25 00:42:45 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:42:45 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:42:45 INFO [cinic10.training.engine] New best checkpoint at epoch 35 best_val_acc=0.5391
+2026-03-25 00:42:45 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=35
+2026-03-25 00:42:45 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:43:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:43:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:43:02 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=36
+2026-03-25 00:43:02 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:43:19 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:43:19 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:43:19 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=37
+2026-03-25 00:43:19 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:43:36 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:43:36 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:43:36 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=38
+2026-03-25 00:43:36 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:43:36 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:43:36 INFO [cinic10.training.engine] New best checkpoint at epoch 38 best_val_acc=0.5401
+2026-03-25 00:43:36 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=38
+2026-03-25 00:43:36 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:43:53 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:43:53 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:43:53 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=39
+2026-03-25 00:43:53 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:43:53 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:43:53 INFO [cinic10.training.engine] New best checkpoint at epoch 39 best_val_acc=0.5403
+2026-03-25 00:43:53 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=39
+2026-03-25 00:43:53 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:44:10 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:44:10 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:44:10 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=40
+2026-03-25 00:44:10 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:44:10 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:44:10 INFO [cinic10.training.engine] New best checkpoint at epoch 40 best_val_acc=0.5438
+2026-03-25 00:44:10 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=40
+2026-03-25 00:44:10 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:44:27 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:44:27 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:44:27 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=41
+2026-03-25 00:44:27 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:44:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:44:45 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:44:45 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=42
+2026-03-25 00:44:45 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:45:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:45:02 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:45:02 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=43
+2026-03-25 00:45:02 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:45:02 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:45:02 INFO [cinic10.training.engine] New best checkpoint at epoch 43 best_val_acc=0.5441
+2026-03-25 00:45:02 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=43
+2026-03-25 00:45:02 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:45:19 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:45:19 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:45:19 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=44
+2026-03-25 00:45:19 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:45:19 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:45:19 INFO [cinic10.training.engine] New best checkpoint at epoch 44 best_val_acc=0.5453
+2026-03-25 00:45:19 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=44
+2026-03-25 00:45:19 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:45:36 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:45:36 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:45:36 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=45
+2026-03-25 00:45:36 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:45:36 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:45:36 INFO [cinic10.training.engine] New best checkpoint at epoch 45 best_val_acc=0.5475
+2026-03-25 00:45:36 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=45
+2026-03-25 00:45:36 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:45:53 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:45:53 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:45:53 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=46
+2026-03-25 00:45:53 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:46:10 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:46:10 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:46:10 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=47
+2026-03-25 00:46:10 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:46:27 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:46:27 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:46:27 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=48
+2026-03-25 00:46:27 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:46:44 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:46:44 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:46:44 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=49
+2026-03-25 00:46:44 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:46:44 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:46:44 INFO [cinic10.training.engine] New best checkpoint at epoch 49 best_val_acc=0.5478
+2026-03-25 00:46:44 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=49
+2026-03-25 00:46:44 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:47:01 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:47:01 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:47:01 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=50
+2026-03-25 00:47:01 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:47:19 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:47:19 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:47:19 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=51
+2026-03-25 00:47:19 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:47:36 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:47:36 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:47:36 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=52
+2026-03-25 00:47:36 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:47:36 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:47:36 INFO [cinic10.training.engine] New best checkpoint at epoch 52 best_val_acc=0.5480
+2026-03-25 00:47:36 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=52
+2026-03-25 00:47:36 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:47:53 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:47:53 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:47:53 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=53
+2026-03-25 00:47:53 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:48:10 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:48:10 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:48:10 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=54
+2026-03-25 00:48:10 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:48:10 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:48:10 INFO [cinic10.training.engine] New best checkpoint at epoch 54 best_val_acc=0.5488
+2026-03-25 00:48:10 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=54
+2026-03-25 00:48:10 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:48:27 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:48:27 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:48:27 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=55
+2026-03-25 00:48:27 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:48:44 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:48:44 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:48:44 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=56
+2026-03-25 00:48:44 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:49:01 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:49:01 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:49:01 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=57
+2026-03-25 00:49:01 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:49:18 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:49:18 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:49:18 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=58
+2026-03-25 00:49:18 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:49:35 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:49:35 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:49:35 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/best.pt status=best epoch=59
+2026-03-25 00:49:35 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/best.pt
+2026-03-25 00:49:35 INFO [cinic10.utils] save_model_weights_optimized -> outputs/03_models/nas_two_stage/seed_42/retrain/best.safetensors
+2026-03-25 00:49:35 INFO [cinic10.training.engine] New best checkpoint at epoch 59 best_val_acc=0.5492
+2026-03-25 00:49:35 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=59
+2026-03-25 00:49:35 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:49:52 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_metrics.json
+2026-03-25 00:49:52 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/epoch_resource_stats.json
+2026-03-25 00:49:52 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=running epoch=60
+2026-03-25 00:49:52 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:49:52 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt status=completed epoch=60
+2026-03-25 00:49:52 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_two_stage/seed_42/retrain/last.ckpt
+2026-03-25 00:49:52 INFO [cinic10.training.engine] fit: completed run output=outputs/03_models/nas_two_stage/seed_42/retrain best_val_acc=0.5492
+2026-03-25 00:49:52 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/retrain/metrics.json
+2026-03-25 00:50:01 INFO [cinic10.utils] Writing JSON to outputs/03_models/nas_two_stage/seed_42/two_stage_summary.json

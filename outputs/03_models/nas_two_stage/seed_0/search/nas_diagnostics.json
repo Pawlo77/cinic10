@@ -1,0 +1,2942 @@
+[
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.60862398147583,
+        "temperature": 5.0,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.21174731850624084
+      },
+      {
+        "edge": 1,
+        "entropy": 1.6088078022003174,
+        "temperature": 5.0,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.20606493949890137
+      },
+      {
+        "edge": 2,
+        "entropy": 1.609274983406067,
+        "temperature": 5.0,
+        "top_operation": "conv3x3",
+        "top_probability": 0.2064630538225174
+      },
+      {
+        "edge": 3,
+        "entropy": 1.6085376739501953,
+        "temperature": 5.0,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.20911948382854462
+      },
+      {
+        "edge": 4,
+        "entropy": 1.608277678489685,
+        "temperature": 5.0,
+        "top_operation": "skip_proj",
+        "top_probability": 0.2098483294248581
+      },
+      {
+        "edge": 5,
+        "entropy": 1.6084890365600586,
+        "temperature": 5.0,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.20839081704616547
+      }
+    ],
+    "epoch": 1,
+    "mean_entropy": 1.6086685260136921,
+    "temperature": 5.0
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.6068849563598633,
+        "temperature": 4.923728813559322,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.22247540950775146
+      },
+      {
+        "edge": 1,
+        "entropy": 1.6070767641067505,
+        "temperature": 4.923728813559322,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.2128603756427765
+      },
+      {
+        "edge": 2,
+        "entropy": 1.6091017723083496,
+        "temperature": 4.923728813559322,
+        "top_operation": "conv3x3",
+        "top_probability": 0.20764905214309692
+      },
+      {
+        "edge": 3,
+        "entropy": 1.6058709621429443,
+        "temperature": 4.923728813559322,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.21840797364711761
+      },
+      {
+        "edge": 4,
+        "entropy": 1.605375051498413,
+        "temperature": 4.923728813559322,
+        "top_operation": "skip_proj",
+        "top_probability": 0.22405828535556793
+      },
+      {
+        "edge": 5,
+        "entropy": 1.6055364608764648,
+        "temperature": 4.923728813559322,
+        "top_operation": "conv3x3",
+        "top_probability": 0.21607497334480286
+      }
+    ],
+    "epoch": 2,
+    "mean_entropy": 1.6066409945487976,
+    "temperature": 4.923728813559322
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.6043674945831299,
+        "temperature": 4.8474576271186445,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.2323547750711441
+      },
+      {
+        "edge": 1,
+        "entropy": 1.6043426990509033,
+        "temperature": 4.8474576271186445,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.2195083498954773
+      },
+      {
+        "edge": 2,
+        "entropy": 1.6081305742263794,
+        "temperature": 4.8474576271186445,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.21187086403369904
+      },
+      {
+        "edge": 3,
+        "entropy": 1.6019614934921265,
+        "temperature": 4.8474576271186445,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.22743625938892365
+      },
+      {
+        "edge": 4,
+        "entropy": 1.6007657051086426,
+        "temperature": 4.8474576271186445,
+        "top_operation": "skip_proj",
+        "top_probability": 0.24288076162338257
+      },
+      {
+        "edge": 5,
+        "entropy": 1.6010533571243286,
+        "temperature": 4.8474576271186445,
+        "top_operation": "conv3x3",
+        "top_probability": 0.22338935732841492
+      }
+    ],
+    "epoch": 3,
+    "mean_entropy": 1.6034368872642517,
+    "temperature": 4.8474576271186445
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.600860357284546,
+        "temperature": 4.771186440677966,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.24389319121837616
+      },
+      {
+        "edge": 1,
+        "entropy": 1.6009763479232788,
+        "temperature": 4.771186440677966,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.22700998187065125
+      },
+      {
+        "edge": 2,
+        "entropy": 1.6061584949493408,
+        "temperature": 4.771186440677966,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.22137880325317383
+      },
+      {
+        "edge": 3,
+        "entropy": 1.596856951713562,
+        "temperature": 4.771186440677966,
+        "top_operation": "skip_proj",
+        "top_probability": 0.23672649264335632
+      },
+      {
+        "edge": 4,
+        "entropy": 1.593626618385315,
+        "temperature": 4.771186440677966,
+        "top_operation": "skip_proj",
+        "top_probability": 0.2652704119682312
+      },
+      {
+        "edge": 5,
+        "entropy": 1.5953322649002075,
+        "temperature": 4.771186440677966,
+        "top_operation": "conv3x3",
+        "top_probability": 0.2303611785173416
+      }
+    ],
+    "epoch": 4,
+    "mean_entropy": 1.598968505859375,
+    "temperature": 4.771186440677966
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.5961921215057373,
+        "temperature": 4.694915254237288,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.2552694082260132
+      },
+      {
+        "edge": 1,
+        "entropy": 1.5967206954956055,
+        "temperature": 4.694915254237288,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.23456233739852905
+      },
+      {
+        "edge": 2,
+        "entropy": 1.6033644676208496,
+        "temperature": 4.694915254237288,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.22900982201099396
+      },
+      {
+        "edge": 3,
+        "entropy": 1.589911699295044,
+        "temperature": 4.694915254237288,
+        "top_operation": "skip_proj",
+        "top_probability": 0.24799372255802155
+      },
+      {
+        "edge": 4,
+        "entropy": 1.5833568572998047,
+        "temperature": 4.694915254237288,
+        "top_operation": "skip_proj",
+        "top_probability": 0.2884719669818878
+      },
+      {
+        "edge": 5,
+        "entropy": 1.5884253978729248,
+        "temperature": 4.694915254237288,
+        "top_operation": "conv3x3",
+        "top_probability": 0.23690952360630035
+      }
+    ],
+    "epoch": 5,
+    "mean_entropy": 1.5929952065149944,
+    "temperature": 4.694915254237288
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.590466022491455,
+        "temperature": 4.61864406779661,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.2667181193828583
+      },
+      {
+        "edge": 1,
+        "entropy": 1.5915498733520508,
+        "temperature": 4.61864406779661,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.24305112659931183
+      },
+      {
+        "edge": 2,
+        "entropy": 1.5995795726776123,
+        "temperature": 4.61864406779661,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.2390255331993103
+      },
+      {
+        "edge": 3,
+        "entropy": 1.5801615715026855,
+        "temperature": 4.61864406779661,
+        "top_operation": "skip_proj",
+        "top_probability": 0.2598213255405426
+      },
+      {
+        "edge": 4,
+        "entropy": 1.5695858001708984,
+        "temperature": 4.61864406779661,
+        "top_operation": "skip_proj",
+        "top_probability": 0.3137200176715851
+      },
+      {
+        "edge": 5,
+        "entropy": 1.5802960395812988,
+        "temperature": 4.61864406779661,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.24440044164657593
+      }
+    ],
+    "epoch": 6,
+    "mean_entropy": 1.5852731466293335,
+    "temperature": 4.61864406779661
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.5834875106811523,
+        "temperature": 4.5423728813559325,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.2790762782096863
+      },
+      {
+        "edge": 1,
+        "entropy": 1.5857408046722412,
+        "temperature": 4.5423728813559325,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.2519783079624176
+      },
+      {
+        "edge": 2,
+        "entropy": 1.5950396060943604,
+        "temperature": 4.5423728813559325,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.24867846071720123
+      },
+      {
+        "edge": 3,
+        "entropy": 1.5681134462356567,
+        "temperature": 4.5423728813559325,
+        "top_operation": "skip_proj",
+        "top_probability": 0.2722683250904083
+      },
+      {
+        "edge": 4,
+        "entropy": 1.5522233247756958,
+        "temperature": 4.5423728813559325,
+        "top_operation": "skip_proj",
+        "top_probability": 0.33991581201553345
+      },
+      {
+        "edge": 5,
+        "entropy": 1.571000337600708,
+        "temperature": 4.5423728813559325,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.25236207246780396
+      }
+    ],
+    "epoch": 7,
+    "mean_entropy": 1.5759341716766357,
+    "temperature": 4.5423728813559325
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.575162649154663,
+        "temperature": 4.466101694915254,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.2929452657699585
+      },
+      {
+        "edge": 1,
+        "entropy": 1.5788114070892334,
+        "temperature": 4.466101694915254,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.2605287432670593
+      },
+      {
+        "edge": 2,
+        "entropy": 1.5890799760818481,
+        "temperature": 4.466101694915254,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.26041314005851746
+      },
+      {
+        "edge": 3,
+        "entropy": 1.5546414852142334,
+        "temperature": 4.466101694915254,
+        "top_operation": "skip_proj",
+        "top_probability": 0.28410011529922485
+      },
+      {
+        "edge": 4,
+        "entropy": 1.530435562133789,
+        "temperature": 4.466101694915254,
+        "top_operation": "skip_proj",
+        "top_probability": 0.3677111864089966
+      },
+      {
+        "edge": 5,
+        "entropy": 1.5609166622161865,
+        "temperature": 4.466101694915254,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.2608496844768524
+      }
+    ],
+    "epoch": 8,
+    "mean_entropy": 1.5648412903149922,
+    "temperature": 4.466101694915254
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.5663076639175415,
+        "temperature": 4.389830508474576,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.30515190958976746
+      },
+      {
+        "edge": 1,
+        "entropy": 1.5707796812057495,
+        "temperature": 4.389830508474576,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.268771231174469
+      },
+      {
+        "edge": 2,
+        "entropy": 1.5826139450073242,
+        "temperature": 4.389830508474576,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.2711018919944763
+      },
+      {
+        "edge": 3,
+        "entropy": 1.538405418395996,
+        "temperature": 4.389830508474576,
+        "top_operation": "skip_proj",
+        "top_probability": 0.29685166478157043
+      },
+      {
+        "edge": 4,
+        "entropy": 1.5043408870697021,
+        "temperature": 4.389830508474576,
+        "top_operation": "skip_proj",
+        "top_probability": 0.396450012922287
+      },
+      {
+        "edge": 5,
+        "entropy": 1.5494134426116943,
+        "temperature": 4.389830508474576,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.26992690563201904
+      }
+    ],
+    "epoch": 9,
+    "mean_entropy": 1.5519768397013347,
+    "temperature": 4.389830508474576
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.5556063652038574,
+        "temperature": 4.313559322033898,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.31895485520362854
+      },
+      {
+        "edge": 1,
+        "entropy": 1.560495138168335,
+        "temperature": 4.313559322033898,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.27793893218040466
+      },
+      {
+        "edge": 2,
+        "entropy": 1.5738232135772705,
+        "temperature": 4.313559322033898,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.2857961356639862
+      },
+      {
+        "edge": 3,
+        "entropy": 1.5204956531524658,
+        "temperature": 4.313559322033898,
+        "top_operation": "skip_proj",
+        "top_probability": 0.3088708221912384
+      },
+      {
+        "edge": 4,
+        "entropy": 1.473272442817688,
+        "temperature": 4.313559322033898,
+        "top_operation": "skip_proj",
+        "top_probability": 0.42655953764915466
+      },
+      {
+        "edge": 5,
+        "entropy": 1.5370769500732422,
+        "temperature": 4.313559322033898,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.279403418302536
+      }
+    ],
+    "epoch": 10,
+    "mean_entropy": 1.5367949604988098,
+    "temperature": 4.313559322033898
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.5425090789794922,
+        "temperature": 4.237288135593221,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.334235280752182
+      },
+      {
+        "edge": 1,
+        "entropy": 1.5504969358444214,
+        "temperature": 4.237288135593221,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.28547465801239014
+      },
+      {
+        "edge": 2,
+        "entropy": 1.5639362335205078,
+        "temperature": 4.237288135593221,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.3037024438381195
+      },
+      {
+        "edge": 3,
+        "entropy": 1.4996168613433838,
+        "temperature": 4.237288135593221,
+        "top_operation": "skip_proj",
+        "top_probability": 0.31990429759025574
+      },
+      {
+        "edge": 4,
+        "entropy": 1.436499834060669,
+        "temperature": 4.237288135593221,
+        "top_operation": "skip_proj",
+        "top_probability": 0.4584338665008545
+      },
+      {
+        "edge": 5,
+        "entropy": 1.523819088935852,
+        "temperature": 4.237288135593221,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.28875836730003357
+      }
+    ],
+    "epoch": 11,
+    "mean_entropy": 1.5194796721140544,
+    "temperature": 4.237288135593221
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.5273165702819824,
+        "temperature": 4.161016949152542,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.3505822718143463
+      },
+      {
+        "edge": 1,
+        "entropy": 1.5369772911071777,
+        "temperature": 4.161016949152542,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.2948859632015228
+      },
+      {
+        "edge": 2,
+        "entropy": 1.549116849899292,
+        "temperature": 4.161016949152542,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.3275691866874695
+      },
+      {
+        "edge": 3,
+        "entropy": 1.4756178855895996,
+        "temperature": 4.161016949152542,
+        "top_operation": "skip_proj",
+        "top_probability": 0.33138442039489746
+      },
+      {
+        "edge": 4,
+        "entropy": 1.394078016281128,
+        "temperature": 4.161016949152542,
+        "top_operation": "skip_proj",
+        "top_probability": 0.49145275354385376
+      },
+      {
+        "edge": 5,
+        "entropy": 1.509308099746704,
+        "temperature": 4.161016949152542,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.29909732937812805
+      }
+    ],
+    "epoch": 12,
+    "mean_entropy": 1.498735785484314,
+    "temperature": 4.161016949152542
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.5100244283676147,
+        "temperature": 4.084745762711864,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.36737892031669617
+      },
+      {
+        "edge": 1,
+        "entropy": 1.5234200954437256,
+        "temperature": 4.084745762711864,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.30401650071144104
+      },
+      {
+        "edge": 2,
+        "entropy": 1.5314204692840576,
+        "temperature": 4.084745762711864,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.35216933488845825
+      },
+      {
+        "edge": 3,
+        "entropy": 1.4484885931015015,
+        "temperature": 4.084745762711864,
+        "top_operation": "skip_proj",
+        "top_probability": 0.34320247173309326
+      },
+      {
+        "edge": 4,
+        "entropy": 1.3462893962860107,
+        "temperature": 4.084745762711864,
+        "top_operation": "skip_proj",
+        "top_probability": 0.525143563747406
+      },
+      {
+        "edge": 5,
+        "entropy": 1.493675947189331,
+        "temperature": 4.084745762711864,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.3093004822731018
+      }
+    ],
+    "epoch": 13,
+    "mean_entropy": 1.4755531549453735,
+    "temperature": 4.084745762711864
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.490632176399231,
+        "temperature": 4.008474576271187,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.3857406973838806
+      },
+      {
+        "edge": 1,
+        "entropy": 1.5092594623565674,
+        "temperature": 4.008474576271187,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.3129362165927887
+      },
+      {
+        "edge": 2,
+        "entropy": 1.5088882446289062,
+        "temperature": 4.008474576271187,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.37934035062789917
+      },
+      {
+        "edge": 3,
+        "entropy": 1.4177392721176147,
+        "temperature": 4.008474576271187,
+        "top_operation": "skip_proj",
+        "top_probability": 0.35541877150535583
+      },
+      {
+        "edge": 4,
+        "entropy": 1.2926033735275269,
+        "temperature": 4.008474576271187,
+        "top_operation": "skip_proj",
+        "top_probability": 0.5596731305122375
+      },
+      {
+        "edge": 5,
+        "entropy": 1.476591944694519,
+        "temperature": 4.008474576271187,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.319709450006485
+      }
+    ],
+    "epoch": 14,
+    "mean_entropy": 1.4492857456207275,
+    "temperature": 4.008474576271187
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.4687511920928955,
+        "temperature": 3.9322033898305087,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.4051162600517273
+      },
+      {
+        "edge": 1,
+        "entropy": 1.4918720722198486,
+        "temperature": 3.9322033898305087,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.3241584002971649
+      },
+      {
+        "edge": 2,
+        "entropy": 1.4794573783874512,
+        "temperature": 3.9322033898305087,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.41037502884864807
+      },
+      {
+        "edge": 3,
+        "entropy": 1.385095238685608,
+        "temperature": 3.9322033898305087,
+        "top_operation": "skip_proj",
+        "top_probability": 0.3684036135673523
+      },
+      {
+        "edge": 4,
+        "entropy": 1.2320013046264648,
+        "temperature": 3.9322033898305087,
+        "top_operation": "skip_proj",
+        "top_probability": 0.5954091548919678
+      },
+      {
+        "edge": 5,
+        "entropy": 1.4579691886901855,
+        "temperature": 3.9322033898305087,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.3298013508319855
+      }
+    ],
+    "epoch": 15,
+    "mean_entropy": 1.419191062450409,
+    "temperature": 3.9322033898305087
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.442245602607727,
+        "temperature": 3.8559322033898304,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.4272998869419098
+      },
+      {
+        "edge": 1,
+        "entropy": 1.4718430042266846,
+        "temperature": 3.8559322033898304,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.3336159586906433
+      },
+      {
+        "edge": 2,
+        "entropy": 1.4446790218353271,
+        "temperature": 3.8559322033898304,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.44296491146087646
+      },
+      {
+        "edge": 3,
+        "entropy": 1.3512777090072632,
+        "temperature": 3.8559322033898304,
+        "top_operation": "skip_proj",
+        "top_probability": 0.38124147057533264
+      },
+      {
+        "edge": 4,
+        "entropy": 1.1656320095062256,
+        "temperature": 3.8559322033898304,
+        "top_operation": "skip_proj",
+        "top_probability": 0.6314290165901184
+      },
+      {
+        "edge": 5,
+        "entropy": 1.438291311264038,
+        "temperature": 3.8559322033898304,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.33890673518180847
+      }
+    ],
+    "epoch": 16,
+    "mean_entropy": 1.3856614430745442,
+    "temperature": 3.8559322033898304
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.4117932319641113,
+        "temperature": 3.7796610169491522,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.4507313072681427
+      },
+      {
+        "edge": 1,
+        "entropy": 1.451541781425476,
+        "temperature": 3.7796610169491522,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.34527772665023804
+      },
+      {
+        "edge": 2,
+        "entropy": 1.4022486209869385,
+        "temperature": 3.7796610169491522,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.4780578911304474
+      },
+      {
+        "edge": 3,
+        "entropy": 1.313476800918579,
+        "temperature": 3.7796610169491522,
+        "top_operation": "skip_proj",
+        "top_probability": 0.3958626389503479
+      },
+      {
+        "edge": 4,
+        "entropy": 1.0939571857452393,
+        "temperature": 3.7796610169491522,
+        "top_operation": "skip_proj",
+        "top_probability": 0.6672763228416443
+      },
+      {
+        "edge": 5,
+        "entropy": 1.4174996614456177,
+        "temperature": 3.7796610169491522,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.34675371646881104
+      }
+    ],
+    "epoch": 17,
+    "mean_entropy": 1.3484195470809937,
+    "temperature": 3.7796610169491522
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.3791269063949585,
+        "temperature": 3.7033898305084745,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.47468969225883484
+      },
+      {
+        "edge": 1,
+        "entropy": 1.4280314445495605,
+        "temperature": 3.7033898305084745,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.359109103679657
+      },
+      {
+        "edge": 2,
+        "entropy": 1.3551945686340332,
+        "temperature": 3.7033898305084745,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.5128074884414673
+      },
+      {
+        "edge": 3,
+        "entropy": 1.2747981548309326,
+        "temperature": 3.7033898305084745,
+        "top_operation": "skip_proj",
+        "top_probability": 0.40985792875289917
+      },
+      {
+        "edge": 4,
+        "entropy": 1.0181081295013428,
+        "temperature": 3.7033898305084745,
+        "top_operation": "skip_proj",
+        "top_probability": 0.7024335265159607
+      },
+      {
+        "edge": 5,
+        "entropy": 1.3940558433532715,
+        "temperature": 3.7033898305084745,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.35316532850265503
+      }
+    ],
+    "epoch": 18,
+    "mean_entropy": 1.3082191745440166,
+    "temperature": 3.7033898305084745
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.3425123691558838,
+        "temperature": 3.6271186440677967,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.5004259347915649
+      },
+      {
+        "edge": 1,
+        "entropy": 1.4011759757995605,
+        "temperature": 3.6271186440677967,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.3760186731815338
+      },
+      {
+        "edge": 2,
+        "entropy": 1.3026611804962158,
+        "temperature": 3.6271186440677967,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.5479344725608826
+      },
+      {
+        "edge": 3,
+        "entropy": 1.2344129085540771,
+        "temperature": 3.6271186440677967,
+        "top_operation": "skip_proj",
+        "top_probability": 0.4238570034503937
+      },
+      {
+        "edge": 4,
+        "entropy": 0.9386277198791504,
+        "temperature": 3.6271186440677967,
+        "top_operation": "skip_proj",
+        "top_probability": 0.7366289496421814
+      },
+      {
+        "edge": 5,
+        "entropy": 1.3699610233306885,
+        "temperature": 3.6271186440677967,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.3582332730293274
+      }
+    ],
+    "epoch": 19,
+    "mean_entropy": 1.2648918628692627,
+    "temperature": 3.6271186440677967
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.304168701171875,
+        "temperature": 3.5508474576271185,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.5246182084083557
+      },
+      {
+        "edge": 1,
+        "entropy": 1.3744968175888062,
+        "temperature": 3.5508474576271185,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.3947182595729828
+      },
+      {
+        "edge": 2,
+        "entropy": 1.2426848411560059,
+        "temperature": 3.5508474576271185,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.5845670700073242
+      },
+      {
+        "edge": 3,
+        "entropy": 1.191773772239685,
+        "temperature": 3.5508474576271185,
+        "top_operation": "skip_proj",
+        "top_probability": 0.4390125572681427
+      },
+      {
+        "edge": 4,
+        "entropy": 0.8567276000976562,
+        "temperature": 3.5508474576271185,
+        "top_operation": "skip_proj",
+        "top_probability": 0.7694647312164307
+      },
+      {
+        "edge": 5,
+        "entropy": 1.3445630073547363,
+        "temperature": 3.5508474576271185,
+        "top_operation": "conv3x3",
+        "top_probability": 0.36633631587028503
+      }
+    ],
+    "epoch": 20,
+    "mean_entropy": 1.2190691232681274,
+    "temperature": 3.5508474576271185
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.2591108083724976,
+        "temperature": 3.4745762711864407,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.5525234341621399
+      },
+      {
+        "edge": 1,
+        "entropy": 1.3451850414276123,
+        "temperature": 3.4745762711864407,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.4136585295200348
+      },
+      {
+        "edge": 2,
+        "entropy": 1.1765745878219604,
+        "temperature": 3.4745762711864407,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.6215952634811401
+      },
+      {
+        "edge": 3,
+        "entropy": 1.1503267288208008,
+        "temperature": 3.4745762711864407,
+        "top_operation": "skip_proj",
+        "top_probability": 0.4503595530986786
+      },
+      {
+        "edge": 4,
+        "entropy": 0.7748050093650818,
+        "temperature": 3.4745762711864407,
+        "top_operation": "skip_proj",
+        "top_probability": 0.8001092076301575
+      },
+      {
+        "edge": 5,
+        "entropy": 1.3184921741485596,
+        "temperature": 3.4745762711864407,
+        "top_operation": "conv3x3",
+        "top_probability": 0.38643351197242737
+      }
+    ],
+    "epoch": 21,
+    "mean_entropy": 1.1707490583260853,
+    "temperature": 3.4745762711864407
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.2094959020614624,
+        "temperature": 3.398305084745763,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.5809662938117981
+      },
+      {
+        "edge": 1,
+        "entropy": 1.313955307006836,
+        "temperature": 3.398305084745763,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.4329996705055237
+      },
+      {
+        "edge": 2,
+        "entropy": 1.107312798500061,
+        "temperature": 3.398305084745763,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.6572345495223999
+      },
+      {
+        "edge": 3,
+        "entropy": 1.107572317123413,
+        "temperature": 3.398305084745763,
+        "top_operation": "skip_proj",
+        "top_probability": 0.46112626791000366
+      },
+      {
+        "edge": 4,
+        "entropy": 0.6927669644355774,
+        "temperature": 3.398305084745763,
+        "top_operation": "skip_proj",
+        "top_probability": 0.8288088440895081
+      },
+      {
+        "edge": 5,
+        "entropy": 1.2913193702697754,
+        "temperature": 3.398305084745763,
+        "top_operation": "conv3x3",
+        "top_probability": 0.4098517894744873
+      }
+    ],
+    "epoch": 22,
+    "mean_entropy": 1.1204037765661876,
+    "temperature": 3.398305084745763
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.1569957733154297,
+        "temperature": 3.3220338983050848,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.6087558269500732
+      },
+      {
+        "edge": 1,
+        "entropy": 1.2784202098846436,
+        "temperature": 3.3220338983050848,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.4584372639656067
+      },
+      {
+        "edge": 2,
+        "entropy": 1.030534267425537,
+        "temperature": 3.3220338983050848,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.6937374472618103
+      },
+      {
+        "edge": 3,
+        "entropy": 1.064915418624878,
+        "temperature": 3.3220338983050848,
+        "top_operation": "skip_proj",
+        "top_probability": 0.47175905108451843
+      },
+      {
+        "edge": 4,
+        "entropy": 0.6124236583709717,
+        "temperature": 3.3220338983050848,
+        "top_operation": "skip_proj",
+        "top_probability": 0.8551417589187622
+      },
+      {
+        "edge": 5,
+        "entropy": 1.2635066509246826,
+        "temperature": 3.3220338983050848,
+        "top_operation": "conv3x3",
+        "top_probability": 0.4352593421936035
+      }
+    ],
+    "epoch": 23,
+    "mean_entropy": 1.0677993297576904,
+    "temperature": 3.3220338983050848
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.1048754453659058,
+        "temperature": 3.2457627118644066,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.6342130899429321
+      },
+      {
+        "edge": 1,
+        "entropy": 1.242465853691101,
+        "temperature": 3.2457627118644066,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.484723299741745
+      },
+      {
+        "edge": 2,
+        "entropy": 0.9518805146217346,
+        "temperature": 3.2457627118644066,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.728441596031189
+      },
+      {
+        "edge": 3,
+        "entropy": 1.0232172012329102,
+        "temperature": 3.2457627118644066,
+        "top_operation": "skip_proj",
+        "top_probability": 0.4820007383823395
+      },
+      {
+        "edge": 4,
+        "entropy": 0.534345805644989,
+        "temperature": 3.2457627118644066,
+        "top_operation": "skip_proj",
+        "top_probability": 0.8791483044624329
+      },
+      {
+        "edge": 5,
+        "entropy": 1.232286810874939,
+        "temperature": 3.2457627118644066,
+        "top_operation": "conv3x3",
+        "top_probability": 0.46365004777908325
+      }
+    ],
+    "epoch": 24,
+    "mean_entropy": 1.0148452719052632,
+    "temperature": 3.2457627118644066
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.0487759113311768,
+        "temperature": 3.169491525423729,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.6603112816810608
+      },
+      {
+        "edge": 1,
+        "entropy": 1.1981172561645508,
+        "temperature": 3.169491525423729,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.515579342842102
+      },
+      {
+        "edge": 2,
+        "entropy": 0.8715810775756836,
+        "temperature": 3.169491525423729,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.7613974213600159
+      },
+      {
+        "edge": 3,
+        "entropy": 0.9838889241218567,
+        "temperature": 3.169491525423729,
+        "top_operation": "skip_proj",
+        "top_probability": 0.4926258325576782
+      },
+      {
+        "edge": 4,
+        "entropy": 0.46058908104896545,
+        "temperature": 3.169491525423729,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9004411697387695
+      },
+      {
+        "edge": 5,
+        "entropy": 1.197631597518921,
+        "temperature": 3.169491525423729,
+        "top_operation": "conv3x3",
+        "top_probability": 0.49570226669311523
+      }
+    ],
+    "epoch": 25,
+    "mean_entropy": 0.9600973079601923,
+    "temperature": 3.169491525423729
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.9930149912834167,
+        "temperature": 3.093220338983051,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.6846081018447876
+      },
+      {
+        "edge": 1,
+        "entropy": 1.1540706157684326,
+        "temperature": 3.093220338983051,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.547622561454773
+      },
+      {
+        "edge": 2,
+        "entropy": 0.7859187126159668,
+        "temperature": 3.093220338983051,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.7941920757293701
+      },
+      {
+        "edge": 3,
+        "entropy": 0.9456877708435059,
+        "temperature": 3.093220338983051,
+        "top_operation": "skip_proj",
+        "top_probability": 0.5103909969329834
+      },
+      {
+        "edge": 4,
+        "entropy": 0.3916647136211395,
+        "temperature": 3.093220338983051,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9191382527351379
+      },
+      {
+        "edge": 5,
+        "entropy": 1.1585184335708618,
+        "temperature": 3.093220338983051,
+        "top_operation": "conv3x3",
+        "top_probability": 0.5304269790649414
+      }
+    ],
+    "epoch": 26,
+    "mean_entropy": 0.9048125396172205,
+    "temperature": 3.093220338983051
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.9353974461555481,
+        "temperature": 3.016949152542373,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.7087216377258301
+      },
+      {
+        "edge": 1,
+        "entropy": 1.107674241065979,
+        "temperature": 3.016949152542373,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.5790777802467346
+      },
+      {
+        "edge": 2,
+        "entropy": 0.700847864151001,
+        "temperature": 3.016949152542373,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.8245256543159485
+      },
+      {
+        "edge": 3,
+        "entropy": 0.9094536304473877,
+        "temperature": 3.016949152542373,
+        "top_operation": "skip_proj",
+        "top_probability": 0.5258888602256775
+      },
+      {
+        "edge": 4,
+        "entropy": 0.3287429213523865,
+        "temperature": 3.016949152542373,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9351962804794312
+      },
+      {
+        "edge": 5,
+        "entropy": 1.1129298210144043,
+        "temperature": 3.016949152542373,
+        "top_operation": "conv3x3",
+        "top_probability": 0.5668172836303711
+      }
+    ],
+    "epoch": 27,
+    "mean_entropy": 0.8491743206977844,
+    "temperature": 3.016949152542373
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.8798864483833313,
+        "temperature": 2.940677966101695,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.7307826280593872
+      },
+      {
+        "edge": 1,
+        "entropy": 1.054719090461731,
+        "temperature": 2.940677966101695,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.6125800609588623
+      },
+      {
+        "edge": 2,
+        "entropy": 0.6190857887268066,
+        "temperature": 2.940677966101695,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.8517673015594482
+      },
+      {
+        "edge": 3,
+        "entropy": 0.8754875659942627,
+        "temperature": 2.940677966101695,
+        "top_operation": "skip_proj",
+        "top_probability": 0.5399714112281799
+      },
+      {
+        "edge": 4,
+        "entropy": 0.27222928404808044,
+        "temperature": 2.940677966101695,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9487778544425964
+      },
+      {
+        "edge": 5,
+        "entropy": 1.060538649559021,
+        "temperature": 2.940677966101695,
+        "top_operation": "conv3x3",
+        "top_probability": 0.6051153540611267
+      }
+    ],
+    "epoch": 28,
+    "mean_entropy": 0.7936578045288721,
+    "temperature": 2.940677966101695
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.8268136978149414,
+        "temperature": 2.864406779661017,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.7506712079048157
+      },
+      {
+        "edge": 1,
+        "entropy": 0.9947457313537598,
+        "temperature": 2.864406779661017,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.6479814052581787
+      },
+      {
+        "edge": 2,
+        "entropy": 0.5387260913848877,
+        "temperature": 2.864406779661017,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.8768259882926941
+      },
+      {
+        "edge": 3,
+        "entropy": 0.8419037461280823,
+        "temperature": 2.864406779661017,
+        "top_operation": "skip_proj",
+        "top_probability": 0.5605257749557495
+      },
+      {
+        "edge": 4,
+        "entropy": 0.22193986177444458,
+        "temperature": 2.864406779661017,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9601638913154602
+      },
+      {
+        "edge": 5,
+        "entropy": 1.000746250152588,
+        "temperature": 2.864406779661017,
+        "top_operation": "conv3x3",
+        "top_probability": 0.6444419622421265
+      }
+    ],
+    "epoch": 29,
+    "mean_entropy": 0.7374792297681173,
+    "temperature": 2.864406779661017
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.7751402854919434,
+        "temperature": 2.788135593220339,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.7698460817337036
+      },
+      {
+        "edge": 1,
+        "entropy": 0.9339609146118164,
+        "temperature": 2.788135593220339,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.6826292872428894
+      },
+      {
+        "edge": 2,
+        "entropy": 0.4621526300907135,
+        "temperature": 2.788135593220339,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.8992119431495667
+      },
+      {
+        "edge": 3,
+        "entropy": 0.8072038888931274,
+        "temperature": 2.788135593220339,
+        "top_operation": "skip_proj",
+        "top_probability": 0.5882912278175354
+      },
+      {
+        "edge": 4,
+        "entropy": 0.17829103767871857,
+        "temperature": 2.788135593220339,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9694815874099731
+      },
+      {
+        "edge": 5,
+        "entropy": 0.9335058927536011,
+        "temperature": 2.788135593220339,
+        "top_operation": "conv3x3",
+        "top_probability": 0.684292733669281
+      }
+    ],
+    "epoch": 30,
+    "mean_entropy": 0.6817091082533201,
+    "temperature": 2.788135593220339
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.7203208804130554,
+        "temperature": 2.711864406779661,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.7899173498153687
+      },
+      {
+        "edge": 1,
+        "entropy": 0.8647505044937134,
+        "temperature": 2.711864406779661,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.7195497751235962
+      },
+      {
+        "edge": 2,
+        "entropy": 0.38838350772857666,
+        "temperature": 2.711864406779661,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9193999767303467
+      },
+      {
+        "edge": 3,
+        "entropy": 0.7716659903526306,
+        "temperature": 2.711864406779661,
+        "top_operation": "skip_proj",
+        "top_probability": 0.6185871362686157
+      },
+      {
+        "edge": 4,
+        "entropy": 0.1410701870918274,
+        "temperature": 2.711864406779661,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9769765734672546
+      },
+      {
+        "edge": 5,
+        "entropy": 0.8606501817703247,
+        "temperature": 2.711864406779661,
+        "top_operation": "conv3x3",
+        "top_probability": 0.7235462665557861
+      }
+    ],
+    "epoch": 31,
+    "mean_entropy": 0.6244735419750214,
+    "temperature": 2.711864406779661
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.6609488725662231,
+        "temperature": 2.6355932203389827,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.8114498853683472
+      },
+      {
+        "edge": 1,
+        "entropy": 0.7906257510185242,
+        "temperature": 2.6355932203389827,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.7553620934486389
+      },
+      {
+        "edge": 2,
+        "entropy": 0.32144713401794434,
+        "temperature": 2.6355932203389827,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9365464448928833
+      },
+      {
+        "edge": 3,
+        "entropy": 0.7318727970123291,
+        "temperature": 2.6355932203389827,
+        "top_operation": "skip_proj",
+        "top_probability": 0.6538565754890442
+      },
+      {
+        "edge": 4,
+        "entropy": 0.10999096184968948,
+        "temperature": 2.6355932203389827,
+        "top_operation": "skip_proj",
+        "top_probability": 0.982883870601654
+      },
+      {
+        "edge": 5,
+        "entropy": 0.7829855680465698,
+        "temperature": 2.6355932203389827,
+        "top_operation": "conv3x3",
+        "top_probability": 0.7614375352859497
+      }
+    ],
+    "epoch": 32,
+    "mean_entropy": 0.5663118474185467,
+    "temperature": 2.6355932203389827
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.5981399416923523,
+        "temperature": 2.559322033898305,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.8336705565452576
+      },
+      {
+        "edge": 1,
+        "entropy": 0.7153191566467285,
+        "temperature": 2.559322033898305,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.7889024615287781
+      },
+      {
+        "edge": 2,
+        "entropy": 0.261245995759964,
+        "temperature": 2.559322033898305,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9509929418563843
+      },
+      {
+        "edge": 3,
+        "entropy": 0.6871736645698547,
+        "temperature": 2.559322033898305,
+        "top_operation": "skip_proj",
+        "top_probability": 0.6916098594665527
+      },
+      {
+        "edge": 4,
+        "entropy": 0.08434897661209106,
+        "temperature": 2.559322033898305,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9874875545501709
+      },
+      {
+        "edge": 5,
+        "entropy": 0.704216480255127,
+        "temperature": 2.559322033898305,
+        "top_operation": "conv3x3",
+        "top_probability": 0.7964688539505005
+      }
+    ],
+    "epoch": 33,
+    "mean_entropy": 0.5084073692560196,
+    "temperature": 2.559322033898305
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.5276021957397461,
+        "temperature": 2.483050847457627,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.8585648536682129
+      },
+      {
+        "edge": 1,
+        "entropy": 0.6421365141868591,
+        "temperature": 2.483050847457627,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.8184563517570496
+      },
+      {
+        "edge": 2,
+        "entropy": 0.20856483280658722,
+        "temperature": 2.483050847457627,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9628379344940186
+      },
+      {
+        "edge": 3,
+        "entropy": 0.6419960260391235,
+        "temperature": 2.483050847457627,
+        "top_operation": "skip_proj",
+        "top_probability": 0.7256805896759033
+      },
+      {
+        "edge": 4,
+        "entropy": 0.06369401514530182,
+        "temperature": 2.483050847457627,
+        "top_operation": "skip_proj",
+        "top_probability": 0.990992546081543
+      },
+      {
+        "edge": 5,
+        "entropy": 0.6245645880699158,
+        "temperature": 2.483050847457627,
+        "top_operation": "conv3x3",
+        "top_probability": 0.8288105726242065
+      }
+    ],
+    "epoch": 34,
+    "mean_entropy": 0.45142636199792224,
+    "temperature": 2.483050847457627
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.4519224762916565,
+        "temperature": 2.406779661016949,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.8845069408416748
+      },
+      {
+        "edge": 1,
+        "entropy": 0.57197105884552,
+        "temperature": 2.406779661016949,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.8441776037216187
+      },
+      {
+        "edge": 2,
+        "entropy": 0.1627548336982727,
+        "temperature": 2.406779661016949,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9724912047386169
+      },
+      {
+        "edge": 3,
+        "entropy": 0.598381757736206,
+        "temperature": 2.406779661016949,
+        "top_operation": "skip_proj",
+        "top_probability": 0.755333662033081
+      },
+      {
+        "edge": 4,
+        "entropy": 0.04727683961391449,
+        "temperature": 2.406779661016949,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9936268329620361
+      },
+      {
+        "edge": 5,
+        "entropy": 0.5470072627067566,
+        "temperature": 2.406779661016949,
+        "top_operation": "conv3x3",
+        "top_probability": 0.8577864766120911
+      }
+    ],
+    "epoch": 35,
+    "mean_entropy": 0.3965523714820544,
+    "temperature": 2.406779661016949
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.37903892993927,
+        "temperature": 2.330508474576271,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9078615307807922
+      },
+      {
+        "edge": 1,
+        "entropy": 0.5172111392021179,
+        "temperature": 2.330508474576271,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.8620700240135193
+      },
+      {
+        "edge": 2,
+        "entropy": 0.1234600692987442,
+        "temperature": 2.330508474576271,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9802435636520386
+      },
+      {
+        "edge": 3,
+        "entropy": 0.5491630434989929,
+        "temperature": 2.330508474576271,
+        "top_operation": "skip_proj",
+        "top_probability": 0.7872306704521179
+      },
+      {
+        "edge": 4,
+        "entropy": 0.03454194217920303,
+        "temperature": 2.330508474576271,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9955600500106812
+      },
+      {
+        "edge": 5,
+        "entropy": 0.47264915704727173,
+        "temperature": 2.330508474576271,
+        "top_operation": "conv3x3",
+        "top_probability": 0.8833886384963989
+      }
+    ],
+    "epoch": 36,
+    "mean_entropy": 0.3460107135276,
+    "temperature": 2.330508474576271
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.3106842041015625,
+        "temperature": 2.254237288135593,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9284334778785706
+      },
+      {
+        "edge": 1,
+        "entropy": 0.49176037311553955,
+        "temperature": 2.254237288135593,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.8674010038375854
+      },
+      {
+        "edge": 2,
+        "entropy": 0.09111739695072174,
+        "temperature": 2.254237288135593,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.986215353012085
+      },
+      {
+        "edge": 3,
+        "entropy": 0.49705249071121216,
+        "temperature": 2.254237288135593,
+        "top_operation": "skip_proj",
+        "top_probability": 0.8184328079223633
+      },
+      {
+        "edge": 4,
+        "entropy": 0.024976473301649094,
+        "temperature": 2.254237288135593,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9969356060028076
+      },
+      {
+        "edge": 5,
+        "entropy": 0.40219229459762573,
+        "temperature": 2.254237288135593,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9057741165161133
+      }
+    ],
+    "epoch": 37,
+    "mean_entropy": 0.3029638721297185,
+    "temperature": 2.254237288135593
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.24675734341144562,
+        "temperature": 2.1779661016949152,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9464781284332275
+      },
+      {
+        "edge": 1,
+        "entropy": 0.4992283582687378,
+        "temperature": 2.1779661016949152,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.858761191368103
+      },
+      {
+        "edge": 2,
+        "entropy": 0.06578007340431213,
+        "temperature": 2.1779661016949152,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9905919432640076
+      },
+      {
+        "edge": 3,
+        "entropy": 0.4452389180660248,
+        "temperature": 2.1779661016949152,
+        "top_operation": "skip_proj",
+        "top_probability": 0.8466214537620544
+      },
+      {
+        "edge": 4,
+        "entropy": 0.01788516715168953,
+        "temperature": 2.1779661016949152,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9979032278060913
+      },
+      {
+        "edge": 5,
+        "entropy": 0.33929020166397095,
+        "temperature": 2.1779661016949152,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9243478178977966
+      }
+    ],
+    "epoch": 38,
+    "mean_entropy": 0.2690300103276968,
+    "temperature": 2.1779661016949152
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.19040358066558838,
+        "temperature": 2.1016949152542375,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9612188935279846
+      },
+      {
+        "edge": 1,
+        "entropy": 0.5260580778121948,
+        "temperature": 2.1016949152542375,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.8400638699531555
+      },
+      {
+        "edge": 2,
+        "entropy": 0.046148158609867096,
+        "temperature": 2.1016949152542375,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9937657117843628
+      },
+      {
+        "edge": 3,
+        "entropy": 0.39385050535202026,
+        "temperature": 2.1016949152542375,
+        "top_operation": "skip_proj",
+        "top_probability": 0.8721874356269836
+      },
+      {
+        "edge": 4,
+        "entropy": 0.012739723548293114,
+        "temperature": 2.1016949152542375,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9985705614089966
+      },
+      {
+        "edge": 5,
+        "entropy": 0.28279924392700195,
+        "temperature": 2.1016949152542375,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9399000406265259
+      }
+    ],
+    "epoch": 39,
+    "mean_entropy": 0.24199988165249428,
+    "temperature": 2.1016949152542375
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.1449667513370514,
+        "temperature": 2.0254237288135593,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9722272157669067
+      },
+      {
+        "edge": 1,
+        "entropy": 0.5583513379096985,
+        "temperature": 2.0254237288135593,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.8156700730323792
+      },
+      {
+        "edge": 2,
+        "entropy": 0.03201860934495926,
+        "temperature": 2.0254237288135593,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9959059953689575
+      },
+      {
+        "edge": 3,
+        "entropy": 0.346140056848526,
+        "temperature": 2.0254237288135593,
+        "top_operation": "skip_proj",
+        "top_probability": 0.8939392566680908
+      },
+      {
+        "edge": 4,
+        "entropy": 0.009046708233654499,
+        "temperature": 2.0254237288135593,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9990267753601074
+      },
+      {
+        "edge": 5,
+        "entropy": 0.2334640771150589,
+        "temperature": 2.0254237288135593,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9526201486587524
+      }
+    ],
+    "epoch": 40,
+    "mean_entropy": 0.22066459013149142,
+    "temperature": 2.0254237288135593
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.11018091440200806,
+        "temperature": 1.9491525423728815,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9800476431846619
+      },
+      {
+        "edge": 1,
+        "entropy": 0.5933295488357544,
+        "temperature": 1.9491525423728815,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.7859153151512146
+      },
+      {
+        "edge": 2,
+        "entropy": 0.021870814263820648,
+        "temperature": 1.9491525423728815,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9973503351211548
+      },
+      {
+        "edge": 3,
+        "entropy": 0.30443114042282104,
+        "temperature": 1.9491525423728815,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9114875793457031
+      },
+      {
+        "edge": 4,
+        "entropy": 0.006361185107380152,
+        "temperature": 1.9491525423728815,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9993433356285095
+      },
+      {
+        "edge": 5,
+        "entropy": 0.1915295571088791,
+        "temperature": 1.9491525423728815,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9627913236618042
+      }
+    ],
+    "epoch": 41,
+    "mean_entropy": 0.20461719335677722,
+    "temperature": 1.9491525423728815
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.08258461207151413,
+        "temperature": 1.8728813559322033,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9858514666557312
+      },
+      {
+        "edge": 1,
+        "entropy": 0.6284661889076233,
+        "temperature": 1.8728813559322033,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.750802218914032
+      },
+      {
+        "edge": 2,
+        "entropy": 0.014931101351976395,
+        "temperature": 1.8728813559322033,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9982807636260986
+      },
+      {
+        "edge": 3,
+        "entropy": 0.2685927748680115,
+        "temperature": 1.8728813559322033,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9255216717720032
+      },
+      {
+        "edge": 4,
+        "entropy": 0.00440142722800374,
+        "temperature": 1.8728813559322033,
+        "top_operation": "skip_proj",
+        "top_probability": 0.999563992023468
+      },
+      {
+        "edge": 5,
+        "entropy": 0.1556701809167862,
+        "temperature": 1.8728813559322033,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9709975719451904
+      }
+    ],
+    "epoch": 42,
+    "mean_entropy": 0.1924410475573192,
+    "temperature": 1.8728813559322033
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.061735495924949646,
+        "temperature": 1.7966101694915255,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9899514317512512
+      },
+      {
+        "edge": 1,
+        "entropy": 0.6584368944168091,
+        "temperature": 1.7966101694915255,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.7132962942123413
+      },
+      {
+        "edge": 2,
+        "entropy": 0.010165197774767876,
+        "temperature": 1.7966101694915255,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9988847374916077
+      },
+      {
+        "edge": 3,
+        "entropy": 0.23532500863075256,
+        "temperature": 1.7966101694915255,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9377756714820862
+      },
+      {
+        "edge": 4,
+        "entropy": 0.002974023576825857,
+        "temperature": 1.7966101694915255,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9997174143791199
+      },
+      {
+        "edge": 5,
+        "entropy": 0.12497206032276154,
+        "temperature": 1.7966101694915255,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9776639342308044
+      }
+    ],
+    "epoch": 43,
+    "mean_entropy": 0.18226811344114444,
+    "temperature": 1.7966101694915255
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.04586420953273773,
+        "temperature": 1.7203389830508478,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9928925037384033
+      },
+      {
+        "edge": 1,
+        "entropy": 0.6825944185256958,
+        "temperature": 1.7203389830508478,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.6738894581794739
+      },
+      {
+        "edge": 2,
+        "entropy": 0.006933156866580248,
+        "temperature": 1.7203389830508478,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9992731213569641
+      },
+      {
+        "edge": 3,
+        "entropy": 0.19952507317066193,
+        "temperature": 1.7203389830508478,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9501448273658752
+      },
+      {
+        "edge": 4,
+        "entropy": 0.001954098232090473,
+        "temperature": 1.7203389830508478,
+        "top_operation": "skip_proj",
+        "top_probability": 0.999822199344635
+      },
+      {
+        "edge": 5,
+        "entropy": 0.0994981974363327,
+        "temperature": 1.7203389830508478,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9829199910163879
+      }
+    ],
+    "epoch": 44,
+    "mean_entropy": 0.17272819229401648,
+    "temperature": 1.7203389830508478
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.03410496935248375,
+        "temperature": 1.6440677966101696,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9949498176574707
+      },
+      {
+        "edge": 1,
+        "entropy": 0.7036079168319702,
+        "temperature": 1.6440677966101696,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.6273988485336304
+      },
+      {
+        "edge": 2,
+        "entropy": 0.004696267656981945,
+        "temperature": 1.6440677966101696,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9995288848876953
+      },
+      {
+        "edge": 3,
+        "entropy": 0.15868806838989258,
+        "temperature": 1.6440677966101696,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9631403088569641
+      },
+      {
+        "edge": 4,
+        "entropy": 0.0012450156500563025,
+        "temperature": 1.6440677966101696,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9998914003372192
+      },
+      {
+        "edge": 5,
+        "entropy": 0.07856771349906921,
+        "temperature": 1.6440677966101696,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9870274662971497
+      }
+    ],
+    "epoch": 45,
+    "mean_entropy": 0.16348499189674234,
+    "temperature": 1.6440677966101696
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.025091424584388733,
+        "temperature": 1.5677966101694918,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9964472651481628
+      },
+      {
+        "edge": 1,
+        "entropy": 0.7180255055427551,
+        "temperature": 1.5677966101694918,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.5725954174995422
+      },
+      {
+        "edge": 2,
+        "entropy": 0.0031244547571986914,
+        "temperature": 1.5677966101694918,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9997000694274902
+      },
+      {
+        "edge": 3,
+        "entropy": 0.1165027767419815,
+        "temperature": 1.5677966101694918,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9752388000488281
+      },
+      {
+        "edge": 4,
+        "entropy": 0.0007627729210071266,
+        "temperature": 1.5677966101694918,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9999364614486694
+      },
+      {
+        "edge": 5,
+        "entropy": 0.061719004064798355,
+        "temperature": 1.5677966101694918,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9901794195175171
+      }
+    ],
+    "epoch": 46,
+    "mean_entropy": 0.1542043231020216,
+    "temperature": 1.5677966101694918
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.01821167953312397,
+        "temperature": 1.4915254237288136,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9975330829620361
+      },
+      {
+        "edge": 1,
+        "entropy": 0.7211923599243164,
+        "temperature": 1.4915254237288136,
+        "top_operation": "depthwise3x3",
+        "top_probability": 0.5063212513923645
+      },
+      {
+        "edge": 2,
+        "entropy": 0.0020248994696885347,
+        "temperature": 1.4915254237288136,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.999813973903656
+      },
+      {
+        "edge": 3,
+        "entropy": 0.07891381531953812,
+        "temperature": 1.4915254237288136,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9848102927207947
+      },
+      {
+        "edge": 4,
+        "entropy": 0.00044654239900410175,
+        "temperature": 1.4915254237288136,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9999644756317139
+      },
+      {
+        "edge": 5,
+        "entropy": 0.04802631586790085,
+        "temperature": 1.4915254237288136,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9926300048828125
+      }
+    ],
+    "epoch": 47,
+    "mean_entropy": 0.14480260208559534,
+    "temperature": 1.4915254237288136
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.01304304227232933,
+        "temperature": 1.4152542372881358,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9983092546463013
+      },
+      {
+        "edge": 1,
+        "entropy": 0.7059224843978882,
+        "temperature": 1.4152542372881358,
+        "top_operation": "conv3x3",
+        "top_probability": 0.5633618831634521
+      },
+      {
+        "edge": 2,
+        "entropy": 0.0012644811067730188,
+        "temperature": 1.4152542372881358,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9998890161514282
+      },
+      {
+        "edge": 3,
+        "entropy": 0.051212046295404434,
+        "temperature": 1.4152542372881358,
+        "top_operation": "skip_proj",
+        "top_probability": 0.991054356098175
+      },
+      {
+        "edge": 4,
+        "entropy": 0.00024786737048998475,
+        "temperature": 1.4152542372881358,
+        "top_operation": "skip_proj",
+        "top_probability": 0.999981164932251
+      },
+      {
+        "edge": 5,
+        "entropy": 0.03706482797861099,
+        "temperature": 1.4152542372881358,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9945105314254761
+      }
+    ],
+    "epoch": 48,
+    "mean_entropy": 0.134792458236916,
+    "temperature": 1.4152542372881358
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.009148754179477692,
+        "temperature": 1.3389830508474576,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9988659620285034
+      },
+      {
+        "edge": 1,
+        "entropy": 0.6708256006240845,
+        "temperature": 1.3389830508474576,
+        "top_operation": "conv3x3",
+        "top_probability": 0.6351673007011414
+      },
+      {
+        "edge": 2,
+        "entropy": 0.0007627516170032322,
+        "temperature": 1.3389830508474576,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9999361038208008
+      },
+      {
+        "edge": 3,
+        "entropy": 0.032073911279439926,
+        "temperature": 1.3389830508474576,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9948969483375549
+      },
+      {
+        "edge": 4,
+        "entropy": 0.00012867590703535825,
+        "temperature": 1.3389830508474576,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9999908208847046
+      },
+      {
+        "edge": 5,
+        "entropy": 0.028087308630347252,
+        "temperature": 1.3389830508474576,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9959909319877625
+      }
+    ],
+    "epoch": 49,
+    "mean_entropy": 0.123504500372898,
+    "temperature": 1.3389830508474576
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.006226871162652969,
+        "temperature": 1.2627118644067794,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9992632269859314
+      },
+      {
+        "edge": 1,
+        "entropy": 0.6228857040405273,
+        "temperature": 1.2627118644067794,
+        "top_operation": "conv3x3",
+        "top_probability": 0.6974481344223022
+      },
+      {
+        "edge": 2,
+        "entropy": 0.000433785782661289,
+        "temperature": 1.2627118644067794,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9999654293060303
+      },
+      {
+        "edge": 3,
+        "entropy": 0.01990293338894844,
+        "temperature": 1.2627118644067794,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9970929622650146
+      },
+      {
+        "edge": 4,
+        "entropy": 6.184647645568475e-05,
+        "temperature": 1.2627118644067794,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9999958276748657
+      },
+      {
+        "edge": 5,
+        "entropy": 0.020765498280525208,
+        "temperature": 1.2627118644067794,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9971502423286438
+      }
+    ],
+    "epoch": 50,
+    "mean_entropy": 0.11171277318862849,
+    "temperature": 1.2627118644067794
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.004049540963023901,
+        "temperature": 1.186440677966102,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9995444416999817
+      },
+      {
+        "edge": 1,
+        "entropy": 0.5705782175064087,
+        "temperature": 1.186440677966102,
+        "top_operation": "conv3x3",
+        "top_probability": 0.7482620477676392
+      },
+      {
+        "edge": 2,
+        "entropy": 0.0002272510901093483,
+        "temperature": 1.186440677966102,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9999828338623047
+      },
+      {
+        "edge": 3,
+        "entropy": 0.012043097987771034,
+        "temperature": 1.186440677966102,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9983788728713989
+      },
+      {
+        "edge": 4,
+        "entropy": 2.712616878852714e-05,
+        "temperature": 1.186440677966102,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9999982118606567
+      },
+      {
+        "edge": 5,
+        "entropy": 0.014752334915101528,
+        "temperature": 1.186440677966102,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9980624318122864
+      }
+    ],
+    "epoch": 51,
+    "mean_entropy": 0.10027959477186717,
+    "temperature": 1.186440677966102
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.002504088217392564,
+        "temperature": 1.1101694915254234,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9997331500053406
+      },
+      {
+        "edge": 1,
+        "entropy": 0.5125163793563843,
+        "temperature": 1.1101694915254234,
+        "top_operation": "conv3x3",
+        "top_probability": 0.793931782245636
+      },
+      {
+        "edge": 2,
+        "entropy": 0.00010695576929720119,
+        "temperature": 1.1101694915254234,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9999923706054688
+      },
+      {
+        "edge": 3,
+        "entropy": 0.007124628871679306,
+        "temperature": 1.1101694915254234,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9991126656532288
+      },
+      {
+        "edge": 4,
+        "entropy": 1.0522206139285117e-05,
+        "temperature": 1.1101694915254234,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9999994039535522
+      },
+      {
+        "edge": 5,
+        "entropy": 0.010103028267621994,
+        "temperature": 1.1101694915254234,
+        "top_operation": "conv3x3",
+        "top_probability": 0.998734176158905
+      }
+    ],
+    "epoch": 52,
+    "mean_entropy": 0.08872760044808577,
+    "temperature": 1.1101694915254234
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.0014452224131673574,
+        "temperature": 1.0338983050847457,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9998548030853271
+      },
+      {
+        "edge": 1,
+        "entropy": 0.45336267352104187,
+        "temperature": 1.0338983050847457,
+        "top_operation": "conv3x3",
+        "top_probability": 0.8329200148582458
+      },
+      {
+        "edge": 2,
+        "entropy": 4.439405529410578e-05,
+        "temperature": 1.0338983050847457,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9999970197677612
+      },
+      {
+        "edge": 3,
+        "entropy": 0.004023473244160414,
+        "temperature": 1.0338983050847457,
+        "top_operation": "skip_proj",
+        "top_probability": 0.999536395072937
+      },
+      {
+        "edge": 4,
+        "entropy": 3.6159158298687544e-06,
+        "temperature": 1.0338983050847457,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9999997615814209
+      },
+      {
+        "edge": 5,
+        "entropy": 0.0065798573195934296,
+        "temperature": 1.0338983050847457,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9992172718048096
+      }
+    ],
+    "epoch": 53,
+    "mean_entropy": 0.0775765394115145,
+    "temperature": 1.0338983050847457
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.0007607812876813114,
+        "temperature": 0.9576271186440675,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.99992835521698
+      },
+      {
+        "edge": 1,
+        "entropy": 0.3960171043872833,
+        "temperature": 0.9576271186440675,
+        "top_operation": "conv3x3",
+        "top_probability": 0.8654623627662659
+      },
+      {
+        "edge": 2,
+        "entropy": 1.578633236931637e-05,
+        "temperature": 0.9576271186440675,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9999990463256836
+      },
+      {
+        "edge": 3,
+        "entropy": 0.002139691263437271,
+        "temperature": 0.9576271186440675,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9997721314430237
+      },
+      {
+        "edge": 4,
+        "entropy": 9.59392082222621e-07,
+        "temperature": 0.9576271186440675,
+        "top_operation": "skip_proj",
+        "top_probability": 1.0
+      },
+      {
+        "edge": 5,
+        "entropy": 0.003991740755736828,
+        "temperature": 0.9576271186440675,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9995520710945129
+      }
+    ],
+    "epoch": 54,
+    "mean_entropy": 0.06715434390309838,
+    "temperature": 0.9576271186440675
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.000357198528945446,
+        "temperature": 0.8813559322033901,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9999687671661377
+      },
+      {
+        "edge": 1,
+        "entropy": 0.33981481194496155,
+        "temperature": 0.8813559322033901,
+        "top_operation": "conv3x3",
+        "top_probability": 0.893416166305542
+      },
+      {
+        "edge": 2,
+        "entropy": 4.644053205993259e-06,
+        "temperature": 0.8813559322033901,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9999997615814209
+      },
+      {
+        "edge": 3,
+        "entropy": 0.0010462249629199505,
+        "temperature": 0.8813559322033901,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9998972415924072
+      },
+      {
+        "edge": 4,
+        "entropy": 2.0786669097105914e-07,
+        "temperature": 0.8813559322033901,
+        "top_operation": "skip_proj",
+        "top_probability": 1.0
+      },
+      {
+        "edge": 5,
+        "entropy": 0.0022157966159284115,
+        "temperature": 0.8813559322033901,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9997672438621521
+      }
+    ],
+    "epoch": 55,
+    "mean_entropy": 0.057239813995442056,
+    "temperature": 0.8813559322033901
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 0.00014458024816121906,
+        "temperature": 0.8050847457627119,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.999988317489624
+      },
+      {
+        "edge": 1,
+        "entropy": 0.28418341279029846,
+        "temperature": 0.8050847457627119,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9178520441055298
+      },
+      {
+        "edge": 2,
+        "entropy": 1.0249889328406425e-06,
+        "temperature": 0.8050847457627119,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 1.0
+      },
+      {
+        "edge": 3,
+        "entropy": 0.0004560660745482892,
+        "temperature": 0.8050847457627119,
+        "top_operation": "skip_proj",
+        "top_probability": 0.999958872795105
+      },
+      {
+        "edge": 4,
+        "entropy": 3.267352965963255e-08,
+        "temperature": 0.8050847457627119,
+        "top_operation": "skip_proj",
+        "top_probability": 1.0
+      },
+      {
+        "edge": 5,
+        "entropy": 0.0010929035488516092,
+        "temperature": 0.8050847457627119,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9998934268951416
+      }
+    ],
+    "epoch": 56,
+    "mean_entropy": 0.04764633672072035,
+    "temperature": 0.8050847457627119
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 4.814873682335019e-05,
+        "temperature": 0.7288135593220337,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9999964237213135
+      },
+      {
+        "edge": 1,
+        "entropy": 0.22763623297214508,
+        "temperature": 0.7288135593220337,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9397803544998169
+      },
+      {
+        "edge": 2,
+        "entropy": 1.662236712718368e-07,
+        "temperature": 0.7288135593220337,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 1.0
+      },
+      {
+        "edge": 3,
+        "entropy": 0.00016936776228249073,
+        "temperature": 0.7288135593220337,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9999860525131226
+      },
+      {
+        "edge": 4,
+        "entropy": 3.4965950135301682e-09,
+        "temperature": 0.7288135593220337,
+        "top_operation": "skip_proj",
+        "top_probability": 1.0
+      },
+      {
+        "edge": 5,
+        "entropy": 0.00046031270176172256,
+        "temperature": 0.7288135593220337,
+        "top_operation": "conv3x3",
+        "top_probability": 0.999958872795105
+      }
+    ],
+    "epoch": 57,
+    "mean_entropy": 0.03805237198221315,
+    "temperature": 0.7288135593220337
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 1.2293443433009088e-05,
+        "temperature": 0.6525423728813564,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9999991655349731
+      },
+      {
+        "edge": 1,
+        "entropy": 0.17323905229568481,
+        "temperature": 0.6525423728813564,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9583277702331543
+      },
+      {
+        "edge": 2,
+        "entropy": 1.6845095984763248e-08,
+        "temperature": 0.6525423728813564,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 1.0
+      },
+      {
+        "edge": 3,
+        "entropy": 5.0137416110374033e-05,
+        "temperature": 0.6525423728813564,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9999963045120239
+      },
+      {
+        "edge": 4,
+        "entropy": 2.2281686218317276e-10,
+        "temperature": 0.6525423728813564,
+        "top_operation": "skip_proj",
+        "top_probability": 1.0
+      },
+      {
+        "edge": 5,
+        "entropy": 0.0001565210404805839,
+        "temperature": 0.6525423728813564,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9999872446060181
+      }
+    ],
+    "epoch": 58,
+    "mean_entropy": 0.028909670210603606,
+    "temperature": 0.6525423728813564
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 2.1466833004524233e-06,
+        "temperature": 0.5762711864406782,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 0.9999998807907104
+      },
+      {
+        "edge": 1,
+        "entropy": 0.12299078702926636,
+        "temperature": 0.5762711864406782,
+        "top_operation": "conv3x3",
+        "top_probability": 0.973324716091156
+      },
+      {
+        "edge": 2,
+        "entropy": 9.38806921091384e-10,
+        "temperature": 0.5762711864406782,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 1.0
+      },
+      {
+        "edge": 3,
+        "entropy": 1.0725180800363887e-05,
+        "temperature": 0.5762711864406782,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9999992847442627
+      },
+      {
+        "edge": 4,
+        "entropy": 6.8904955526083445e-12,
+        "temperature": 0.5762711864406782,
+        "top_operation": "skip_proj",
+        "top_probability": 1.0
+      },
+      {
+        "edge": 5,
+        "entropy": 3.9376525819534436e-05,
+        "temperature": 0.5762711864406782,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9999971389770508
+      }
+    ],
+    "epoch": 59,
+    "mean_entropy": 0.020507172727480687,
+    "temperature": 0.5762711864406782
+  },
+  {
+    "edges": [
+      {
+        "edge": 0,
+        "entropy": 2.0742143647112243e-07,
+        "temperature": 0.5,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 1.0
+      },
+      {
+        "edge": 1,
+        "entropy": 0.079799123108387,
+        "temperature": 0.5,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9845404028892517
+      },
+      {
+        "edge": 2,
+        "entropy": 2.193716736043072e-11,
+        "temperature": 0.5,
+        "top_operation": "maxpool3x3_proj",
+        "top_probability": 1.0
+      },
+      {
+        "edge": 3,
+        "entropy": 1.448578245799581e-06,
+        "temperature": 0.5,
+        "top_operation": "skip_proj",
+        "top_probability": 0.9999998807907104
+      },
+      {
+        "edge": 4,
+        "entropy": 7.441839028690667e-14,
+        "temperature": 0.5,
+        "top_operation": "skip_proj",
+        "top_probability": 1.0
+      },
+      {
+        "edge": 5,
+        "entropy": 6.342808774206787e-06,
+        "temperature": 0.5,
+        "top_operation": "conv3x3",
+        "top_probability": 0.9999996423721313
+      }
+    ],
+    "epoch": 60,
+    "mean_entropy": 0.013301186989809177,
+    "temperature": 0.5
+  }
+]
