@@ -8,6 +8,7 @@ version = "0.1.0"
 requires-python = ">=3.13"
 
 dependencies = [
+    "convkan>=0.0.1.2",
     "ipykernel>=7.2.0",
     "ipywidgets>=8.1.8",
     "kagglehub>=0.3.6",

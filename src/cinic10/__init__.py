@@ -8,6 +8,7 @@ directory set by `CINIC10_LOG_DIR`).
 """
 
 import logging
+import multiprocessing
 import os
 from pathlib import Path
 
@@ -20,8 +21,6 @@ _repo_root = Path(__file__).resolve().parents[2]
 _log_dir = Path(os.environ.get("CINIC10_LOG_DIR", str(_repo_root / "logs")))
 _log_file_name = os.environ.get("CINIC10_LOG_FILE_NAME", "cinic10.log")
 _log_file = _log_dir / _log_file_name
-
-print(f"Logging to file: {_log_file}")
 
 _handlers: list[logging.Handler] = [logging.StreamHandler()]
 _file_handler_error: OSError | None = None
@@ -40,6 +39,8 @@ logging.basicConfig(
 )
 
 logger = logging.getLogger("cinic10")
+if multiprocessing.current_process().name == "MainProcess":
+    logger.info("Logging to file: %s", _log_file)
 logger.debug("cinic10 root logger configured at level %s", logging.getLevelName(_level))
 if _file_handler_error is None:
     logger.debug("cinic10 file logging enabled at %s", _log_file)
