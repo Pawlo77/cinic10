@@ -188,11 +188,23 @@ done
 
 ---
 
+Select the best architecture for the next stage and set `$FINAL_ARCH`
+
+```bash
+export FINAL_ARCH=densenet121
+export FINAL_AUG_EXTRA_ARGS="--augmentation $BEST_AUG --weight-decay $WEIGHT_DECAY --dropout $BEST_DROPOUT --early-stopping"
+```
+
 ## 4) Final stage with best model configuration
 
 ```bash
 for SEED in ${=SEEDS}; do
+  export CINIC10_LOG_DIR="logs/04_final/dataset_reduction_5pct"
+  export CINIC10_LOG_FILE_NAME="train_${FINAL_ARCH}_seed_${SEED}.log"
   make train-reduced OUTPUT_DIR=outputs/04_final/dataset_reduction_5pct/seed_${SEED} ARCH=$FINAL_ARCH OPTIMIZER=$BEST_OPTIMIZER BATCH_SIZE=$BEST_BATCH_SIZE EPOCHS=$BEST_EPOCHS SEED=$SEED TRAIN_FRACTION=0.05 EXTRA_ARGS="$FINAL_AUG_EXTRA_ARGS"
+
+  export CINIC10_LOG_DIR="logs/04_final/fewshot_protonet"
+  export CINIC10_LOG_FILE_NAME="fewshot_seed_${SEED}.log"
   make fewshot OUTPUT_DIR=outputs/04_final/fewshot_protonet/seed_${SEED} SEED=$SEED WAYS=5 SHOTS=5 QUERIES=15 EPISODES=2000 EVAL_EPISODES=400
 done
 ```
@@ -201,6 +213,8 @@ Resume few-shot if needed:
 
 ```bash
 for SEED in ${=SEEDS}; do
+  export CINIC10_LOG_DIR="logs/04_final/fewshot_protonet"
+  export CINIC10_LOG_FILE_NAME="fewshot_resume_seed_${SEED}.log"
   make fewshot-resume OUTPUT_DIR=outputs/04_final/fewshot_protonet/seed_${SEED} SEED=$SEED
 done
 ```

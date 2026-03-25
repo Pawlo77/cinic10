@@ -3,6 +3,7 @@
 import logging
 from dataclasses import dataclass
 from os import PathLike
+from pathlib import Path
 from typing import Any
 
 import numpy as np
@@ -28,6 +29,25 @@ from cinic10.utils import (
 )
 
 logger = logging.getLogger(__name__)
+
+
+def _resolve_episode_split_dir(data_root: PathLike[str] | str, split: str) -> str:
+    """Resolve split directory for few-shot datasets.
+
+    Supports both `validate` and `valid` aliases for the validation split.
+    """
+    root_path = Path(data_root)
+    if split != "validate":
+        return str(root_path / split)
+
+    for candidate in ("validate", "valid"):
+        candidate_path = root_path / candidate
+        if candidate_path.is_dir():
+            return str(candidate_path)
+
+    raise FileNotFoundError(
+        f"Validation split directory not found under {root_path}. Expected one of: validate, valid"
+    )
 
 
 class ConvEmbedding(nn.Module):
@@ -361,9 +381,19 @@ def train_protonet(
     ensure_dir(config.output_dir)
     data_root = resolve_data_root(config.data_root)
 
-    train_set = datasets.ImageFolder(root=str(data_root / "train"), transform=_transform())
-    val_set = datasets.ImageFolder(root=str(data_root / "validate"), transform=_transform())
-    test_set = datasets.ImageFolder(root=str(data_root / "test"), transform=_transform())
+    resolved_root = Path(data_root)
+    train_set = datasets.ImageFolder(
+        root=_resolve_episode_split_dir(resolved_root, "train"),
+        transform=_transform(),
+    )
+    val_set = datasets.ImageFolder(
+        root=_resolve_episode_split_dir(resolved_root, "validate"),
+        transform=_transform(),
+    )
+    test_set = datasets.ImageFolder(
+        root=_resolve_episode_split_dir(resolved_root, "test"),
+        transform=_transform(),
+    )
 
     model = PrototypicalNetwork(embedding_dim=config.embedding_dim).to(device)
     optimizer = Adam(model.parameters(), lr=config.learning_rate)
