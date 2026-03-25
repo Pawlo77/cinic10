@@ -28,12 +28,18 @@ def _iter_named_children(module: nn.Module) -> Iterator[tuple[str, nn.Module]]:
     yield from module.named_children()
 
 
-def replace_conv2d_with_convkan(module: nn.Module, min_kernel_size: int = 3) -> nn.Module:
+def replace_conv2d_with_convkan(
+    module: nn.Module,
+    min_kernel_size: int = 3,
+    max_channels: int | None = None,
+) -> nn.Module:
     """Recursively replace Conv2d layers with KAN convolutional layers.
 
     Args:
         module: Input module to transform.
         min_kernel_size: Replace only convolutions with kernel size >= this threshold.
+        max_channels: Optional upper bound for both in/out channels of converted layers.
+            If set, larger convolutions are left as standard Conv2d to avoid memory blowups.
 
     Returns:
         Transformed module.
@@ -46,6 +52,18 @@ def replace_conv2d_with_convkan(module: nn.Module, min_kernel_size: int = 3) -> 
                 else (child.kernel_size, child.kernel_size)
             )
             if kernel_h < min_kernel_size or kernel_w < min_kernel_size:
+                continue
+            if max_channels is not None and (
+                child.in_channels > max_channels or child.out_channels > max_channels
+            ):
+                logger.debug(
+                    "Skipping ConvKAN replacement in %s.%s due to channel cap: %d->%d > %d",
+                    module.__class__.__name__,
+                    name,
+                    child.in_channels,
+                    child.out_channels,
+                    max_channels,
+                )
                 continue
 
             setattr(
@@ -63,7 +81,11 @@ def replace_conv2d_with_convkan(module: nn.Module, min_kernel_size: int = 3) -> 
             )
             logger.debug("Replaced Conv2d with ConvKAN in %s.%s", module.__class__.__name__, name)
         else:
-            replace_conv2d_with_convkan(child, min_kernel_size=min_kernel_size)
+            replace_conv2d_with_convkan(
+                child,
+                min_kernel_size=min_kernel_size,
+                max_channels=max_channels,
+            )
     return module
 
 
