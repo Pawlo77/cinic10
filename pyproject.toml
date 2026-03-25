@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "cinic10"
 version = "0.1.0"
-requires-python = ">=3.13"
+requires-python = ">=3.12,<3.13"
 
 dependencies = [
     "convkan>=0.0.1.2",
@@ -39,7 +39,7 @@ package-dir = {"" = "src"}
 where = ["src"]
 
 [tool.ruff]
-target-version = "py313"
+target-version = "py312"
 line-length = 100
 exclude = [
     ".git",
