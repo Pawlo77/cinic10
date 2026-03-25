@@ -1,0 +1,78 @@
+2026-03-25 11:52:16 INFO [__main__] run_fewshot: starting few-shot run output=outputs/04_final/fewshot_protonet/seed_0 device=mps
+2026-03-25 11:52:16 INFO [cinic10.fewshot.protonet] train_protonet: output=outputs/04_final/fewshot_protonet/seed_0 device=mps
+2026-03-25 11:52:37 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.pt
+2026-03-25 11:52:37 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.safetensors
+2026-03-25 11:52:37 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_last.ckpt
+2026-03-25 11:52:37 INFO [cinic10.utils] Writing JSON to outputs/04_final/fewshot_protonet/seed_0/fewshot_episode_resource_stats.json
+2026-03-25 11:52:51 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.pt
+2026-03-25 11:52:51 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.safetensors
+2026-03-25 11:52:51 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_last.ckpt
+2026-03-25 11:52:51 INFO [cinic10.utils] Writing JSON to outputs/04_final/fewshot_protonet/seed_0/fewshot_episode_resource_stats.json
+2026-03-25 11:53:04 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.pt
+2026-03-25 11:53:04 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.safetensors
+2026-03-25 11:53:04 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_last.ckpt
+2026-03-25 11:53:04 INFO [cinic10.utils] Writing JSON to outputs/04_final/fewshot_protonet/seed_0/fewshot_episode_resource_stats.json
+2026-03-25 11:53:17 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.pt
+2026-03-25 11:53:17 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.safetensors
+2026-03-25 11:53:17 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_last.ckpt
+2026-03-25 11:53:17 INFO [cinic10.utils] Writing JSON to outputs/04_final/fewshot_protonet/seed_0/fewshot_episode_resource_stats.json
+2026-03-25 11:53:28 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.pt
+2026-03-25 11:53:28 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.safetensors
+2026-03-25 11:53:28 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_last.ckpt
+2026-03-25 11:53:28 INFO [cinic10.utils] Writing JSON to outputs/04_final/fewshot_protonet/seed_0/fewshot_episode_resource_stats.json
+2026-03-25 11:53:41 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.pt
+2026-03-25 11:53:41 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.safetensors
+2026-03-25 11:53:41 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_last.ckpt
+2026-03-25 11:53:41 INFO [cinic10.utils] Writing JSON to outputs/04_final/fewshot_protonet/seed_0/fewshot_episode_resource_stats.json
+2026-03-25 11:53:52 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.pt
+2026-03-25 11:53:52 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.safetensors
+2026-03-25 11:53:52 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_last.ckpt
+2026-03-25 11:53:52 INFO [cinic10.utils] Writing JSON to outputs/04_final/fewshot_protonet/seed_0/fewshot_episode_resource_stats.json
+2026-03-25 11:54:03 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.pt
+2026-03-25 11:54:03 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.safetensors
+2026-03-25 11:54:03 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_last.ckpt
+2026-03-25 11:54:03 INFO [cinic10.utils] Writing JSON to outputs/04_final/fewshot_protonet/seed_0/fewshot_episode_resource_stats.json
+2026-03-25 11:54:14 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_last.ckpt
+2026-03-25 11:54:14 INFO [cinic10.utils] Writing JSON to outputs/04_final/fewshot_protonet/seed_0/fewshot_episode_resource_stats.json
+2026-03-25 11:54:24 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.pt
+2026-03-25 11:54:24 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.safetensors
+2026-03-25 11:54:24 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_last.ckpt
+2026-03-25 11:54:24 INFO [cinic10.utils] Writing JSON to outputs/04_final/fewshot_protonet/seed_0/fewshot_episode_resource_stats.json
+2026-03-25 11:54:35 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.pt
+2026-03-25 11:54:35 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.safetensors
+2026-03-25 11:54:35 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_last.ckpt
+2026-03-25 11:54:35 INFO [cinic10.utils] Writing JSON to outputs/04_final/fewshot_protonet/seed_0/fewshot_episode_resource_stats.json
+2026-03-25 11:54:45 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.pt
+2026-03-25 11:54:45 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.safetensors
+2026-03-25 11:54:45 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_last.ckpt
+2026-03-25 11:54:45 INFO [cinic10.utils] Writing JSON to outputs/04_final/fewshot_protonet/seed_0/fewshot_episode_resource_stats.json
+2026-03-25 11:54:56 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.pt
+2026-03-25 11:54:56 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.safetensors
+2026-03-25 11:54:56 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_last.ckpt
+2026-03-25 11:54:56 INFO [cinic10.utils] Writing JSON to outputs/04_final/fewshot_protonet/seed_0/fewshot_episode_resource_stats.json
+2026-03-25 11:55:06 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_last.ckpt
+2026-03-25 11:55:06 INFO [cinic10.utils] Writing JSON to outputs/04_final/fewshot_protonet/seed_0/fewshot_episode_resource_stats.json
+2026-03-25 11:55:16 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.pt
+2026-03-25 11:55:16 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.safetensors
+2026-03-25 11:55:16 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_last.ckpt
+2026-03-25 11:55:16 INFO [cinic10.utils] Writing JSON to outputs/04_final/fewshot_protonet/seed_0/fewshot_episode_resource_stats.json
+2026-03-25 11:55:26 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.pt
+2026-03-25 11:55:26 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.safetensors
+2026-03-25 11:55:26 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_last.ckpt
+2026-03-25 11:55:26 INFO [cinic10.utils] Writing JSON to outputs/04_final/fewshot_protonet/seed_0/fewshot_episode_resource_stats.json
+2026-03-25 11:55:36 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_last.ckpt
+2026-03-25 11:55:36 INFO [cinic10.utils] Writing JSON to outputs/04_final/fewshot_protonet/seed_0/fewshot_episode_resource_stats.json
+2026-03-25 11:55:46 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.pt
+2026-03-25 11:55:46 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.safetensors
+2026-03-25 11:55:46 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_last.ckpt
+2026-03-25 11:55:46 INFO [cinic10.utils] Writing JSON to outputs/04_final/fewshot_protonet/seed_0/fewshot_episode_resource_stats.json
+2026-03-25 11:55:56 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.pt
+2026-03-25 11:55:56 INFO [cinic10.utils] save_model_weights_optimized -> outputs/04_final/fewshot_protonet/seed_0/fewshot_best.safetensors
+2026-03-25 11:55:56 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_last.ckpt
+2026-03-25 11:55:56 INFO [cinic10.utils] Writing JSON to outputs/04_final/fewshot_protonet/seed_0/fewshot_episode_resource_stats.json
+2026-03-25 11:56:06 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_last.ckpt
+2026-03-25 11:56:06 INFO [cinic10.utils] Writing JSON to outputs/04_final/fewshot_protonet/seed_0/fewshot_episode_resource_stats.json
+2026-03-25 11:56:18 INFO [cinic10.utils] Writing JSON to outputs/04_final/fewshot_protonet/seed_0/fewshot_metrics.json
+2026-03-25 11:56:18 INFO [cinic10.utils] Writing JSON to outputs/04_final/fewshot_protonet/seed_0/fewshot_episode_resource_stats.json
+2026-03-25 11:56:18 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/fewshot_last.ckpt
+2026-03-25 11:56:18 INFO [cinic10.utils] atomic_torch_save -> outputs/04_final/fewshot_protonet/seed_0/protonet.pt
