@@ -1,0 +1,49 @@
+2026-03-25 23:31:59 INFO [cinic10] Logging to file: /Users/pawelp/Desktop/education/pw/deepl/cinic10/logs/cinic10.log
+2026-03-25 23:32:01 INFO [__main__] run_nas_convkan: data=data output=outputs/03_models/nas_convkan/seed_42 nas=outputs/03_models/nas_two_stage seed=42
+2026-03-25 23:32:01 INFO [cinic10.training.engine] fit: starting run output=outputs/03_models/nas_convkan/seed_42 epochs=60 device=mps
+2026-03-25 23:32:21 INFO [cinic10] Logging to file: /Users/pawelp/Desktop/education/pw/deepl/cinic10/logs/cinic10.log
+2026-03-25 23:32:22 INFO [__main__] run_nas_convkan: data=data output=outputs/03_models/nas_convkan/seed_42 nas=outputs/03_models/nas_two_stage seed=42
+2026-03-25 23:32:23 INFO [cinic10.training.engine] fit: starting run output=outputs/03_models/nas_convkan/seed_42 epochs=60 device=mps
+2026-03-25 23:34:52 INFO [cinic10] Logging to file: /Users/pawelp/Desktop/education/pw/deepl/cinic10/logs/cinic10.log
+2026-03-25 23:34:53 INFO [__main__] run_nas_convkan: data=data output=outputs/03_models/nas_convkan/seed_42 nas=outputs/03_models/nas_two_stage seed=42
+2026-03-25 23:34:53 INFO [cinic10.training.engine] fit: starting run output=outputs/03_models/nas_convkan/seed_42 epochs=60 device=mps
+2026-03-25 23:35:19 INFO [cinic10] Logging to file: /Users/pawelp/Desktop/education/pw/deepl/cinic10/logs/cinic10.log
+2026-03-25 23:35:20 INFO [__main__] run_nas_convkan: data=data output=outputs/03_models/nas_convkan/seed_42 nas=outputs/03_models/nas_two_stage seed=42
+2026-03-25 23:35:20 INFO [cinic10.training.engine] fit: starting run output=outputs/03_models/nas_convkan/seed_42 epochs=60 device=mps
+2026-03-25 23:36:31 INFO [cinic10] Logging to file: /Users/pawelp/Desktop/education/pw/deepl/cinic10/logs/cinic10.log
+2026-03-25 23:36:32 INFO [__main__] run_nas_convkan: data=data output=outputs/03_models/nas_convkan/seed_42 nas=outputs/03_models/nas_two_stage seed=42
+2026-03-25 23:36:32 INFO [cinic10.training.engine] fit: starting run output=outputs/03_models/nas_convkan/seed_42 epochs=60 device=mps
+2026-03-25 23:37:04 INFO [cinic10] Logging to file: /Users/pawelp/Desktop/education/pw/deepl/cinic10/logs/cinic10.log
+2026-03-25 23:37:05 INFO [__main__] run_nas_convkan: data=data output=outputs/03_models/nas_convkan/seed_42 nas=outputs/03_models/nas_two_stage seed=42
+2026-03-25 23:37:05 INFO [cinic10.training.engine] fit: starting run output=outputs/03_models/nas_convkan/seed_42 epochs=60 device=mps
+2026-03-25 23:38:25 INFO [cinic10] Logging to file: /Users/pawelp/Desktop/education/pw/deepl/cinic10/logs/cinic10.log
+2026-03-25 23:38:26 INFO [__main__] run_nas_convkan: data=data output=outputs/03_models/nas_convkan/seed_42 nas=outputs/03_models/nas_two_stage seed=42
+2026-03-25 23:38:26 INFO [cinic10.training.engine] fit: starting run output=outputs/03_models/nas_convkan/seed_42 epochs=60 device=mps
+2026-03-25 23:39:39 INFO [cinic10] Logging to file: /Users/pawelp/Desktop/education/pw/deepl/cinic10/logs/cinic10.log
+2026-03-25 23:39:40 INFO [__main__] run_nas_convkan: data=data output=outputs/03_models/nas_convkan/seed_42 nas=outputs/03_models/nas_two_stage seed=42
+2026-03-25 23:39:40 INFO [cinic10.training.engine] fit: starting run output=outputs/03_models/nas_convkan/seed_42 epochs=60 device=mps
+2026-03-25 23:41:13 INFO [cinic10] Logging to file: /Users/pawelp/Desktop/education/pw/deepl/cinic10/logs/cinic10.log
+2026-03-25 23:41:14 INFO [__main__] run_nas_convkan: data=data output=outputs/03_models/nas_convkan/seed_42 nas=outputs/03_models/nas_two_stage seed=42
+2026-03-25 23:41:15 INFO [cinic10.training.engine] fit: starting run output=outputs/03_models/nas_convkan/seed_42 epochs=60 device=cpu
+2026-03-25 23:41:16 INFO [cinic10] Logging to file: /Users/pawelp/Desktop/education/pw/deepl/cinic10/logs/cinic10.log
+2026-03-25 23:41:17 INFO [__main__] run_nas_convkan: data=data output=outputs/03_models/nas_convkan/seed_42 nas=outputs/03_models/nas_two_stage seed=42
+2026-03-25 23:41:17 INFO [cinic10.training.engine] fit: starting run output=outputs/03_models/nas_convkan/seed_42 epochs=60 device=mps
+2026-03-25 23:41:33 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_convkan/seed_42/last.ckpt status=interrupted epoch=0
+2026-03-25 23:41:33 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_convkan/seed_42/last.ckpt
+2026-03-25 23:41:33 WARNING [cinic10.training.engine] Training interrupted by user at epoch 0
+2026-03-25 23:41:40 INFO [cinic10] Logging to file: /Users/pawelp/Desktop/education/pw/deepl/cinic10/logs/cinic10.log
+2026-03-25 23:41:41 INFO [__main__] run_nas_convkan: data=data output=outputs/03_models/nas_convkan/seed_42 nas=outputs/03_models/nas_two_stage seed=42
+2026-03-25 23:41:42 INFO [cinic10.training.engine] fit: starting run output=outputs/03_models/nas_convkan/seed_42 epochs=60 device=cpu
+2026-03-25 23:42:07 INFO [cinic10] Logging to file: /Users/pawelp/Desktop/education/pw/deepl/cinic10/logs/cinic10.log
+2026-03-25 23:42:18 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_convkan/seed_42/last.ckpt status=interrupted epoch=0
+2026-03-25 23:42:18 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_convkan/seed_42/last.ckpt
+2026-03-25 23:42:18 WARNING [cinic10.training.engine] Training interrupted by user at epoch 0
+2026-03-25 23:42:29 INFO [cinic10] Logging to file: /Users/pawelp/Desktop/education/pw/deepl/cinic10/logs/cinic10.log
+2026-03-25 23:42:30 INFO [cinic10] Logging to file: /Users/pawelp/Desktop/education/pw/deepl/cinic10/logs/cinic10.log
+2026-03-25 23:42:31 INFO [__main__] run_nas_convkan: data=data output=outputs/03_models/nas_convkan/seed_42 nas=outputs/03_models/nas_two_stage seed=42
+2026-03-25 23:42:31 INFO [cinic10.training.engine] fit: starting run output=outputs/03_models/nas_convkan/seed_42 epochs=60 device=cpu
+2026-03-25 23:43:02 INFO [cinic10] Logging to file: /Users/pawelp/Desktop/education/pw/deepl/cinic10/logs/cinic10.log
+2026-03-25 23:43:29 INFO [cinic10] Logging to file: /Users/pawelp/Desktop/education/pw/deepl/cinic10/logs/cinic10.log
+2026-03-25 23:43:41 INFO [cinic10] Logging to file: /Users/pawelp/Desktop/education/pw/deepl/cinic10/logs/cinic10.log
+2026-03-25 23:43:42 INFO [__main__] run_nas_convkan: data=data output=outputs/03_models/nas_convkan/seed_42 nas=outputs/03_models/nas_two_stage seed=42
+2026-03-25 23:43:43 INFO [cinic10.training.engine] fit: starting run output=outputs/03_models/nas_convkan/seed_42 epochs=60 device=mps

@@ -4,7 +4,6 @@ import logging
 from collections.abc import Iterator
 from typing import cast
 
-from convkan import ConvKAN
 from torch import nn
 from torchvision.models import (
     DenseNet121_Weights,
@@ -19,6 +18,8 @@ from torchvision.models import (
 
 from cinic10.config import ArchitectureName
 from cinic10.models.nas_cnn import NasCnn
+
+from ..custom_convkan import ConvKAN
 
 logger = logging.getLogger(__name__)
 

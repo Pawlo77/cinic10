@@ -1,0 +1,24 @@
+2026-03-25 23:23:36 INFO [cinic10] Logging to file: logs/03_models/nas_convkan/nas_convkan_seed_0.log
+2026-03-25 23:23:48 INFO [__main__] run_nas_convkan: data=data output=outputs/03_models/nas_convkan/seed_0 nas=outputs/03_models/nas_two_stage seed=0
+2026-03-25 23:23:49 INFO [cinic10.training.engine] fit: starting run output=outputs/03_models/nas_convkan/seed_0 epochs=60 device=mps
+2026-03-25 23:44:01 INFO [cinic10] Logging to file: logs/03_models/nas_convkan/nas_convkan_seed_0.log
+2026-03-25 23:44:02 INFO [__main__] run_nas_convkan: data=data output=outputs/03_models/nas_convkan/seed_0 nas=outputs/03_models/nas_two_stage seed=0
+2026-03-25 23:44:02 INFO [cinic10.training.engine] fit: starting run output=outputs/03_models/nas_convkan/seed_0 epochs=60 device=mps
+2026-03-25 23:45:31 INFO [cinic10] Logging to file: logs/03_models/nas_convkan/nas_convkan_seed_0.log
+2026-03-25 23:45:33 INFO [__main__] run_nas_convkan: data=data output=outputs/03_models/nas_convkan/seed_0 nas=outputs/03_models/nas_two_stage seed=0
+2026-03-25 23:45:33 INFO [cinic10.training.engine] fit: starting run output=outputs/03_models/nas_convkan/seed_0 epochs=60 device=mps
+2026-03-25 23:46:40 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_convkan/seed_0/last.ckpt status=interrupted epoch=0
+2026-03-25 23:46:40 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_convkan/seed_0/last.ckpt
+2026-03-25 23:46:40 WARNING [cinic10.training.engine] Training interrupted by user at epoch 0
+2026-03-25 23:58:17 INFO [cinic10] Logging to file: logs/03_models/nas_convkan/nas_convkan_seed_0.log
+2026-03-25 23:58:18 INFO [__main__] run_nas_convkan: data=data output=outputs/03_models/nas_convkan/seed_0 nas=outputs/03_models/nas_two_stage seed=0
+2026-03-25 23:58:19 INFO [cinic10.training.engine] fit: starting run output=outputs/03_models/nas_convkan/seed_0 epochs=60 device=mps
+2026-03-26 00:00:48 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_convkan/seed_0/last.ckpt status=interrupted epoch=0
+2026-03-26 00:00:48 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_convkan/seed_0/last.ckpt
+2026-03-26 00:00:48 WARNING [cinic10.training.engine] Training interrupted by user at epoch 0
+2026-03-26 00:01:03 INFO [cinic10] Logging to file: logs/03_models/nas_convkan/nas_convkan_seed_0.log
+2026-03-26 00:01:04 INFO [__main__] run_nas_convkan: data=data output=outputs/03_models/nas_convkan/seed_0 nas=outputs/03_models/nas_two_stage seed=0
+2026-03-26 00:01:05 INFO [cinic10.training.engine] fit: starting run output=outputs/03_models/nas_convkan/seed_0 epochs=60 device=mps
+2026-03-26 00:04:54 INFO [cinic10.training.engine] Saving checkpoint outputs/03_models/nas_convkan/seed_0/last.ckpt status=interrupted epoch=0
+2026-03-26 00:04:54 INFO [cinic10.utils] atomic_torch_save -> outputs/03_models/nas_convkan/seed_0/last.ckpt
+2026-03-26 00:04:54 WARNING [cinic10.training.engine] Training interrupted by user at epoch 0
